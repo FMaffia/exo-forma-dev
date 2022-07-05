@@ -11,4 +11,5 @@ import java.io.Serializable;
 public class ProjectCard extends Project implements Serializable {
     private static final long serialVersionUID = 1574006953815072972L;
     private int stepsCount;
+    private int lastStep;
 }

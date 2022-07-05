@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
@@ -19,11 +20,11 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepo;
 
-    @GetMapping("/test")
-    public ResponseEntity<List<ProjectCard>> getTest() {
-        log.debug("-----> PROJECT_SERVICES: GetTest");
-        return ResponseEntity.ok(this.projectRepo.findAllWithLastStep());
-    }
+//    @GetMapping("/test")
+//    public ResponseEntity<List<Map>> getTest() {
+//        log.debug("-----> PROJECT_SERVICES: GetTest");
+//        return ResponseEntity.ok(this.projectRepo.findAllWithLastStep());
+//    }
 
     @GetMapping("/getAll")
     public ResponseEntity<List<ProjectCard>> getAll() {

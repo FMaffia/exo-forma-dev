@@ -22,7 +22,7 @@ const CardProject = ({ project }: Prop) => {
     : undefined;
   const completed: boolean = calculatePerc === 100;
   return (
-    <Card sx={{ maxWidth: "100%", position: "relative" }}>
+    <Card sx={{ maxWidth: "100%", position: "relative", background: "linear-gradient(195deg, rgb(237, 236, 255) 15%, rgb(220, 212, 246) 70%)" }}>
       {calculatePerc && (
         <LinearProgress
           sx={{ position: "absolute", width: "100%" }}
@@ -65,7 +65,7 @@ const CardProject = ({ project }: Prop) => {
           alt="Paella dish"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" >
             <span
               className="content"
               dangerouslySetInnerHTML={{ __html: project.descBreve }}

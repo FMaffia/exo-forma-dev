@@ -53,7 +53,10 @@ const ContainerMain = styled(Container)(({ theme }) => ({
   "@media all": {
     minHeight: "90vh",
     display: "flex",
-    padding: "1rem",
+    paddingLeft: theme.spacing(6),
+    paddingRight: theme.spacing(6),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     flexDirection: "column",
     backgroundColor: "#E9EEF1",
   },
@@ -77,19 +80,19 @@ const Layout = () => {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <ContainerHeader maxWidth="xl">
+      <ContainerHeader maxWidth={false}>
         <Title />
         <PanelUtenteDesktop />
       </ContainerHeader>
       {/*<ContainerMenu maxWidth="xl">
         <MenuBar />
       </ContainerMenu>*/}
-      <ContainerMain>
+      <ContainerMain  maxWidth={false} >
         <CssBaseline />
         <DynamicBreadCrumb />
         <Outlet />
       </ContainerMain>
-      <ContainerFooter maxWidth="xl">
+      <ContainerFooter  maxWidth={false}>
         <TitleFooter />
       </ContainerFooter>
     </ThemeProvider>

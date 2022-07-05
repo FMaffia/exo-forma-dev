@@ -17,13 +17,14 @@ const RisultatiRicerca = () => {
     <Grid
       container
       spacing={2}
-      sx={{ display: "flex", justifyContent: "center" }}
+      sx={{ display: "flex", justifyContent: "left" }}
     >
       {filteredProjects.map((fp) => (
-        <Grid key={fp.id} item xs={11} sm={6} md={4} lg={3}>
+        <Grid key={fp.id} item xs={12} sm={6} md={4} lg={3} xl={2}>
           <CardProject project={fp} />
         </Grid>
       ))}
+
     </Grid>
   );
 };

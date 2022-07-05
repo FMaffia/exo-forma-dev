@@ -1,0 +1,3 @@
+mongodump --host localhost --port 27017 --db FORMAZIONE_INTERNA (per ESPORTARE)
+
+mongorestore --host localhost --port 27017 --db FORMAZIONE_INTERNA dump/FORMAZIONE_INTERNA (PER IMPORTARE)

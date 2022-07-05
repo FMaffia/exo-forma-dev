@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -28,43 +29,102 @@ public class ProjectRepository {
 //    }
 
 
-
     public List<ProjectCard> findAll() {
 
         String idUser = "62a85bce9512066fdab1bfb7";
 
-        AddFieldsOperation stageAddIdString = Aggregation.addFields()
-                .addField("idString")
-                .withValue(ConvertOperators.ToString.toString("$_id"))
-                .addField("stepsCount")
-                .withValueOf(
-                        ArrayOperators.Size.lengthOfArray("steps")
-                ).build();
-        CustomProjectAggregationOperation lookupOperation = new CustomProjectAggregationOperation(computeLookupJson(idUser));
-        UnwindOperation unwindOperation = Aggregation.unwind("$userProject",true);
-        AddFieldsOperation addLastStep = Aggregation.addFields().addField("lastStep").withValue("$userProject.lastStep").build();
-        ProjectionOperation projection = Aggregation.project().andExclude("userProject","steps","idString");
-        //userProject: 0,
-        //  steps: 0,
-        //  idString: 0
+        //escludiamo le cose non necessarie dal risultato
+        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
 
-        Aggregation agg = Aggregation.newAggregation(ProjectCard.class,stageAddIdString, lookupOperation, unwindOperation, addLastStep, projection);
+        ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>(aggregateProjectJoins(idUser, true));
+        pipelineOperations.add(projection);
+
+        //assemblaggio, l'ordine è importante
+        Aggregation agg = Aggregation.newAggregation(ProjectCard.class, pipelineOperations);
 
 
         AggregationResults<ProjectCard> aggRes = mongoTemplate.aggregate(agg, Project.class, ProjectCard.class);
         return aggRes.getMappedResults();
     }
 
+
     public Project getStepsByIdProject(String id) {
-        Query q = new Query();
-        q.addCriteria(Criteria.where("id").is(id));
-        q.fields().include("steps.title");
-        q.fields().include("steps.index");
-        q.fields().include("steps.number");
-        return mongoTemplate.findOne(q, Project.class);
+        String idUser = "62a85bce9512066fdab1bfb7";
+        ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();
+
+        //prendiamo solo il progetto richiesto
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(id));
+        pipelineOperations.add(matchOperation);
+        //aggiungiamo le pipeline comuni per la join con l'utente
+        pipelineOperations.addAll(aggregateProjectJoins(idUser, false));
+        //escludiamo le cose non necessarie dal risultato
+        ProjectionOperation projection = Aggregation.project().andInclude("steps", "lastStep");
+        pipelineOperations.add(projection);
+        //aggiungiamo il mergesteps per calcolare se i singoli step sono completati
+        pipelineOperations.add(new CustomProjectAggregationOperation(computeAddFieldMergeSteps()));
+        //escludiamo lastStep perché nn ci serve più
+        ProjectionOperation projection2 = Aggregation.project().andExclude("lastStep");
+        pipelineOperations.add(projection2);
+
+        //assemblaggio, l'ordine è importante
+        Aggregation agg = Aggregation.newAggregation(pipelineOperations);
+
+        AggregationResults<Project> aggRes = mongoTemplate.aggregate(agg, Project.class, Project.class);
+        return aggRes.getUniqueMappedResult();
     }
 
-    private String computeLookupJson(String idUser){
+    private List<AggregationOperation> aggregateProjectJoins(String idUser, boolean addStepsCount) {
+
+
+        //aggiungiamo l'idString come campo per fare l'uguaglianza tra stringhe
+        //aggiungiamo anche il totale degli step con un size
+        AddFieldsOperation.AddFieldsOperationBuilder stageAddIdStringBuilder = Aggregation.addFields()
+                .addField("idString")
+                .withValue(ConvertOperators.ToString.toString("$_id"));
+        if (addStepsCount) {
+            stageAddIdStringBuilder.addField("stepsCount")
+                    .withValueOf(
+                            ArrayOperators.Size.lengthOfArray("steps")
+                    );
+        }
+        AddFieldsOperation stageAddIdString = stageAddIdStringBuilder.build();
+
+        //aggiungiamo tutto il json del lookup con pipeline non supportato dal template
+        CustomProjectAggregationOperation lookupOperation = new CustomProjectAggregationOperation(computeLookupJson(idUser));
+        //effettuiamo l'appiattimento del nuovo campo userProject
+        UnwindOperation unwindOperation = Aggregation.unwind("$userProject", true);
+        //ci prendiamo solo lastStep e lo mettiamo a primo livello
+        AddFieldsOperation addLastStep = Aggregation.addFields().addField("lastStep").withValue("$userProject.lastStep").build();
+        return Arrays.asList(stageAddIdString, lookupOperation, unwindOperation, addLastStep);
+    }
+
+    private String computeAddFieldMergeSteps() {
+        return "{\n" +
+                " $addFields: {\n" +
+                "  steps: {\n" +
+                "   $map: {\n" +
+                "    input: '$steps',\n" +
+                "    as: 'currStep',\n" +
+                "    'in': {\n" +
+                "     $mergeObjects: [\n" +
+                "      '$$currStep',\n" +
+                "      {\n" +
+                "       completed: {\n" +
+                "        $lt: [\n" +
+                "         '$$currStep.number',\n" +
+                "         '$lastStep'\n" +
+                "        ]\n" +
+                "       }\n" +
+                "      }\n" +
+                "     ]\n" +
+                "    }\n" +
+                "   }\n" +
+                "  }\n" +
+                " }\n" +
+                "}";
+    }
+
+    private String computeLookupJson(String idUser) {
         return " {\n" +
                 " $lookup: {\n" +
                 "  from: 'projectsUsers',\n" +
@@ -79,7 +139,7 @@ public class ProjectRepository {
                 "       {\n" +
                 "        $eq: [\n" +
                 "         '$idUser',\n" +
-                "         '"+idUser+"'\n" +
+                "         '" + idUser + "'\n" +
                 "        ]\n" +
                 "       },\n" +
                 "       {\n" +

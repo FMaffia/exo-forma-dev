@@ -19,11 +19,11 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepo;
 
-//    @GetMapping("/test")
-//    public ResponseEntity<List<Map>> getTest() {
-//        log.debug("-----> PROJECT_SERVICES: GetTest");
-//        return ResponseEntity.ok(this.projectRepo.findAllWithLastStep());
-//    }
+    @GetMapping("/test")
+    public ResponseEntity<List<StepView>> getTest() {
+        log.debug("-----> PROJECT_SERVICES: GetTest");
+        return ResponseEntity.ok(this.projectRepo.getStepsByIdProject("62bcb592aa4ab15c340bdbbb").getSteps());
+    }
 
     @GetMapping("/getAll")
     public ResponseEntity<List<ProjectCard>> getAll() {
@@ -35,7 +35,6 @@ public class ProjectService {
     public ResponseEntity<List<StepView>> getSteps(@PathVariable String projectId) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
         List<StepView> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
-        stepsFull.forEach(s -> s.setCompleted(s.getIndex() < 4));
         return ResponseEntity.ok(stepsFull);
     }
 

@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 public class StepView implements Serializable {
+    private static final long serialVersionUID = 292572689817176123L;
     private int number;
     private int index;
     private String title;

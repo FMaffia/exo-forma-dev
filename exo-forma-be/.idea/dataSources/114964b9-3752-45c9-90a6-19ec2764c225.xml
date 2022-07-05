@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.23">
+    <root id="1">
+      <ServerVersion>4.2.20</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="FORMAZIONE_INTERNA"/>
+    <schema id="3" parent="1" name="MDA_PNA"/>
+    <schema id="4" parent="1" name="admin"/>
+    <schema id="5" parent="1" name="config"/>
+    <schema id="6" parent="1" name="local"/>
+    <table id="7" parent="2" name="projects"/>
+    <table id="8" parent="2" name="users"/>
+    <column id="9" parent="8" name="_id">
+      <Position>1</Position>
+      <DataType>ObjectId|12s</DataType>
+    </column>
+    <column id="10" parent="8" name="_class">
+      <Position>2</Position>
+      <DataType>String|12s</DataType>
+    </column>
+    <column id="11" parent="8" name="pass">
+      <Position>3</Position>
+      <DataType>String|12s</DataType>
+    </column>
+    <column id="12" parent="8" name="roles">
+      <Position>4</Position>
+      <DataType>Array|2003s</DataType>
+    </column>
+    <column id="13" parent="8" name="username">
+      <Position>5</Position>
+      <DataType>String|12s</DataType>
+    </column>
+  </database-model>
+</dataSource>

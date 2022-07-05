@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
@@ -36,7 +35,7 @@ public class ProjectService {
     public ResponseEntity<List<StepView>> getSteps(@PathVariable String projectId) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
         List<StepView> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
-        stepsFull.forEach(s -> s.setCompleted(s.getIndex() < 5));
+        stepsFull.forEach(s -> s.setCompleted(s.getIndex() < 4));
         return ResponseEntity.ok(stepsFull);
     }
 

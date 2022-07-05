@@ -1,0 +1,18 @@
+GET http://localhost:8080/api/hello
+
+<> 2022-06-24T104943.404.json
+
+###
+
+GET http://localhost:8080/users/getAll
+
+<> 2022-06-24T104934.200.json
+
+###
+
+GET http://localhost:8080/users/getAll
+
+<> 2022-06-24T104918.200.json
+
+###
+

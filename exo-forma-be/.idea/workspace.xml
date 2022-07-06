@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="steps con completed tramite aggregation">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" afterDir="false" />
+    <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ResourceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProjectNew.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/saga/resourcesSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/ResourcesServices.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/endpoint/URI_RESOURCES.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/HeaderDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/HeaderDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProject.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/model/tabsItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/model/tabsItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/useMyStyle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/useMyStyle.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +58,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="E:\work\projects\exo-forma-dev\exo-forma-be\settings.xml" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -74,7 +91,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -82,10 +99,11 @@
       <recent name="D:\Sviluppo\Progetti\exo-factory-beta\exo-forma-be\ExoFormaUtility\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.exolab.access" />
+      <recent name="it.exolab.services" />
       <recent name="it.exolab.model.view" />
       <recent name="it.exolab.repository" />
       <recent name="it.exolab.model" />
-      <recent name="it.exolab.services" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -137,6 +155,7 @@
       <workItem from="1657030688039" duration="2426000" />
       <workItem from="1657043893813" duration="4199000" />
       <workItem from="1657049880200" duration="712000" />
+      <workItem from="1657095069886" duration="3225000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

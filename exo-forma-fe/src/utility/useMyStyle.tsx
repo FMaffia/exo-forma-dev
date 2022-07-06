@@ -72,6 +72,10 @@ const useStyles = makeStyles((theme) => ({
   activeStyle: {
     color: `${purple["400"]}!important`,
   },
+  lastStepStyle: {
+    color: `${purple["900"]}!important`
+  }
+
 }));
 
 const useMyStyle = () => {

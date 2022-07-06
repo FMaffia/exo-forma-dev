@@ -14,6 +14,7 @@ export type TabDetail = {
 export const emptyProject = {
   authors: "",
   carousel: [],
+  cover:"",
   categories: [],
   creationDate: "",
   desc: "",
@@ -32,6 +33,7 @@ export const emptyProject = {
 export type Project = {
   id: string;
   title: string;
+    cover: string;
   order: number;
   descBreve: string;
   desc: string;

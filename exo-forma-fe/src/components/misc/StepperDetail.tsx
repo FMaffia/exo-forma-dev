@@ -37,7 +37,7 @@ const StepperDetail = () => {
     };
 
     const BodyDialog = () => {
-        return <Box>Sei sicuro di voler avviare lo step selezionato?</Box>;
+        return <Box component={"span"}>Sei sicuro di voler avviare lo step selezionato?</Box>;
     };
     const HeaderDialog = () => {
         return (

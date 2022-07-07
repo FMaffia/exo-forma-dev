@@ -3,7 +3,7 @@ import {Project} from "../../model/models";
 import {useSelector} from "react-redux";
 import {RootState} from "../../store/store";
 import {Box, Fab, Grid} from "@mui/material";
-import CardProject from "./CardProject";
+import CardProject from "../../components/ricerca/CardProject";
 import AddIcon from '@mui/icons-material/Add';
 import {includes} from "lodash";
 import {useNavigate} from "react-router-dom";
@@ -48,7 +48,7 @@ const RisultatiRicerca = () => {
             </Fab>
             }
             <ConfirmDialog
-                body={<p> Sei sicuro di voler creare un nuovo progetto?</p>}
+                body="Sei sicuro di voler creare un nuovo progetto?"
                 open={open}
                 handleClose={() => setOpen(false)}
                 handleConfirm={() => navigate(PROJECT_ROOT_NEW)}

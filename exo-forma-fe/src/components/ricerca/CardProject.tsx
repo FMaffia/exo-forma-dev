@@ -5,26 +5,39 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import {Box, CardActionArea, Chip, LinearProgress} from "@mui/material";
+import {Box, CardActionArea, Chip, Fab, LinearProgress} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import {PROJECT_ROOT} from "../../utility/Routes";
+import {PROJECT_EDIT, PROJECT_ROOT} from "../../utility/Routes";
 import {END_POINT_LOAD_IMAGE} from "../../services/endpoint/URI_RESOURCES";
 import {purple} from "@mui/material/colors";
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import {includes} from "lodash";
+import {useSelector} from "react-redux";
+import {RootState} from "../../store/store";
 
 interface Prop {
     project: Project;
 }
 
+const fabStyle = {
+    position: 'absolute',
+    top: 16,
+    right: 16,
+};
 const CardProject = ({project}: Prop) => {
     const navigate = useNavigate();
     const calculatePerc = project.lastStep
         ? (project.lastStep * 100) / project.stepsCount
         : undefined;
+    const permissions: string[] = useSelector<RootState, string[]>(
+        (state) => state.user.permissions
+    );
     const completed: boolean = project.lastStep === project.stepsCount;
-    console.log(project.stepsCount)
     return (
         <Card sx={{maxWidth: "100%", position: "relative"}}>
-            <CardActionArea onClick={() => navigate(PROJECT_ROOT + project.path)}>
+            <CardActionArea onClick={() => {
+                navigate(PROJECT_ROOT + project.path)
+            }}>
                 <CardHeader sx={{pt: 2, pb: 0, color: purple["600"]}} title={project.title}/>
                 <CardContent
                     sx={{py: 0, justifyContent: "left"}}
@@ -87,6 +100,11 @@ const CardProject = ({project}: Prop) => {
                     </Typography>
                 </CardContent>
             </CardActionArea>
+            {includes(permissions, "WRITE") &&
+            <Fab sx={fabStyle} color="secondary" size={"small"} title={"Modifica progetto"} aria-label="Modifica progetto" onClick={() => navigate(PROJECT_ROOT + `${project.path}` + PROJECT_EDIT)}>
+                <ModeEditIcon/>
+            </Fab>
+            }
         </Card>
     );
 };

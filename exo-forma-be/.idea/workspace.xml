@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ResourceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProjectNew.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/saga/resourcesSaga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/ResourcesServices.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/endpoint/URI_RESOURCES.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonsNewProject.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormProgetto.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormSteps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsStep.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/HeaderDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/HeaderDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/CardProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/model/tabsItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/model/tabsItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/useMyStyle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/useMyStyle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/NewProjectPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/NewProjectPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

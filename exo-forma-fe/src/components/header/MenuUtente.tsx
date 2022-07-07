@@ -61,7 +61,7 @@ export const MenuUtente = () => {
                 </Box>
                 <Box>
                     {user.permissions?.map(p =>
-                        <Chip size={"small"} component={"div"} clickable label={p}/>
+                        <Chip key={p} size={"small"} component={"div"} clickable label={p}/>
                     )}
                 </Box>
             </Stack>

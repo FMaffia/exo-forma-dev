@@ -8,15 +8,16 @@ import {PersistGate} from "redux-persist/integration/react";
 import "./App.css";
 import LoginContainer from "./containers/LoginContainer";
 import * as ROUTES_CONSTANTS from "./utility/Routes";
-import {PROJECT_ROOT, PROJECT_ROOT_NEW, USER_ROOT} from "./utility/Routes";
+import {PROJECT_EDIT, PROJECT_ROOT, PROJECT_ROOT_NEW, USER_ROOT} from "./utility/Routes";
 import NavigationDrawer from "./containers/NavigationDrawer";
 import HomePage from "./pages/HomePage";
 import RicercaPage from "./pages/RicercaPage";
 import Layout from "./layout/Layout";
-import DetailsPage from "./pages/DetailsPage";
 import {SAGA_USER} from "./saga/userSaga";
 import {User} from "./model/models";
-import NewProjectPage from "./pages/NewProjectPage";
+import EditNewContainer from "./containers/EditNewContainer";
+import DetailsStep from "./pages/DetailsStep";
+import DetailsPage from "./pages/DetailsPage";
 
 firebase.initializeApp(config);
 
@@ -46,11 +47,16 @@ const WrapperApp: React.FC = () => {
                             element={isLoggedIn ? <Layout/> : <Navigate to={root} replace/>}
                         >
                             <Route index element={<HomePage/>}/>
+
                             <Route path={PROJECT_ROOT}>
-                                <Route path=":projectPath" element={<DetailsPage/>}/>
-                                <Route path={PROJECT_ROOT_NEW} element={<NewProjectPage/>}/>
                                 <Route index element={<RicercaPage/>}/>
+                                <Route path=":projectPath" element={<DetailsPage/>}>
+                                    <Route path=":numberStep" element={<DetailsStep/>}/>
+                                </Route>
+                                <Route path={PROJECT_ROOT + "/:projectPath" + PROJECT_EDIT} element={<EditNewContainer/>}/>
+                                <Route path={PROJECT_ROOT_NEW} element={<EditNewContainer/>}/>
                             </Route>
+
                             <Route path={USER_ROOT} element={<NavigationDrawer/>}>
                                 <Route index element={<h1>Mio profilo </h1>}/>
                             </Route>

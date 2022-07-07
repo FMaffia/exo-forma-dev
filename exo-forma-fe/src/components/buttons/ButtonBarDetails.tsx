@@ -3,6 +3,7 @@ import {Button, Stack} from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import {useNavigate} from "react-router-dom";
 
+
 const ButtonBarDetails = () => {
     const navigate = useNavigate();
 

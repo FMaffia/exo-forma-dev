@@ -1,32 +1,21 @@
-import React from "react";
-import { Box, styled, Typography } from "@mui/material";
+import React from 'react'
+import { Box, Typography } from '@mui/material'
+import { TypographyHeader, TypographyHeaderPre } from '../header/Title'
 
-const TypographyFooter = styled(Typography)(({ theme }) => ({
-  color: "white",
-  fontFamily: "Saira Stencil One",
-  fontSize: "2rem",
-  opacity: 0.5,
-}));
-const TypographyFooterPre = styled(Typography)(({ theme }) => ({
-  color: "white",
-  fontFamily: "Saira Stencil One",
-  fontSize: "2rem",
-  opacity: 0.7,
-}));
 const TitleFooter = () => {
-  return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Box sx={{ display: "flex" }}>
-        <TypographyFooterPre>EXO</TypographyFooterPre>
-        <TypographyFooter>FORMA</TypographyFooter>
-      </Box>
-      <Box>
-        <Typography variant="body1" color={"white"}>
-          Exolab - Progetto di formazione interna 2022
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
+    return (
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ display: 'flex' }}>
+                <TypographyHeaderPre>EXO</TypographyHeaderPre>
+                <TypographyHeader>FORMA</TypographyHeader>
+            </Box>
+            <Box>
+                <Typography variant="body1" color={'white'}>
+                    Exolab - Progetto di formazione interna 2022
+                </Typography>
+            </Box>
+        </Box>
+    )
+}
 
-export default TitleFooter;
+export default TitleFooter

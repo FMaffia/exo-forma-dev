@@ -1,14 +1,10 @@
 import { all, call, put, takeLeading } from "redux-saga/effects";
-import {
-  disableLoading,
-  enableLoading,
-  setMessage,
-} from "../store/reducers/uiReducer";
+import { disableLoading, enableLoading, setMessage } from "../store/reducers/uiReducer";
 import { performReceiveUser } from "../services/UserServices";
 import { setUser } from "../store/reducers/userReducer";
 
 export const SAGA_USER = {
-  CHECK_USER: "SAGA_USER/CHECK_USER",
+  CHECK_USER: "SAGA_USER/CHECK_USER"
 };
 
 function* checkUser({ payload }: any) {
@@ -30,6 +26,6 @@ function* checkUser({ payload }: any) {
 export function* userSaga() {
   yield all([
     // @ts-ignore
-    takeLeading(SAGA_USER.CHECK_USER, checkUser),
+    takeLeading(SAGA_USER.CHECK_USER, checkUser)
   ]);
 }

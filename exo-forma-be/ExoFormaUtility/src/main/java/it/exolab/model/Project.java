@@ -24,7 +24,6 @@ public class Project implements Serializable {
     private List<String> carousel;
     private int difficult;
     private int order;
-    private String cover;
     private boolean published;
     private List<StepView> steps;
 

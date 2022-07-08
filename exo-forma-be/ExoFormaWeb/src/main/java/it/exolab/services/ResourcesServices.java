@@ -17,16 +17,15 @@ import java.io.IOException;
 @Slf4j
 public class ResourcesServices {
 
-    private final String FOLDER_IMG_PATH = "D:/Sviluppo/Progetti/exo-forma-dev/covers/";
-
+    private final String FOLDER_IMG_PATH = "D:/Sviluppo/Progetti/exo-forma-dev/images/";
     @Autowired
     private ResourceRepository resourceRepo;
 
 
-    @GetMapping(value = "/image/{pathImage}", produces = MediaType.IMAGE_JPEG_VALUE)
+    @GetMapping(value = "/images", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
-    byte[] getImage(@PathVariable String pathImage) throws IOException {
-        File file = new File(FOLDER_IMG_PATH + pathImage);
+    byte[] getImage(@RequestParam String id) throws IOException {
+        File file = new File(FOLDER_IMG_PATH + id);
         try (FileInputStream fis = new FileInputStream(file)) {
             return IOUtils.toByteArray(fis);
         }

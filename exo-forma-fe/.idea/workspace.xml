@@ -2,27 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="Gestione navigazione nuovo/modifica">
-      <change afterPath="$PROJECT_DIR$/src/components/buttons/ButtonsNewProject.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/CardProjectViewer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/EsploraProgettiCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../covers/distributore.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../covers/maven.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../covers/mines.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../covers/rubrica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuUtente.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuUtente.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ContainerProgetti.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/DynamicProjectContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ricerca/CardProjectNew.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonsNewProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/NewProjectPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/selectedProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/selectedProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/userSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/userSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_RESOURCES.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/endpoint/URI_RESOURCES.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/userReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/buttons" />
@@ -56,9 +70,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="optimize.imports.on.save" value="true" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="E:\work\projects\exo-forma-dev\exo-forma-fe\node_modules\prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\prettier" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="actions.on.save" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -101,7 +115,7 @@
       <updated>1657048449317</updated>
       <workItem from="1657048450806" duration="672000" />
       <workItem from="1657049260914" duration="1593000" />
-      <workItem from="1657090594448" duration="27616000" />
+      <workItem from="1657090594448" duration="51105000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>
@@ -117,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657114224034</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Gestione navigazione nuovo/modifica">
+      <created>1657183840524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657183840524</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

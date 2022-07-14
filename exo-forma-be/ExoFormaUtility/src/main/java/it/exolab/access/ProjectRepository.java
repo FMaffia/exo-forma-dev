@@ -37,13 +37,12 @@ public class ProjectRepository {
     }
 
     public Project getStepByIndexAndIdProject(String projectId, int indexStep) {
-        MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
 
-        ProjectionOperation projectionOperation2 = Aggregation.project().and(ArrayOperators.arrayOf(ArrayOperators.ArrayElemAt.arrayOf("steps").elementAt(indexStep - 1))).as("steps");
+        Query query = new Query()
+                .addCriteria(Criteria.where("_id").is(projectId));
+        query.fields().elemMatch("steps", Criteria.where("number").is(indexStep));
 
-        Aggregation agg = Aggregation.newAggregation(Project.class, matchOperation, projectionOperation2);
-        AggregationResults<Project> aggRes = mongoTemplate.aggregate(agg, Project.class, Project.class);
-        return aggRes.getUniqueMappedResult();
+        return mongoTemplate.findOne(query, Project.class);
     }
 
     public List<ProjectCard> findAll() {

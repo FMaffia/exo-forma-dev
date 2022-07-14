@@ -5,9 +5,9 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Box, CardActionArea, Chip, Fab, LinearProgress } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { PROJECT_EDIT, PROJECT_ROOT } from "../../utility/Routes";
+import { Box, CardActionArea, Chip, Fab, Fade, LinearProgress } from "@mui/material";
+import { useNavigate } from "@tanstack/react-location";
+import { PROJECT_EDIT } from "../../utility/Routes";
 import { END_POINT_LOAD_IMAGE } from "../../services/endpoint/URI_RESOURCES";
 import { purple } from "@mui/material/colors";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
@@ -26,15 +26,17 @@ const fabStyle = {
 };
 const CardProject = ({ project }: Prop) => {
   const navigate = useNavigate();
-  const calculatePerc = project.lastStep ? (project.lastStep * 100) / project.stepsCount : undefined;
 
+  const calculatePerc = project.lastStep ? (project.lastStep * 100) / project.stepsCount : undefined;
+  const location = window.location;
+  const isModifica = location.pathname === PROJECT_EDIT;
   const permissions: string[] = useSelector<RootState, string[]>((state) => state.user.permissions);
   const completed: boolean = project.lastStep === project.stepsCount;
   return (
     <Card sx={{ maxWidth: "100%", position: "relative" }}>
       <CardActionArea
         onClick={() => {
-          navigate(PROJECT_ROOT + project.path);
+          navigate({ to: `./dettaglio/${project.path}` });
         }}
       >
         <CardHeader sx={{ pt: 2, pb: 0, color: purple["600"] }} title={project.title} />
@@ -71,7 +73,7 @@ const CardProject = ({ project }: Prop) => {
                         size="small"
                     />*/}
         </CardContent>
-        <CardContent sx={{ pt: 1, borderBottom: "0.5rem #c6ff00 solid" }}>
+        <CardContent sx={{ pt: 1, borderBottom: "5px #c6ff00 solid" }}>
           {project.categories.map((c) => (
             <Chip sx={{ margin: "0.2rem" }} key={c} color="secondary" label={`#${c}`} size="small" />
           ))}
@@ -85,17 +87,18 @@ const CardProject = ({ project }: Prop) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      {includes(permissions, "WRITE") && (
-        <Fab
-          sx={fabStyle}
-          color="secondary"
-          size={"small"}
-          title={"Modifica progetto"}
-          aria-label="Modifica progetto"
-          onClick={() => navigate(PROJECT_ROOT + `${project.path}` + PROJECT_EDIT)}
-        >
-          <ModeEditIcon />
-        </Fab>
+      {includes(permissions, "WRITE") && isModifica && (
+        <Fade timeout={1000} in={true} unmountOnExit>
+          <Fab
+            sx={fabStyle}
+            color="secondary"
+            size={"small"}
+            title={"Modifica progetto"}
+            aria-label="Modifica progetto"
+            onClick={() => navigate({ to: PROJECT_EDIT + `${project.path}` })}
+          >
+            <ModeEditIcon />
+          </Fab></Fade>
       )}
     </Card>
   );

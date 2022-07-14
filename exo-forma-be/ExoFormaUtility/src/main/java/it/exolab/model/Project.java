@@ -1,6 +1,5 @@
 package it.exolab.model;
 
-import it.exolab.model.view.StepView;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,6 +24,6 @@ public class Project implements Serializable {
     private int difficult;
     private int order;
     private boolean published;
-    private List<StepView> steps;
+    private List<StepProject> steps;
 
 }

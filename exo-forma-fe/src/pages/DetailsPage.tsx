@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Avatar, Box, Fade, Paper, Typography } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { useMatch } from "@tanstack/react-location";
 import { upperCase } from "lodash";
 import { Project } from "../model/models";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,7 +36,9 @@ function TabPanel(props: TabPanelProps) {
 }
 
 const DetailsPage = () => {
-  let { projectPath } = useParams();
+  const {
+    params: { projectPath }
+  } = useMatch();
   const dispatch = useDispatch();
   const [value, setValue] = React.useState(0);
 

@@ -10,7 +10,7 @@ import { SAGA_PROJECT } from "../../saga/projectsSaga";
 import { generateProjectItems } from "../../model/menuItems";
 import { MenuObject, Project } from "../../model/models";
 import Title from "../header/Title";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "@tanstack/react-location";
 import { useSelector } from "react-redux";
 import useMyStyle from "../../utility/useMyStyle";
 import MenuList from "@mui/material/MenuList";
@@ -21,8 +21,8 @@ const StyledMenuToolbar = styled(Toolbar)(({ theme }) => ({
   "@media all": {
     minHeight: 95,
     backgroundColor: theme.palette.primary.main,
-    borderBottom: `15.5px ${theme.palette.secondary.light} solid`,
-  },
+    borderBottom: `15.5px ${theme.palette.secondary.light} solid`
+  }
 }));
 const MenuLaterale = () => {
   /*
@@ -30,6 +30,7 @@ const MenuLaterale = () => {
 */
   const navigate = useNavigate();
   const location = useLocation();
+
   const [projectMenuItems, setProjectMenuItems] = useState<MenuObject[] | []>(
     []
   );
@@ -42,7 +43,7 @@ const MenuLaterale = () => {
   }, [projects]);
 
   const handleListItemClick = (menu: MenuObject) => {
-    navigate(menu.path);
+    navigate({ to: menu.path });
   };
   useEffect(() => {
     sagaAction(SAGA_PROJECT.LOAD_PROJECTS);
@@ -55,7 +56,7 @@ const MenuLaterale = () => {
           sx={{
             flexGrow: 1,
             justifyContent: "center",
-            display: { xs: "flex", sm: "none" },
+            display: { xs: "flex", sm: "none" }
           }}
         >
           <Title small />
@@ -65,7 +66,7 @@ const MenuLaterale = () => {
       <MenuList>
         {projectMenuItems.map((menu: MenuObject, index: number) => (
           <MenuItem
-            selected={menu.path === location.pathname}
+            selected={menu.path === location.history.location.pathname}
             onClick={(event) => handleListItemClick(menu)}
           >
             {menu.icon && <ListItemIcon>{menu.icon}</ListItemIcon>}
@@ -81,7 +82,7 @@ const MenuLaterale = () => {
           return (
             <ListItem key={menu.path} disablePadding>
               <ListItemButton
-                selected={menu.path === location.pathname}
+                selected={menu.path === location.history.location.pathname}
                 onClick={(event) => handleListItemClick(menu)}
               >
                 <ListItemIcon>{menu.icon}</ListItemIcon>

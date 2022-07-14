@@ -1,20 +1,11 @@
-import React from "react";
-import {Button, Stack} from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import {useNavigate} from "react-router-dom";
-
+import React from 'react'
+import { Button, Stack } from '@mui/material'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 
 const ButtonBarDetails = () => {
-    const navigate = useNavigate();
-
     return (
-        <Stack direction="row" spacing={2} sx={{my: 4}}>
-            <Button
-                size="large"
-                startIcon={<ArrowBackIosIcon/>}
-                variant="outlined"
-                onClick={() => navigate(-1)}
-            >
+        <Stack direction="row" spacing={2} sx={{ my: 4 }}>
+            <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => null}>
                 Indietro
             </Button>
             {/* <Button
@@ -26,7 +17,7 @@ const ButtonBarDetails = () => {
         Inizia a progettare
       </Button>*/}
         </Stack>
-    );
-};
+    )
+}
 
-export default ButtonBarDetails;
+export default ButtonBarDetails

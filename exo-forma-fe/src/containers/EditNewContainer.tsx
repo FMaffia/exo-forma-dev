@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useMatch } from "@tanstack/react-location";
 import { emptyProject, Project } from "../model/models";
 import { cloneDeep, includes, upperCase } from "lodash";
 import { useSelector } from "react-redux";
@@ -32,8 +32,11 @@ const EditNewContainer = () => {
   const projects: Project[] = useSelector<RootState, Project[]>(
     (state) => state.projects
   );
-  let { projectPath } = useParams();
-  const isModifica = includes(location.pathname, PROJECT_EDIT);
+  const {
+    params: { projectPath }
+  } = useMatch();
+
+  const isModifica = includes(location.history.location.pathname, PROJECT_EDIT);
 
   type ObjectKey = keyof typeof currentProject;
 
@@ -113,7 +116,7 @@ const EditNewContainer = () => {
               <BottomNavigationAction label="Demo" icon={<PreviewIcon fontSize="large" />} />
             </BottomNavigation>
           </Box>
-          <Divider sx={{ mt: 1 }} />
+          <Divider sx={{ my: 2 }} />
           {navigationMap[currentPage]}
         </Paper>
         <ButtonsNavEdit clear={clear} save={save} />

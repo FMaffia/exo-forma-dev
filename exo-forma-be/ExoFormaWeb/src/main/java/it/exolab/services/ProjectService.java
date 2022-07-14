@@ -1,9 +1,9 @@
 package it.exolab.services;
 
 import it.exolab.access.ProjectRepository;
+import it.exolab.model.Project;
 import it.exolab.model.StepProject;
 import it.exolab.model.view.ProjectCard;
-import it.exolab.model.view.StepView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +19,11 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepo;
 
-    @GetMapping("/test")
-    public ResponseEntity<List<StepView>> getTest() {
-        log.debug("-----> PROJECT_SERVICES: GetTest");
-        return ResponseEntity.ok(this.projectRepo.getStepsByIdProject("62bcb592aa4ab15c340bdbbb").getSteps());
-    }
+//    @GetMapping("/test")
+//    public ResponseEntity<List<StepView>> getTest() {
+//        log.debug("-----> PROJECT_SERVICES: GetTest");
+//        return ResponseEntity.ok(this.projectRepo.getStepsByIdProject("62bcb592aa4ab15c340bdbbb").getSteps());
+//    }
 
     @GetMapping("/getAll")
     public ResponseEntity<List<ProjectCard>> getAll() {
@@ -32,19 +32,17 @@ public class ProjectService {
     }
 
     @GetMapping(value = "/getSteps/{projectId}")
-    public ResponseEntity<List<StepView>> getSteps(@PathVariable String projectId) {
+    public ResponseEntity<List<StepProject>> getSteps(@PathVariable String projectId) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
-        List<StepView> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
+        List<StepProject> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
         return ResponseEntity.ok(stepsFull);
     }
 
     @GetMapping(value = "/getStep/{projectId}/step/{stepIndex}")
-    public ResponseEntity<StepProject> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex) {
-/*
-        log.debug("-----> PROJECT_SERVICES: Get step: " + stepIndex + "by projectId:" + projectId);
-        List<StepProject> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
-        return ResponseEntity.ok(stepsFull.get(stepIndex));
-*/
-        return null;
+    public ResponseEntity<Project> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex) {
+        log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
+        Project step = this.projectRepo.getStepByIndexAndIdProject(projectId, stepIndex);
+        return ResponseEntity.ok(step);
     }
+
 }

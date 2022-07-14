@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;600&family=Saira+Stencil+One&display=swap');
+
 body {
- margin: 0 !important
+    margin: 0 !important
 }
-#root{
- background-color: #E9EEF1
+
+#root {
+    background-color: #E9EEF1
+}
+
+.css-1wtc51h-MuiDrawer-docked .MuiDrawer-paper {
+    position: inherit !important;
 }

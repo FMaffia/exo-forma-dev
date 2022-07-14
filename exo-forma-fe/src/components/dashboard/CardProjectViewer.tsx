@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography'
 import CardMedia from '@mui/material/CardMedia'
 import { END_POINT_LOAD_IMAGE } from '../../services/endpoint/URI_RESOURCES'
 import Card from '@mui/material/Card'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from '@tanstack/react-location'
 
 interface ICardProps {
     list: Project[];
@@ -29,7 +29,7 @@ const CardProjectViewer = ({ list }: ICardProps) => {
                         <Card sx={{ maxWidth: '100%', position: 'relative' }}>
                             <CardActionArea
                                 onClick={() => {
-                                    navigate(PROJECT_ROOT + project.path)
+                                    navigate({ to: PROJECT_ROOT + project.path })
                                 }}
                             >
                                 <CardHeader sx={{ pt: 2, pb: 0, color: purple['600'] }} title={project.title} />

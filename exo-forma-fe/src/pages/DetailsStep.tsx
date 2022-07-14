@@ -1,14 +1,11 @@
-import React from 'react';
-import {useParams} from "react-router-dom";
+import React from 'react'
+import { useMatch } from '@tanstack/react-location'
 
 const DetailsStep = () => {
-    let {numberStep} = useParams();
+    const {
+        params: { numberStep }
+    } = useMatch()
+    return <div>{numberStep}</div>
+}
 
-    return (
-        <div>
-            {numberStep}
-        </div>
-    );
-};
-
-export default DetailsStep;
+export default DetailsStep

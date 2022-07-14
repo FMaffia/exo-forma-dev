@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import { Backdrop, CircularProgress, Container, createTheme, CssBaseline, styled, ThemeProvider } from "@mui/material";
+import { Backdrop, Box, CircularProgress, Container, createTheme, CssBaseline, styled, ThemeProvider } from "@mui/material";
 import { grey, lime, purple } from "@mui/material/colors";
 import Title from "../components/header/Title";
-import { PanelUtenteDesktop } from "../components/header/PanelUtenteDesktop";
-import { Outlet } from "react-router-dom";
+import { ReactLocationDevtools } from "@tanstack/react-location-devtools";
+import { Outlet } from "@tanstack/react-location";
 import { RootState, sagaAction } from "../store/store";
 import { SAGA_PROJECT } from "../saga/projectsSaga";
 import TitleFooter from "../components/footer/TitleFooter";
 import DynamicBreadCrumb from "../utility/DynamicBreadCrumb";
 import { useSelector } from "react-redux";
+import DrawnerLaterale from "./DrawnerLaterale";
 
 const theme = createTheme({
   typography: {
@@ -32,6 +33,17 @@ const theme = createTheme({
       light: lime.A400,
       dark: "#90cc00"
     }
+  },
+  components: {
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            borderLeft: `5px solid ${purple["800"]}`
+          }
+        }
+      }
+    }
   }
 });
 
@@ -41,7 +53,7 @@ const ContainerHeader = styled(Container)(({ theme }) => ({
     display: "flex",
     padding: "1rem",
     background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)",
-    borderBottom: `0.5rem ${theme.palette.secondary.light} solid`
+    borderBottom: `5px ${theme.palette.secondary.light} solid`
   }
 }));
 const ContainerMain = styled(Container)(({ theme }) => ({
@@ -62,11 +74,11 @@ const ContainerFooter = styled(Container)(({ theme }) => ({
     display: "flex",
     padding: "1rem",
     background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)",
-    borderTop: `0.5rem ${theme.palette.secondary.light} solid`
+    borderTop: `5px ${theme.palette.secondary.light} solid`
   }
 }));
 
-const Layout = () => {
+export const Layout = () => {
   const loading = useSelector<RootState, boolean>(state => state.ui.loading);
   useEffect(() => {
     sagaAction(SAGA_PROJECT.LOAD_PROJECTS);
@@ -82,16 +94,16 @@ const Layout = () => {
       </Backdrop>
       <ContainerHeader maxWidth={false}>
         <Title />
-        <PanelUtenteDesktop />
       </ContainerHeader>
-      {/*<ContainerMenu maxWidth="xl">
-        <MenuBar />
-      </ContainerMenu>*/}
-      <ContainerMain maxWidth={false}>
-        <CssBaseline />
-        <DynamicBreadCrumb />
-        <Outlet />
-      </ContainerMain>
+      <Box sx={{ display: "flex" }}>
+        <DrawnerLaterale />
+        <ContainerMain maxWidth={false}>
+          <CssBaseline />
+          <DynamicBreadCrumb />
+          <Outlet />
+          <ReactLocationDevtools initialIsOpen={false} />
+        </ContainerMain>
+      </Box>
       <ContainerFooter maxWidth={false}>
         <TitleFooter />
       </ContainerFooter>
@@ -99,4 +111,29 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export const NoLayout = () => {
+  const loading = useSelector<RootState, boolean>(state => state.ui.loading);
+  return (
+    <ThemeProvider theme={theme}>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={loading}
+        onClick={() => null}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+      <ContainerHeader maxWidth={false}>
+        <Title />
+      </ContainerHeader>
+      <Box sx={{ display: "flex" }}>
+        <ContainerMain maxWidth={false}>
+          <Outlet />
+        </ContainerMain>
+      </Box>
+      <ContainerFooter maxWidth={false}>
+        <TitleFooter />
+      </ContainerFooter>
+    </ThemeProvider>
+  );
+};
+

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -28,6 +29,22 @@ public class ProjectRepository {
 //        return result;
 //    }
 
+    public Project getStepByIndexAndIdProject2(String projectId, int indexStep) {
+        Query x = new Query(Criteria.where("_id").is(projectId));
+        x.fields().include("steps").position("number", indexStep);
+        Project p = mongoTemplate.findOne(x, Project.class);
+        return p;
+    }
+
+    public Project getStepByIndexAndIdProject(String projectId, int indexStep) {
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
+
+        ProjectionOperation projectionOperation2 = Aggregation.project().and(ArrayOperators.arrayOf(ArrayOperators.ArrayElemAt.arrayOf("steps").elementAt(indexStep - 1))).as("steps");
+
+        Aggregation agg = Aggregation.newAggregation(Project.class, matchOperation, projectionOperation2);
+        AggregationResults<Project> aggRes = mongoTemplate.aggregate(agg, Project.class, Project.class);
+        return aggRes.getUniqueMappedResult();
+    }
 
     public List<ProjectCard> findAll() {
 

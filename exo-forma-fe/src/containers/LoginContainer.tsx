@@ -1,15 +1,8 @@
-import React from "react";
-import { Box, Fade } from "@mui/material";
-import useLoginStyle from "../styles/useLoginStyle";
+import React from 'react'
+import { Box } from '@mui/material'
 
 const LoginContainer = () => {
-  const { loginBody }: any = useLoginStyle();
+    return <Box sx={{ p: 5 }}>FORM</Box>
+}
 
-  return (
-    <Fade in={true} unmountOnExit>
-      <Box className={loginBody}>FORM</Box>
-    </Fade>
-  );
-};
-
-export default LoginContainer;
+export default LoginContainer

@@ -38,7 +38,7 @@ export type Project = {
     carousel: string[],
     authors: string,
     creationDate: string,
-    difficult?: number,
+    difficult: number,
     published?: boolean,
     path: string,
     steps: Steps[],

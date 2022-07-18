@@ -1,27 +1,41 @@
 import { all, call, put, takeLeading } from "redux-saga/effects";
-import {
-  addLoaders,
-  disableLoading,
-  enableLoading,
-  removeLoaders,
-  setMessage,
-} from "../store/reducers/uiReducer";
-import {
-  performLoadProjects,
-  performLoadStep,
-  performLoadStepsById,
-} from "../services/ProjectServices";
+import { addLoaders, disableLoading, enableLoading, removeLoaders, setMessage } from "../store/reducers/uiReducer";
+import { performInsertProject, performLoadProjects, performLoadStep, performLoadStepsById } from "../services/ProjectServices";
 import { setProjects } from "../store/reducers/projectsReducer";
 import { setFilteredProjects } from "../store/reducers/projectsFilteredReducer";
 import { setStepsByProject } from "../store/reducers/selectedProject";
 import { setCurrentStep } from "../store/selectedStep";
 import { LOAD_STEPS } from "../utility/Constant";
+import { Project } from "../model/models";
 
 export const SAGA_PROJECT = {
   LOAD_PROJECTS: "SAGA_PROJECT/LOAD",
   LOAD_STEP: "SAGA_PROJECT/LOAD_STEP",
-  LOAD_STEPS_BY_PROJECT: "SAGA_PROJECT/LOAD_STEPS_BY_ID",
+  INSERT_PROJECT: "SAGA_PROJECT/INSERT",
+  LOAD_STEPS_BY_PROJECT: "SAGA_PROJECT/LOAD_STEPS_BY_ID"
 };
+
+type Payload = {
+  payload: Project
+}
+
+function* insertProject({ payload }: any) {
+  console.log(payload);
+  try {
+    yield put(enableLoading(null));
+    // @ts-ignore
+    const response: any = yield call(performInsertProject, payload);
+    if (response.success) {
+      console.log(response.result);
+      yield put(setMessage({ show: true, body: response.result }));
+    } else {
+      console.log(response.errorCode);
+    }
+  } catch (e: any) {
+    yield put(setMessage({ show: true, body: e.message }));
+  }
+  yield put(disableLoading(null));
+}
 
 function* loadProjects() {
   try {
@@ -56,15 +70,17 @@ function* loadStepsByProjectId({ payload }: any) {
   }
   yield put(removeLoaders(LOAD_STEPS));
 }
+
 export type PayloadStep = {
   id: string;
   stepNumber: number;
 };
+
 function* loadStep(payload: any) {
   try {
     const params: PayloadStep = {
       id: payload.id,
-      stepNumber: payload.stepNumber,
+      stepNumber: payload.stepNumber
     };
     // @ts-ignore
     const response: any = yield call(performLoadStep, params);
@@ -78,10 +94,12 @@ function* loadStep(payload: any) {
   }
   yield put(disableLoading(null));
 }
+
 export function* projectsSaga() {
   yield all([
     takeLeading(SAGA_PROJECT.LOAD_PROJECTS, loadProjects),
     takeLeading(SAGA_PROJECT.LOAD_STEPS_BY_PROJECT, loadStepsByProjectId),
     takeLeading(SAGA_PROJECT.LOAD_STEP, loadStep),
+    takeLeading(SAGA_PROJECT.INSERT_PROJECT, insertProject)
   ]);
 }

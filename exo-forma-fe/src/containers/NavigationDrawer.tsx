@@ -8,7 +8,7 @@ import { Fade, IconButton, styled, useTheme } from '@mui/material'
 import { PanelUtenteDesktop } from '../components/header/PanelUtenteDesktop'
 import MenuIcon from '@mui/icons-material/Menu'
 import MenuLaterale from '../components/menus/MenuLaterale'
-import Title from '../components/header/Title'
+import { Title } from '../components/header/Title'
 import { Outlet } from '@tanstack/react-location'
 import { grey } from '@mui/material/colors'
 

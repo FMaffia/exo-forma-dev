@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { Backdrop, Box, CircularProgress, Container, createTheme, CssBaseline, styled, ThemeProvider } from "@mui/material";
 import { grey, lime, purple } from "@mui/material/colors";
-import Title from "../components/header/Title";
+import { Title } from "../components/header/Title";
 import { ReactLocationDevtools } from "@tanstack/react-location-devtools";
 import { Outlet } from "@tanstack/react-location";
 import { RootState, sagaAction } from "../store/store";
 import { SAGA_PROJECT } from "../saga/projectsSaga";
-import TitleFooter from "../components/footer/TitleFooter";
 import DynamicBreadCrumb from "../utility/DynamicBreadCrumb";
 import { useSelector } from "react-redux";
 import DrawnerLaterale from "./DrawnerLaterale";
@@ -93,7 +92,7 @@ export const Layout = () => {
         <CircularProgress color="inherit" />
       </Backdrop>
       <ContainerHeader maxWidth={false}>
-        <Title />
+        <Title footer={false} />
       </ContainerHeader>
       <Box sx={{ display: "flex" }}>
         <DrawnerLaterale />
@@ -105,7 +104,7 @@ export const Layout = () => {
         </ContainerMain>
       </Box>
       <ContainerFooter maxWidth={false}>
-        <TitleFooter />
+        <Title footer={true} />
       </ContainerFooter>
     </ThemeProvider>
   );
@@ -123,7 +122,7 @@ export const NoLayout = () => {
         <CircularProgress color="inherit" />
       </Backdrop>
       <ContainerHeader maxWidth={false}>
-        <Title />
+        <Title footer={false} />
       </ContainerHeader>
       <Box sx={{ display: "flex" }}>
         <ContainerMain maxWidth={false}>
@@ -131,7 +130,7 @@ export const NoLayout = () => {
         </ContainerMain>
       </Box>
       <ContainerFooter maxWidth={false}>
-        <TitleFooter />
+        <Title footer={true} />
       </ContainerFooter>
     </ThemeProvider>
   );

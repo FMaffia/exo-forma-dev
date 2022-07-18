@@ -2,6 +2,7 @@ package it.exolab.access;
 
 import it.exolab.aggregationoperations.CustomProjectAggregationOperation;
 import it.exolab.model.Project;
+import it.exolab.model.StepProject;
 import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,28 +22,31 @@ public class ProjectRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
-//    public List<ProjectCard> findAll() {
-//        Query q = new Query();
-//        q.fields().exclude("steps");
-//        List<ProjectCard> result = mongoTemplate.find(q, ProjectCard.class);
-//        //result.forEach(p -> p.setStepsCount(stepsCount(p.getId())));
-//        return result;
-//    }
 
     public Project getStepByIndexAndIdProject2(String projectId, int indexStep) {
-        Query x = new Query(Criteria.where("_id").is(projectId));
-        x.fields().include("steps").position("number", indexStep);
-        Project p = mongoTemplate.findOne(x, Project.class);
-        return p;
-    }
-
-    public Project getStepByIndexAndIdProject(String projectId, int indexStep) {
 
         Query query = new Query()
                 .addCriteria(Criteria.where("_id").is(projectId));
         query.fields().elemMatch("steps", Criteria.where("number").is(indexStep));
 
         return mongoTemplate.findOne(query, Project.class);
+    }
+
+    public StepProject getStepByIndexAndIdProject(String projectId, int indexStep) {
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
+
+        ProjectionOperation projectionOperation = Aggregation.project()
+                .andExclude("_id")
+                .and(ArrayOperators.Filter.filter("steps")
+                        .as("item")
+                        .by(ComparisonOperators.valueOf("item.number").equalToValue(indexStep)))
+                .as("steps");
+        ReplaceRootOperation replaceRootOperation = Aggregation.replaceRoot(ArrayOperators.First.firstOf("steps"));
+
+
+        Aggregation agg = Aggregation.newAggregation(Project.class, matchOperation, projectionOperation, replaceRootOperation);
+        AggregationResults<StepProject> aggRes = mongoTemplate.aggregate(agg, Project.class, StepProject.class);
+        return aggRes.getUniqueMappedResult();
     }
 
     public List<ProjectCard> findAll() {
@@ -174,4 +178,7 @@ public class ProjectRepository {
                 "}";
     }
 
+    public void insert(Project newProject) {
+        this.mongoTemplate.insert(newProject);
+    }
 }

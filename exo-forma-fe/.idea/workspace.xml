@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="Gestione navigazione nuovo/modifica">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/CardProjectViewer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/EsploraProgettiCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../covers/distributore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../covers/maven.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../covers/mines.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../covers/rubrica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" afterDir="false" />
+    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="Dashboard liste view">
+      <change afterPath="$PROJECT_DIR$/src/containers/forms/CategorieChips.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/forms/FormDescrizione.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/alpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/beta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/beta_white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonsNewProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/MenuLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/MenuLaterale.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/NavigationDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/NavigationDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/Footer.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/saga/userSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/userSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_RESOURCES.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/endpoint/URI_RESOURCES.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/userReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/projectsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/projectsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ProjectServices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProjectServices.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/buttons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -78,13 +70,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\public" />
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\buttons" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\containers\forms" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\misc" />
-      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\pages" />
-      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\containers\ricerca" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\ricerca" />
     </key>
   </component>
@@ -115,7 +108,12 @@
       <updated>1657048449317</updated>
       <workItem from="1657048450806" duration="672000" />
       <workItem from="1657049260914" duration="1593000" />
-      <workItem from="1657090594448" duration="51105000" />
+      <workItem from="1657090594448" duration="51194000" />
+      <workItem from="1657535081724" duration="5925000" />
+      <workItem from="1657547570689" duration="37668000" />
+      <workItem from="1657717836671" duration="15761000" />
+      <workItem from="1657803570807" duration="7790000" />
+      <workItem from="1658151951090" duration="9988000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>
@@ -138,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657183840524</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dashboard liste view">
+      <created>1657277571085</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657277571085</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +165,18 @@
     <MESSAGE value="Commit ore 15.28" />
     <MESSAGE value="Commit add files" />
     <MESSAGE value="Gestione navigazione nuovo/modifica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestione navigazione nuovo/modifica" />
+    <MESSAGE value="Dashboard liste view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard liste view" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/saga/projectsSaga.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,7 +14,7 @@ import { tabsDetails } from "../model/tabsItems";
 import { a11yProps, TabPanelProps } from "../layout/CustomMui";
 import { END_POINT_LOAD_IMAGE } from "../services/endpoint/URI_RESOURCES";
 
-function TabPanel(props: TabPanelProps) {
+export function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
   return (
     <div

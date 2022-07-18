@@ -3,10 +3,11 @@ import { useLocation, useMatch } from "@tanstack/react-location";
 import { emptyProject, Project } from "../model/models";
 import { cloneDeep, includes, upperCase } from "lodash";
 import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import { RootState, sagaAction } from "../store/store";
 import { Box, Divider, Fade, Paper, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import FormProgetto from "./forms/FormProgetto";
+import FormInfo2 from "./forms/FormInfo";
+import FormInfo from "./forms/FormInfo";
 import FormSteps from "./forms/FormSteps";
 import { PROJECT_EDIT } from "../utility/Routes";
 import ButtonsNavEdit from "../components/buttons/ButtonsNavEdit.";
@@ -18,6 +19,8 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import ArchitectureOutlinedIcon from "@mui/icons-material/ArchitectureOutlined";
 import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
 import PreviewIcon from "@mui/icons-material/Preview";
+import FormDescrizione from "./forms/FormDescrizione";
+import { SAGA_PROJECT } from "../saga/projectsSaga";
 
 const styleStack = {
   justifyContent: "space-between",
@@ -64,6 +67,9 @@ const EditNewContainer = () => {
       }
       //IN OGNI CASO
       //BE: AGGIUNGO PROGETTO
+
+      sagaAction(SAGA_PROJECT.INSERT_PROJECT, currentProject);
+
     }
 
   };
@@ -84,10 +90,10 @@ const EditNewContainer = () => {
   }, []);
 
   const navigationMap = [
-    <FormProgetto currentProject={currentProject} setField={setField} />,
-    <FormProgetto currentProject={currentProject} setField={setField} />,
+    <FormInfo currentProject={currentProject} setField={setField} />,
+    <FormDescrizione currentProject={currentProject} setField={setField} />,
     <FormSteps currentProject={currentProject} setField={setField} />,
-    <FormProgetto currentProject={currentProject} setField={setField} />
+    <FormInfo2 currentProject={currentProject} setField={setField} />
   ];
   return (
     <Fade timeout={1000} in={true} unmountOnExit>
@@ -104,6 +110,7 @@ const EditNewContainer = () => {
         <Paper sx={{ padding: 3 }}>
           <Box>
             <BottomNavigation
+              sx={{ justifyContent: "space-between" }}
               showLabels
               value={currentPage}
               onChange={(event, newValue) => {
@@ -117,7 +124,9 @@ const EditNewContainer = () => {
             </BottomNavigation>
           </Box>
           <Divider sx={{ my: 2 }} />
-          {navigationMap[currentPage]}
+          <Box sx={{ padding: 3 }}>
+            {navigationMap[currentPage]}
+          </Box>
         </Paper>
         <ButtonsNavEdit clear={clear} save={save} />
       </Box>

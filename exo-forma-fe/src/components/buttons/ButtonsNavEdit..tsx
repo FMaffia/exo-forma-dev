@@ -4,6 +4,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import SaveAsIcon from '@mui/icons-material/SaveAs'
 import { useNavigate } from '@tanstack/react-location'
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh'
+import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 
 interface ButtonProps {
     save: () => void;
@@ -12,9 +13,10 @@ interface ButtonProps {
 
 const ButtonsNavEdit = ({ save, clear }: ButtonProps) => {
     const navigate = useNavigate()
+
     return (
         <Stack direction="row" spacing={2} sx={{ my: 4 }}>
-            <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => navigate({ to: -1 })}>
+            <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => window.history.back()}>
                 Indietro
             </Button>
             <Button size="large" startIcon={<AutoFixHighIcon />} variant="contained" onClick={() => clear()}>
@@ -22,6 +24,9 @@ const ButtonsNavEdit = ({ save, clear }: ButtonProps) => {
             </Button>
             <Button size="large" startIcon={<SaveAsIcon />} variant="contained" onClick={() => save()}>
                 Salva
+            </Button>
+            <Button color={'secondary'} size="large" startIcon={<NavigateNextIcon />} variant="contained" onClick={() => save()}>
+                Avanti
             </Button>
         </Stack>
     )

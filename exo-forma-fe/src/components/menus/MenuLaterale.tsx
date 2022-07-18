@@ -9,7 +9,7 @@ import { RootState, sagaAction } from "../../store/store";
 import { SAGA_PROJECT } from "../../saga/projectsSaga";
 import { generateProjectItems } from "../../model/menuItems";
 import { MenuObject, Project } from "../../model/models";
-import Title from "../header/Title";
+import { Title } from "../header/Title";
 import { useLocation, useNavigate } from "@tanstack/react-location";
 import { useSelector } from "react-redux";
 import useMyStyle from "../../utility/useMyStyle";

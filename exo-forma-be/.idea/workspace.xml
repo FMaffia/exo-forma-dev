@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="FindAll con aggregazione lastStep dell'utente">
+    <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="aggregation x step array">
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/CategorieChips.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormDescrizione.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/alpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/beta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonsNavEdit..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/buttons/ButtonsNavEdit..tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/EditNewContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormProgetto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/model/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/saga/projectsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/saga/projectsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/services/ProjectServices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/ProjectServices.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/services/endpoint/URI_PROJECTS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/services/endpoint/URI_PROJECTS.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +71,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mongo" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -73,7 +90,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -140,6 +157,8 @@
       <workItem from="1657095069886" duration="3240000" />
       <workItem from="1657204088150" duration="2508000" />
       <workItem from="1657268481818" duration="969000" />
+      <workItem from="1657803567068" duration="1644000" />
+      <workItem from="1658151964782" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

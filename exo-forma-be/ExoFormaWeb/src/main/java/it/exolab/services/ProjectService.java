@@ -39,10 +39,17 @@ public class ProjectService {
     }
 
     @GetMapping(value = "/getStep/{projectId}/step/{stepIndex}")
-    public ResponseEntity<Project> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex) {
+    public ResponseEntity<StepProject> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
-        Project step = this.projectRepo.getStepByIndexAndIdProject(projectId, stepIndex);
+        StepProject step = this.projectRepo.getStepByIndexAndIdProject(projectId, stepIndex);
         return ResponseEntity.ok(step);
     }
+
+    @PostMapping(value = "/insert")
+    public ResponseEntity<String> insert(@RequestBody Project newProject) {
+        this.projectRepo.insert(newProject);
+        return ResponseEntity.ok("Il progetto è stato inserito correttamente");
+    }
+
 
 }

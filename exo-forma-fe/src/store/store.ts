@@ -7,11 +7,13 @@ import sessionStorage from 'redux-persist/es/storage/session'
 import createSagaMiddleware from 'redux-saga'
 import { createRootReducer } from './reducers'
 import { rootSagas } from '../saga'
+import { rootApi } from '../api/rootApi'
 
 export const history = createMemoryHistory()
 const persistConfig: PersistConfig<any> = {
     key: 'root',
     storage: sessionStorage
+    /* blacklist: [rootApi.reducerPath]*/
 }
 
 const persistedReducer = persistReducer(persistConfig, createRootReducer())
@@ -32,7 +34,9 @@ export const store = configureStore({
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: false
-        }).concat(sagaMiddleware),
+        })
+            .concat(sagaMiddleware)
+            .concat(rootApi.middleware),
     devTools: true,
     enhancers: [reduxBatch]
 })

@@ -6,7 +6,7 @@ import { setFilteredProjects } from "../store/reducers/projectsFilteredReducer";
 import { setStepsByProject } from "../store/reducers/selectedProject";
 import { setCurrentStep } from "../store/selectedStep";
 import { LOAD_STEPS } from "../utility/Constant";
-import { Project } from "../model/models";
+import { Project } from "../types/models";
 
 export const SAGA_PROJECT = {
   LOAD_PROJECTS: "SAGA_PROJECT/LOAD",

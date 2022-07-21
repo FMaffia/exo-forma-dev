@@ -1,12 +1,8 @@
-import React from 'react';
-import {FormProps} from "../../model/models";
+import React from 'react'
+import { FormProps } from '../../types/models'
 
-const FormSteps = ({currentProject: setCurrentProject}: FormProps) => {
-    return (
-        <div>
-            FORM STEPS
-        </div>
-    );
-};
+const FormSteps = ({ currentProject: setCurrentProject }: FormProps) => {
+    return <div>FORM STEPS</div>
+}
 
-export default FormSteps;
+export default FormSteps

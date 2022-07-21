@@ -5,14 +5,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { styled } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
-import { RootState, sagaAction } from "../../store/store";
-import { SAGA_PROJECT } from "../../saga/projectsSaga";
-import { generateProjectItems } from "../../model/menuItems";
-import { MenuObject, Project } from "../../model/models";
+import { RootState } from "../../store/store";
+import { generateProjectItems } from "../../types/menuItems";
+import { MenuObject, Project } from "../../types/models";
 import { Title } from "../header/Title";
 import { useLocation, useNavigate } from "@tanstack/react-location";
 import { useSelector } from "react-redux";
-import useMyStyle from "../../utility/useMyStyle";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 
@@ -25,16 +23,12 @@ const StyledMenuToolbar = styled(Toolbar)(({ theme }) => ({
   }
 }));
 const MenuLaterale = () => {
-  /*
-  const userMenuItems: MenuObject[] = generateUserMenuItems();
-*/
+
   const navigate = useNavigate();
   const location = useLocation();
-
   const [projectMenuItems, setProjectMenuItems] = useState<MenuObject[] | []>(
     []
   );
-  const { menuItemClass }: any = useMyStyle();
   const projects: Project[] = useSelector<RootState, Project[]>(
     (state) => state.projects
   );
@@ -45,9 +39,6 @@ const MenuLaterale = () => {
   const handleListItemClick = (menu: MenuObject) => {
     navigate({ to: menu.path });
   };
-  useEffect(() => {
-    sagaAction(SAGA_PROJECT.LOAD_PROJECTS);
-  }, []);
 
   return (
     <div>
@@ -75,23 +66,6 @@ const MenuLaterale = () => {
           </MenuItem>
         ))}
       </MenuList>
-      {/*<Divider />
-      <List>
-        {userMenuItems.map((menu: MenuObject, index) => {
-          index += +projectMenuItems.length;
-          return (
-            <ListItem key={menu.path} disablePadding>
-              <ListItemButton
-                selected={menu.path === location.history.location.pathname}
-                onClick={(event) => handleListItemClick(menu)}
-              >
-                <ListItemIcon>{menu.icon}</ListItemIcon>
-                <ListItemText primary={menu.menuLabel} />
-              </ListItemButton>
-            </ListItem>
-          );
-        })}
-      </List>*/}
     </div>
   );
 };

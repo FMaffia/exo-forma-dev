@@ -1,12 +1,12 @@
 import * as React from 'react'
 import MenuItem from '@mui/material/MenuItem'
-import { MenuObject, User } from '../../model/models'
+import { MenuObject, User } from '../../types/models'
 import { Box, Button, Chip, Menu, Stack, styled, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { useNavigate } from '@tanstack/react-location'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
-import { generateUserMenuItems } from '../../model/menuItems'
+import { generateUserMenuItems } from '../../types/menuItems'
 
 const CustomMenuTypography = styled(Typography)({
     color: grey['800'],

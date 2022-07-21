@@ -1,12 +1,10 @@
-import AjaxService from "./ajax-service";
-import {SpringResponse} from "../model/models";
-import {END_POINT_LOAD_IMAGE} from "./endpoint/URI_RESOURCES";
+import AjaxService from './ajax-service'
+import { SpringResponse } from '../types/models'
+import { END_POINT_LOAD_IMAGE } from './endpoint/URI_RESOURCES'
 
-const service = new AjaxService();
+const service = new AjaxService()
 
-export const performLoadImage = async (
-    pathName: string
-): Promise<SpringResponse> => {
+export const performLoadImage = async (pathName: string): Promise<SpringResponse> => {
     // @ts-ignore
-    return await service.callAjaxBlob("GET", END_POINT_LOAD_IMAGE + pathName);
-};
+    return await service.callAjaxBlob('GET', END_POINT_LOAD_IMAGE + pathName)
+}

@@ -9,7 +9,7 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined'
-import { Project } from '../../model/models'
+import { Project } from '../../types/models'
 import CardProjectViewer from './CardProjectViewer'
 
 interface ICardProps {

@@ -2,32 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="Dashboard liste view">
-      <change afterPath="$PROJECT_DIR$/src/containers/forms/CategorieChips.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/forms/FormDescrizione.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/beta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/beta_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/apiConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/projectsApi.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/rootApi.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/userApi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/breadcrumb/pathnames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/breadcrumb/pathnames.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonsNavEdit..tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/TitleFooter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/CardProjectViewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/CardProjectViewer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/EsploraProgettiCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/EsploraProgettiCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/HeaderDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/HeaderDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/MenuUtente.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuUtente.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/PanelUtenteDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/PanelUtenteDesktop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menus/MenuLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/MenuLaterale.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/NavigationDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/NavigationDrawer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormProgetto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/CategorieChips.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/CategorieChips.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormDescrizione.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormDescrizione.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/menuItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/menuItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tabsItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/tabsItems.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/saga/projectsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/projectsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/resourcesSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/resourcesSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/userSaga.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/ProjectServices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProjectServices.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ResourcesServices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ResourcesServices.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserServices.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_USER.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/projectsFilteredReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/projectsFilteredReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/projectsReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/projectsReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/selectedProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/selectedProject.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/uiReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/uiReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/userReducer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/selectedStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/selectedStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +80,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/api" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="optimize.imports.on.save" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\prettier" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\api" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\public" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\buttons" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\containers\forms" />
-      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\misc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
@@ -167,16 +192,6 @@
     <MESSAGE value="Gestione navigazione nuovo/modifica" />
     <MESSAGE value="Dashboard liste view" />
     <option name="LAST_COMMIT_MESSAGE" value="Dashboard liste view" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/saga/projectsSaga.ts</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

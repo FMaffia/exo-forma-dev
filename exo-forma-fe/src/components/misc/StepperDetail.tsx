@@ -1,15 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box, Skeleton, Step, StepContent, Stepper, Typography } from "@mui/material";
-import { RootState, sagaAction } from "../../store/store";
-import { SAGA_PROJECT } from "../../saga/projectsSaga";
+import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
-import { includes, range } from "lodash";
-import { LOAD_STEPS } from "../../utility/Constant";
-import { Project } from "../../model/models";
+import { range } from "lodash";
+import { Project } from "../../types/models";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import SimpleDialog from "./AlertDialog";
 import { grey, purple } from "@mui/material/colors";
+import { useGetStepsByIdQuery } from "../../api/projectsApi";
 
 
 const style = {
@@ -28,21 +27,12 @@ const style = {
 };
 const StepperDetail = () => {
   const [open, setOpen] = React.useState(false);
-  const loaders: string[] = useSelector<RootState, string[]>(
-    (state) => state.ui.loaders
-  );
-  const currentProject: Project = useSelector<RootState, Project>(
-    (state) => state.selectedProjects
-  );
+  const loaders: string[] = useSelector<RootState, string[]>((state) => state.ui.loaders);
+  const currentProject: Project = useSelector<RootState, Project>((state) => state.selectedProjects);
   const lastStep: number = currentProject.lastStep;
   const [activeStep, setActiveStep] = React.useState(lastStep - 1);
-  const steps = currentProject.steps || [];
-
-  const { stepStyle, activeStyle, completedStyle, lastStepStyle } = style;
-  useEffect(() => {
-    currentProject.id &&
-    sagaAction(SAGA_PROJECT.LOAD_STEPS_BY_PROJECT, currentProject.id);
-  }, []);
+  const { activeStyle } = style;
+  const { data: steps, isLoading } = useGetStepsByIdQuery(currentProject.id);
 
   const handleSelect = (stepIndex: number) => {
     setActiveStep(stepIndex);
@@ -55,39 +45,32 @@ const StepperDetail = () => {
   const BodyDialog = () => {
     return <Box component={"span"}>Sei sicuro di voler avviare lo step selezionato?</Box>;
   };
+
   const HeaderDialog = () => {
     return (
       <Typography color="primary">
-        <strong>{steps[activeStep]?.title}</strong>
+        <strong>{steps && steps[activeStep]?.title}</strong>
       </Typography>
     );
   };
 
   return (
     <Box sx={{ width: "100%", px: 3 }}>
+
       <p>Seleziona lo step da cui vuoi riprendere a progettare</p>
-      {includes(loaders, LOAD_STEPS)
+      {isLoading
         ? range(15).map((i) => <Skeleton key={i} />)
         : steps &&
         steps.length > 0 && (
           <Stepper
             orientation="vertical"
             activeStep={activeStep}
-            /*  classes={{
-                  root: style.stepStyle,
-              }}*/
             connector={<div />}
           >
             {steps.map((step) => (
               <Step
                 completed={step.completed}
                 key={step.title}
-                /*classes={{
-                    root: stepStyle,
-                    completed: completedStyle,
-                    // @ts-ignore
-                    active: activeStyle,
-                }}*/
               >
                 <Button
                   disabled={step.index >= lastStep}
@@ -97,13 +80,7 @@ const StepperDetail = () => {
                   <StepLabel
                     StepIconProps={{
                       classes: {
-                        /* root:
-                           step.index + 1 === lastStep
-                             ? lastStepStyle
-                             : stepStyle,
-                         completed: completedStyle,*/
-                        // @ts-ignore
-                        active: activeStyle
+                        active: activeStyle.color
                       }
                     }}
                   >
@@ -119,9 +96,6 @@ const StepperDetail = () => {
                     {step.index + 1 === lastStep ? "Riprendi" : "Ricomincia"}
                   </Button>
                 </StepContent>
-                {/*
-                    )}
-*/}
               </Step>
             ))}
           </Stepper>

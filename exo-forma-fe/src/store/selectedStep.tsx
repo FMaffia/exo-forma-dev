@@ -1,24 +1,24 @@
-import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { StepProject } from "../model/models";
+import { createSlice, PayloadAction, Slice } from '@reduxjs/toolkit'
+import { StepProject } from '../types/models'
 
 const currentStepState: StepProject = {
-  attachment: undefined,
-  completed: false,
-  desc: "",
-  link: "",
-  number: 1,
-  title: "",
-};
+    attachment: undefined,
+    completed: false,
+    desc: '',
+    link: '',
+    number: 1,
+    title: ''
+}
 
 const currentStepSlice: Slice<StepProject> = createSlice({
-  name: "currentStep",
-  initialState: currentStepState,
-  reducers: {
-    setCurrentStep(state, action: PayloadAction<StepProject>) {
-      return action.payload;
-    },
-  },
-});
+    name: 'currentStep',
+    initialState: currentStepState,
+    reducers: {
+        setCurrentStep(state, action: PayloadAction<StepProject>) {
+            return action.payload
+        }
+    }
+})
 
-export const { setCurrentStep } = currentStepSlice.actions;
-export default currentStepSlice.reducer;
+export const { setCurrentStep } = currentStepSlice.actions
+export default currentStepSlice.reducer

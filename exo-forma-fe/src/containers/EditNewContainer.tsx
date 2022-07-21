@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useMatch } from "@tanstack/react-location";
-import { emptyProject, Project } from "../model/models";
+import { emptyProject, Project } from "../types/models";
 import { cloneDeep, includes, upperCase } from "lodash";
 import { useSelector } from "react-redux";
 import { RootState, sagaAction } from "../store/store";

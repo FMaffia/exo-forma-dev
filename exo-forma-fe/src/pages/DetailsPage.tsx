@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Avatar, Box, Fade, Paper, Typography } from "@mui/material";
 import { useMatch } from "@tanstack/react-location";
 import { upperCase } from "lodash";
-import { Project } from "../model/models";
+import { Project } from "../types/models";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import ButtonBarDetails from "../components/buttons/ButtonBarDetails";
@@ -10,9 +10,10 @@ import { setSelectedProject } from "../store/reducers/selectedProject";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import HeaderDetail from "../components/details/HeaderDetail";
-import { tabsDetails } from "../model/tabsItems";
+import { tabsDetails } from "../types/tabsItems";
 import { a11yProps, TabPanelProps } from "../layout/CustomMui";
 import { END_POINT_LOAD_IMAGE } from "../services/endpoint/URI_RESOURCES";
+import { useGetProjectsQuery } from "../api/projectsApi";
 
 export function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
@@ -41,24 +42,19 @@ const DetailsPage = () => {
   } = useMatch();
   const dispatch = useDispatch();
   const [value, setValue] = React.useState(0);
+  const { data: projects, isLoading } = useGetProjectsQuery(null);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
-  const currentProject: Project = useSelector<RootState, Project>(
-    (state) => state.selectedProjects
-  );
-  const projects: Project[] = useSelector<RootState, Project[]>(
-    (state) => state.projects
-  );
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {setValue(newValue);};
+  const currentProject: Project = useSelector<RootState, Project>((state) => state.selectedProjects);
 
   useEffect(() => {
-    let found: Project | undefined = projects.find(
-      (p) => upperCase(p.path) === upperCase(projectPath)
-    );
-    if (found) {
-      dispatch(setSelectedProject(found));
+    if (projects !== undefined) {
+      let found: Project | undefined = projects.find(
+        (p) => upperCase(p.path) === upperCase(projectPath)
+      );
+      if (found) {
+        dispatch(setSelectedProject(found));
+      }
     }
   }, []);
 
@@ -67,12 +63,12 @@ const DetailsPage = () => {
       <Box sx={{ width: "100%", mt: 1 }}>
         <Paper>
           <Box sx={{ display: "flex", background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)" }}>
-            <Avatar
+            {!isLoading && <Avatar
               alt={currentProject.title}
               variant="square"
               src={END_POINT_LOAD_IMAGE + "?id=" + currentProject.id + ".jpg"}
               sx={{ width: "20rem", height: "inherit" }}
-            />
+            />}
             <HeaderDetail currentProject={currentProject} />
           </Box>
           <Box sx={{ borderBottom: 1, borderColor: "divider", px: 3, pt: 2 }}>

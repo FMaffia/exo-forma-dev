@@ -1,6 +1,6 @@
 import { END_POINT_INSERT_PROJECT, END_POINT_LOAD_PROJECT, END_POINT_LOAD_STEP, END_POINT_LOAD_STEPS_BY_ID } from './endpoint/URI_PROJECTS'
 import AjaxService from './ajax-service'
-import { Project, SpringResponse } from '../model/models'
+import { Project, SpringResponse } from '../types/models'
 import { PayloadStep } from '../saga/projectsSaga'
 
 const service = new AjaxService()

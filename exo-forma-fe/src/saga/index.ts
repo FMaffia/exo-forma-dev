@@ -1,8 +1,7 @@
-import "regenerator-runtime/runtime";
-import { all } from "redux-saga/effects";
-import { projectsSaga } from "./projectsSaga";
-import { userSaga } from "./userSaga";
+import 'regenerator-runtime/runtime'
+import { all } from 'redux-saga/effects'
+import { projectsSaga } from './projectsSaga'
 
 export function* rootSagas() {
-  yield all([projectsSaga(), userSaga()]);
+    yield all([projectsSaga()])
 }

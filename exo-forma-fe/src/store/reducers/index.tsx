@@ -1,16 +1,13 @@
-import {combineReducers} from "redux";
-import uiReducer from "./uiReducer";
-import userReducer from "./userReducer";
-import projectsReducer from "./projectsReducer";
-import selectedProject from "./selectedProject";
-import selectedStep from "../selectedStep";
+import { combineReducers } from 'redux'
+import uiReducer from './uiReducer'
+import selectedProject from './selectedProject'
+import selectedStep from '../selectedStep'
+import { rootApi } from '../../api/rootApi'
 
 export const createRootReducer = () =>
     combineReducers({
+        [rootApi.reducerPath]: rootApi.reducer,
         ui: uiReducer,
-        user: userReducer,
         currentStep: selectedStep,
-        selectedProjects: selectedProject,
-        projects: projectsReducer,
-        filteredProjects: projectsReducer,
-    });
+        selectedProjects: selectedProject
+    })

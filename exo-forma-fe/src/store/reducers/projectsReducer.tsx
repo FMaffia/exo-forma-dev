@@ -1,17 +1,17 @@
-import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { Project } from "../../model/models";
+import { createSlice, PayloadAction, Slice } from '@reduxjs/toolkit'
+import { Project } from '../../types/models'
 
-const projectsState: Project[] = [];
+const projectsState: Project[] = []
 
 const projectSlice: Slice<Project[]> = createSlice({
-  name: "projects",
-  initialState: projectsState,
-  reducers: {
-    setProjects(state, action: PayloadAction<Project[]>) {
-      return action.payload;
-    },
-  },
-});
+    name: 'projects',
+    initialState: projectsState,
+    reducers: {
+        setProjects(state, action: PayloadAction<Project[]>) {
+            return action.payload
+        }
+    }
+})
 
-export const { setProjects } = projectSlice.actions;
-export default projectSlice.reducer;
+export const { setProjects } = projectSlice.actions
+export default projectSlice.reducer

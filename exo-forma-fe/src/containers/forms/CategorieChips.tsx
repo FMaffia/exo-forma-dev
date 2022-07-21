@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FormProps } from "../../model/models";
+import { FormProps } from "../../types/models";
 import { Box, Chip, FormHelperText, IconButton, TextField } from "@mui/material";
 import TagIcon from "@mui/icons-material/Tag";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
@@ -14,7 +14,7 @@ const CategorieChips = ({ currentProject, setField }: FormProps) => {
   const categories: string[] = currentProject.categories;
   const [categoriesView, setCategoryView] = useState<ChipData[]>([]);
   const [data, setData] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
+  const [error] = useState<boolean>(false);
 
   useEffect(() => {
     if (categories.length > 0) {

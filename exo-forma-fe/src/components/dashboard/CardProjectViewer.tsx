@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from '../../model/models'
+import { Project } from '../../types/models'
 import { Box, CardActionArea, Grid, LinearProgress } from '@mui/material'
 import { PROJECT_ROOT } from '../../utility/Routes'
 import CardHeader from '@mui/material/CardHeader'

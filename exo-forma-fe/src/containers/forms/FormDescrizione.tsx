@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormProps } from '../../model/models'
+import { FormProps } from '../../types/models'
 import { Stack, TextField } from '@mui/material'
 
 const FormDescrizione = ({ currentProject, setField }: FormProps) => {

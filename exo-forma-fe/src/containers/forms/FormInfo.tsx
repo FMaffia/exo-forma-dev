@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { FormProps } from '../../model/models'
+import { FormProps } from '../../types/models'
 import { Box, Rating, Stack, styled, TextField, Typography } from '@mui/material'
 import { DatePicker } from '@mui/x-date-pickers'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'

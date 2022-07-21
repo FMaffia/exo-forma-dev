@@ -1,21 +1,20 @@
-import {createSlice, PayloadAction, Slice} from "@reduxjs/toolkit";
-import {emptyProject, Project, Steps} from "../../model/models";
+import { createSlice, PayloadAction, Slice } from '@reduxjs/toolkit'
+import { emptyProject, Project, Steps } from '../../types/models'
 
-const selectedProjectState: Project = emptyProject;
+const selectedProjectState: Project = emptyProject
 
 const selectedProjectSlice: Slice<Project> = createSlice({
-    name: "selectedProjects",
+    name: 'selectedProjects',
     initialState: selectedProjectState,
     reducers: {
         setSelectedProject(state, action: PayloadAction<Project>) {
-            return action.payload;
+            return action.payload
         },
         setStepsByProject(state, action: PayloadAction<Steps[]>) {
-            state.steps = action.payload;
-        },
-    },
-});
+            state.steps = action.payload
+        }
+    }
+})
 
-export const {setSelectedProject, setStepsByProject} =
-    selectedProjectSlice.actions;
-export default selectedProjectSlice.reducer;
+export const { setSelectedProject, setStepsByProject } = selectedProjectSlice.actions
+export default selectedProjectSlice.reducer

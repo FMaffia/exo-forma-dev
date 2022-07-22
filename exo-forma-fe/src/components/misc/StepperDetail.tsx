@@ -93,7 +93,7 @@ const StepperDetail = () => {
                     onClick={() => handleStart()}
                     size="small"
                   >
-                    {step.index + 1 === lastStep ? "Riprendi" : "Ricomincia"}
+                    {step.index + 1 === lastStep ? "Continua" : "Ricomincia"}
                   </Button>
                 </StepContent>
               </Step>

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useMatch } from "@tanstack/react-location";
 import { emptyProject, Project } from "../types/models";
 import { cloneDeep, includes, upperCase } from "lodash";
-import { useSelector } from "react-redux";
-import { RootState, sagaAction } from "../store/store";
+import { sagaAction } from "../store/store";
 import { Box, Divider, Fade, Paper, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import FormInfo2 from "./forms/FormInfo";
@@ -21,6 +20,7 @@ import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOu
 import PreviewIcon from "@mui/icons-material/Preview";
 import FormDescrizione from "./forms/FormDescrizione";
 import { SAGA_PROJECT } from "../saga/projectsSaga";
+import { useGetProjectsQuery } from "../api/projectsApi";
 
 const styleStack = {
   justifyContent: "space-between",
@@ -32,9 +32,8 @@ const EditNewContainer = () => {
   const [currentProject, setCurrentProject] = useState<Project>(emptyProject);
   const [backupCurrentProject, setBackupCurrentProject] = useState<Project>(emptyProject);
   const location = useLocation();
-  const projects: Project[] = useSelector<RootState, Project[]>(
-    (state) => state.projects
-  );
+  const { data: projects, isLoading } = useGetProjectsQuery(null);
+
   const {
     params: { projectPath }
   } = useMatch();
@@ -78,8 +77,8 @@ const EditNewContainer = () => {
   };
 
   useEffect(() => {
-    if (isModifica) {
-      let found: Project | undefined = projects.find(
+    if (isModifica && !isLoading) {
+      let found: Project | undefined = projects?.find(
         (p) => upperCase(p.path) === upperCase(projectPath)
       );
       if (found) {

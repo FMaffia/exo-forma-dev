@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { FormProps } from '../../types/models'
-import { Box, Rating, Stack, styled, TextField, Typography } from '@mui/material'
+import { Box, Divider, Rating, Stack, styled, TextField, Typography } from '@mui/material'
 import { DatePicker } from '@mui/x-date-pickers'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
@@ -92,6 +92,7 @@ const FormInfo = ({ currentProject, setField }: FormProps) => {
                 </LocalizationProvider>
             </Box>
             <Box sx={{ display: 'flex' }}>
+                <Divider />
                 <TextField
                     helperText={`Il path del progetto sarà: ${normalizePath(currentProject.title)}`}
                     sx={{

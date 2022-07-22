@@ -2,7 +2,6 @@ import { all, call, put, takeLeading } from "redux-saga/effects";
 import { addLoaders, disableLoading, enableLoading, removeLoaders, setMessage } from "../store/reducers/uiReducer";
 import { performInsertProject, performLoadProjects, performLoadStep, performLoadStepsById } from "../services/ProjectServices";
 import { setProjects } from "../store/reducers/projectsReducer";
-import { setFilteredProjects } from "../store/reducers/projectsFilteredReducer";
 import { setStepsByProject } from "../store/reducers/selectedProject";
 import { setCurrentStep } from "../store/selectedStep";
 import { LOAD_STEPS } from "../utility/Constant";
@@ -45,7 +44,6 @@ function* loadProjects() {
     const response: any = yield call(performLoadProjects);
     if (response.success) {
       yield put(setProjects(response.result));
-      yield put(setFilteredProjects(response.result));
     } else {
       console.log(response.errorCode);
     }

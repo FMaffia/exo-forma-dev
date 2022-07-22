@@ -3,7 +3,8 @@ import { Navigate, Route } from '@tanstack/react-location'
 import RisultatiRicerca from '../containers/ricerca/RisultatiRicerca'
 import DetailsPage from '../pages/DetailsPage'
 import EditNewContainer from '../containers/EditNewContainer'
-import DetailsStep from '../pages/DetailsStep'
+import HomeMenu from '../components/menus/HomeMenu'
+import StepMenu from '../components/menus/StepMenu'
 
 export const privateRoutes: Route[] = [
     {
@@ -15,14 +16,6 @@ export const privateRoutes: Route[] = [
         children: [
             {
                 path: '/',
-                element: <RisultatiRicerca />
-            },
-            {
-                path: 'in-corso',
-                element: <RisultatiRicerca />
-            },
-            {
-                path: 'completati',
                 element: <RisultatiRicerca />
             },
             {
@@ -46,7 +39,7 @@ export const privateRoutes: Route[] = [
                             },
                             {
                                 path: ':numberStep',
-                                element: <DetailsStep />
+                                element: <DetailsPage />
                             }
                         ]
                     }
@@ -85,5 +78,24 @@ export const publicRoutes = [
     {
         path: 'login',
         element: <LoginContainer />
+    }
+]
+export const menuRoutes = [
+    {
+        path: '/progetti',
+        children: [
+            {
+                path: '/',
+                element: <HomeMenu />
+            },
+            {
+                path: '/dettaglio',
+                element: <StepMenu />
+            },
+            {
+                path: '*',
+                element: <HomeMenu />
+            }
+        ]
     }
 ]

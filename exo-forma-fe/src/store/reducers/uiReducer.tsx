@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { MenuObject, Message, UiState } from "../../types/models";
+import { MenuFilter, MenuObject, Message, UiState } from "../../types/models";
 import { remove, uniq } from "lodash";
 
 const initialState: UiState = {
   loading: false,
   loaders: [],
   message: { show: false, type: "Success", body: "" },
-  menu: []
+  menu: [],
+  menuFilter: MenuFilter.TUTTI
 };
 const uiSlice: Slice<UiState> = createSlice({
   name: "ui",
@@ -23,6 +24,9 @@ const uiSlice: Slice<UiState> = createSlice({
     },
     setMessage(state, action: PayloadAction<Message>) {
       state.message = action.payload;
+    },
+    setMenuFilter(state, action: PayloadAction<MenuFilter>) {
+      state.menuFilter = action.payload;
     },
     hideMessage(state, action: PayloadAction<Message>) {
       state.message = {
@@ -49,6 +53,7 @@ export const {
   setMessage,
   hideMessage,
   addLoaders,
+  setMenuFilter,
   removeLoaders
 } = uiSlice.actions;
 export default uiSlice.reducer;

@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import { Box, CardActionArea, Chip, Fab, Fade, LinearProgress } from '@mui/material'
-import { useNavigate } from '@tanstack/react-location'
+import { useLocation, useNavigate } from '@tanstack/react-location'
 import { PROJECT_EDIT } from '../../utility/Routes'
 import { END_POINT_LOAD_IMAGE } from '../../services/endpoint/URI_RESOURCES'
 import { purple } from '@mui/material/colors'
@@ -27,8 +27,8 @@ const CardProject = ({ project }: Prop) => {
     const navigate = useNavigate()
 
     const calculatePerc = project.lastStep ? (project.lastStep * 100) / project.stepsCount : undefined
-    const location = window.location
-    const isModifica = location.pathname === PROJECT_EDIT
+    const location = useLocation()
+    const isModifica = location.history.location.pathname === PROJECT_EDIT
     const [, { data: user }] = useCheckUserMutation({ fixedCacheKey: 'userKey' })
     const permissions: string[] | undefined = user?.permissions
     const completed: boolean = project.lastStep === project.stepsCount

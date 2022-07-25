@@ -67,6 +67,27 @@ public class ProjectRepository {
         return aggRes.getMappedResults();
     }
 
+    public ProjectCard findProjectByPath(String path) {
+
+        String idUser = "62a85bce9512066fdab1bfb7";
+
+        //escludiamo le cose non necessarie dal risultato
+        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is("/" + path));
+
+
+        ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();
+        pipelineOperations.add(matchOperation);
+        pipelineOperations.addAll(aggregateProjectJoins(idUser, true));
+        pipelineOperations.add(projection);
+
+        //assemblaggio, l'ordine è importante
+        Aggregation agg = Aggregation.newAggregation(ProjectCard.class, pipelineOperations);
+
+
+        AggregationResults<ProjectCard> aggRes = mongoTemplate.aggregate(agg, Project.class, ProjectCard.class);
+        return aggRes.getUniqueMappedResult();
+    }
 
     public Project getStepsByIdProject(String id) {
         String idUser = "62a85bce9512066fdab1bfb7";

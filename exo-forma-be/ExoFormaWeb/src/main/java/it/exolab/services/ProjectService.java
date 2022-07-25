@@ -31,6 +31,14 @@ public class ProjectService {
         return ResponseEntity.ok(this.projectRepo.findAll());
     }
 
+    @GetMapping(value = "/path/{path}")
+    public ResponseEntity<ProjectCard> getProjectByPath(@PathVariable String path) {
+        log.debug("-----> PROJECT_SERVICES: Get project by path: " + path);
+        ProjectCard response = this.projectRepo.findProjectByPath(path);
+        return ResponseEntity.ok(response);
+    }
+
+
     @GetMapping(value = "/getSteps/{projectId}")
     public ResponseEntity<List<StepProject>> getSteps(@PathVariable String projectId) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);

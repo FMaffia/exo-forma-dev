@@ -6,7 +6,7 @@ import { Project } from '../../types/models'
 import CreateIcon from '@mui/icons-material/Create'
 
 export interface HeaderProps {
-    currentProject: Project;
+    currentProject: Project | undefined;
 }
 
 const HeaderDetail = ({ currentProject }: HeaderProps) => {
@@ -26,7 +26,7 @@ const HeaderDetail = ({ currentProject }: HeaderProps) => {
                 </Box>
             </Typography>
             <Stack direction={'row'} spacing={2} sx={{ alignItems: 'center', py: 2 }}>
-                {currentProject.categories.map(c => (
+                {currentProject?.categories.map(c => (
                     <Chip key={c} color="secondary" label={`#${c}`} size="medium" />
                 ))}
             </Stack>

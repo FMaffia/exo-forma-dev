@@ -103,7 +103,7 @@ export const Layout = () => {
       </ContainerHeader>
       <Box sx={{ display: "flex" }}>
         <Router location={location} routes={menuRoutes}>
-          {notStartedYet || <DrawnerLaterale />}
+          <DrawnerLaterale />
         </Router>
         <ContainerMain maxWidth={false}>
           <CssBaseline />

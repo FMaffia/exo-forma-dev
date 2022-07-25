@@ -4,9 +4,9 @@ import { Box, Grid } from '@mui/material'
 import CardProject from '../../components/ricerca/CardProject'
 import { useGetProjectsQuery } from '../../api/projectsApi'
 import { cloneDeep } from 'lodash'
-
+/*{ refetchOnMountOrArgChange: true }*/
 const RisultatiRicerca = () => {
-    const { data, isLoading } = useGetProjectsQuery(null)
+    const { data, isLoading } = useGetProjectsQuery('', { refetchOnMountOrArgChange: true })
     const filteredProjects: Project[] | undefined = cloneDeep(data)
     return (
         <Box

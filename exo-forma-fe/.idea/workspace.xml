@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="****">
-      <change afterPath="$PROJECT_DIR$/src/components/details/BodyDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/details/CircularProgress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/details/StepIndicator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" afterDir="false" />
+    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="Pagina dettaglio ok">
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menus/MenuBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/CustomMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/apiConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/apiConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/projectsApi.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/HeaderDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/HeaderDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" afterDir="false" />
@@ -44,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/menus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/layout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,11 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\layout" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\menus" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\api" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\public" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
-      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\buttons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
@@ -105,7 +105,7 @@
       <workItem from="1658151951090" duration="9988000" />
       <workItem from="1658476653245" duration="2705000" />
       <workItem from="1658490254388" duration="16619000" />
-      <workItem from="1658735587671" duration="12379000" />
+      <workItem from="1658735587671" duration="19433000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>
@@ -149,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658508181711</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pagina dettaglio ok">
+      <created>1658748133464</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658748133464</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +181,8 @@
     <MESSAGE value="Dashboard liste view" />
     <MESSAGE value="RTK Query" />
     <MESSAGE value="****" />
-    <option name="LAST_COMMIT_MESSAGE" value="****" />
+    <MESSAGE value="Pagina dettaglio ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagina dettaglio ok" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -94,7 +94,7 @@ export const menuRoutes = [
                 element: <HomeMenu />
             },
             {
-                path: '/dettaglio',
+                path: '/dettaglio/:projectPath',
                 element: <DetailsMenu />
             },
             {

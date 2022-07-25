@@ -32,7 +32,7 @@ const EditNewContainer = () => {
   const [currentProject, setCurrentProject] = useState<Project>(emptyProject);
   const [backupCurrentProject, setBackupCurrentProject] = useState<Project>(emptyProject);
   const location = useLocation();
-  const { data: projects, isLoading } = useGetProjectsQuery(null);
+  const { data: projects, isLoading } = useGetProjectsQuery();
 
   const {
     params: { projectPath }

@@ -5,31 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="aggregation x step array">
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/HomeMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/StepMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/UserInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/BodyDetails.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/details/CircularProgress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/DetailsMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/view/StepView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/view/StepView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/api/projectsApi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/breadcrumb/pathnames.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/MenuUtente.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/PanelUtenteDesktop.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/MenuLaterale.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/misc/StepperDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/EditNewContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/NavigationDrawer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/forms/FormInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/MenuBar.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/DrawnerLaterale.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/pages/DetailsStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/saga/projectsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/saga/projectsSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/store/reducers/projectsFilteredReducer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/store/reducers/uiReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/store/reducers/uiReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/types/menuItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/types/menuItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/types/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/types/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/RoutesMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/RoutesMap.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +152,7 @@
       <workItem from="1657803567068" duration="1644000" />
       <workItem from="1658151964782" duration="925000" />
       <workItem from="1658476670872" duration="817000" />
-      <workItem from="1658490129865" duration="1979000" />
+      <workItem from="1658490129865" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

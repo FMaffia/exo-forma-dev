@@ -1,10 +1,13 @@
 import LoginContainer from '../containers/LoginContainer'
-import { Navigate, Route } from '@tanstack/react-location'
+import { Navigate, ReactLocation, Route } from '@tanstack/react-location'
 import RisultatiRicerca from '../containers/ricerca/RisultatiRicerca'
 import DetailsPage from '../pages/DetailsPage'
 import EditNewContainer from '../containers/EditNewContainer'
 import HomeMenu from '../components/menus/HomeMenu'
-import StepMenu from '../components/menus/StepMenu'
+import DetailsMenu from '../components/menus/DetailsMenu'
+import BodyDetails from '../components/details/BodyDetails'
+
+export const location = new ReactLocation()
 
 export const privateRoutes: Route[] = [
     {
@@ -32,14 +35,15 @@ export const privateRoutes: Route[] = [
                     },
                     {
                         path: ':projectPath',
+                        element: <DetailsPage />,
                         children: [
                             {
                                 path: '/',
-                                element: <DetailsPage />
+                                element: <BodyDetails />
                             },
                             {
                                 path: ':numberStep',
-                                element: <DetailsPage />
+                                element: <p>Step details</p>
                             }
                         ]
                     }
@@ -80,6 +84,7 @@ export const publicRoutes = [
         element: <LoginContainer />
     }
 ]
+
 export const menuRoutes = [
     {
         path: '/progetti',
@@ -90,7 +95,7 @@ export const menuRoutes = [
             },
             {
                 path: '/dettaglio',
-                element: <StepMenu />
+                element: <DetailsMenu />
             },
             {
                 path: '*',

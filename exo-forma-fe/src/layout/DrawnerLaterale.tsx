@@ -19,8 +19,6 @@ const DrawnerLaterale = () => {
             }}
         >
             <Box sx={{ height: '100vh!important', width: drawerWidth, overflow: 'auto', position: 'inherit!important' }}>
-                {/*<HomeMenu />*/}
-                {/*<StepMenu />*/}
                 <Outlet />
             </Box>
         </Drawer>

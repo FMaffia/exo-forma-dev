@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Avatar, Box, Fade, Paper } from "@mui/material";
-import { useMatch } from "@tanstack/react-location";
+import { Outlet, useMatch } from "@tanstack/react-location";
 import { upperCase } from "lodash";
 import { Project } from "../types/models";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +10,14 @@ import { setSelectedProject } from "../store/reducers/selectedProject";
 import HeaderDetail from "../components/details/HeaderDetail";
 import { END_POINT_LOAD_IMAGE } from "../services/endpoint/URI_RESOURCES";
 import { useGetProjectsQuery } from "../api/projectsApi";
-import DetailsStep from "./DetailsStep";
+import { styled } from "@mui/styles";
+
+const ContainerButtonStart = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  flexGrow: 2
+}));
 
 
 const DetailsPage = () => {
@@ -31,11 +38,10 @@ const DetailsPage = () => {
       }
     }
   }, []);
-
   return (
     <Fade timeout={1000} in={true} unmountOnExit>
       <Box sx={{ width: "100%", mt: 1 }}>
-        <Paper>
+        <Paper sx={{ mb: 2 }}>
           <Box sx={{ display: "flex", background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)" }}>
             {currentProject && <Avatar
               alt={currentProject.title}
@@ -44,13 +50,21 @@ const DetailsPage = () => {
               sx={{ width: "20rem", height: "inherit" }}
             />}
             <HeaderDetail currentProject={currentProject} />
+            <ContainerButtonStart>
+              <Paper sx={{ width: "5rem" }}>
+
+              </Paper>
+            </ContainerButtonStart>
           </Box>
-          <DetailsStep />
         </Paper>
-        <ButtonBarDetails />
+
+        <Outlet />
+
+        <ButtonBarDetails started={currentProject.lastStep !== 0} />
       </Box>
     </Fade>
   );
 };
+
 
 export default DetailsPage;

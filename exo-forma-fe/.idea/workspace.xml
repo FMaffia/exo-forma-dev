@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="RTK Query">
-      <change afterPath="$PROJECT_DIR$/src/components/menus/HomeMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menus/StepMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menus/UserInfo.tsx" afterDir="false" />
+    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="****">
+      <change afterPath="$PROJECT_DIR$/src/components/details/BodyDetails.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/details/CircularProgress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/details/StepIndicator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/view/StepView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/view/StepView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/apiConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/apiConstants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/projectsApi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/breadcrumb/pathnames.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuUtente.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/PanelUtenteDesktop.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menus/MenuLaterale.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/misc/StepperDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ricerca/CardProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditNewContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/NavigationDrawer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/forms/FormInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/MenuBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/CustomMui.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/saga/projectsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/projectsSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/projectsFilteredReducer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/uiReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/uiReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/menuItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/menuItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +104,8 @@
       <workItem from="1657803570807" duration="7790000" />
       <workItem from="1658151951090" duration="9988000" />
       <workItem from="1658476653245" duration="2705000" />
-      <workItem from="1658490254388" duration="16368000" />
+      <workItem from="1658490254388" duration="16619000" />
+      <workItem from="1658735587671" duration="12379000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>
@@ -157,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658417080645</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="****">
+      <created>1658508181710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658508181711</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +173,8 @@
     <MESSAGE value="Gestione navigazione nuovo/modifica" />
     <MESSAGE value="Dashboard liste view" />
     <MESSAGE value="RTK Query" />
-    <option name="LAST_COMMIT_MESSAGE" value="RTK Query" />
+    <MESSAGE value="****" />
+    <option name="LAST_COMMIT_MESSAGE" value="****" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

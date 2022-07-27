@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import List from '@mui/material/List'
 import { Divider, Typography } from '@mui/material'
 import { purple } from '@mui/material/colors'
@@ -13,7 +13,6 @@ import { stepMenuFunc } from '../../types/menuItems'
 import StepIndicator from '../details/StepIndicator'
 
 const StepMenu = () => {
-    const [open, setOpen] = React.useState(false)
     const navigate = useNavigate()
     const {
         params: { projectPath }
@@ -22,12 +21,22 @@ const StepMenu = () => {
         params: { numberStep }
     } = useMatch()
     const { data: currentProject } = useGetDetailsQuery(projectPath)
-    const { data: steps } = useGetStepsByIdQuery(currentProject?.id, { skip: !currentProject?.id })
+    const { data: steps } = useGetStepsByIdQuery(currentProject?.id, { skip: !currentProject?.id, refetchOnMountOrArgChange: true })
 
     const handleClick = (menu: MenuObject) => {
-        let basePath = `/progetti/dettaglio/${currentProject?.path}`
-        navigate({ to: basePath + menu.path })
+        // @ts-ignore
+        if (menu?.number <= currentProject?.lastStep) {
+            let basePath = `/progetti/dettaglio/${currentProject?.path}`
+            navigate({ to: basePath + menu.path })
+        }
     }
+
+    useEffect(() => {
+        // @ts-ignore
+        const element = document.getElementById(`step-${numberStep}`)
+        element?.scrollIntoView({ behavior: 'smooth' })
+    }, [numberStep])
+
     return (
         <List>
             <Typography sx={{ p: 2, fontWeight: 600, pb: 1 }} variant={'h5'} color={'inherit'}>
@@ -37,7 +46,7 @@ const StepMenu = () => {
             <Divider />
             {steps &&
                 stepMenuFunc(steps).map(menu => (
-                    <ListItem selected={+numberStep === menu.number} key={menu.menuLabel} disablePadding>
+                    <ListItem selected={+numberStep === menu.number} key={menu.menuLabel} disablePadding id={`step-${menu.number}`}>
                         <ListItemButton onClick={() => handleClick(menu)}>
                             <ListItemIcon sx={{ color: theme => (+numberStep === menu.number ? theme.palette.primary.main : 'gray') }}>
                                 {menu.icon}

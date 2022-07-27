@@ -7,10 +7,10 @@ import { useMatch, useNavigate } from '@tanstack/react-location'
 import { useGetDetailsQuery, useGetStepByNumberQuery } from '../../api/projectsApi'
 
 interface Props {
-    handleChange: any;
+    setDirection: any;
 }
 
-const PaginationSteps = ({ handleChange }: Props) => {
+const PaginationSteps = ({ setDirection }: Props) => {
     const {
         params: { numberStep }
     } = useMatch()
@@ -23,11 +23,12 @@ const PaginationSteps = ({ handleChange }: Props) => {
     const navigate = useNavigate()
 
     const goPrevious = () => {
+        setDirection('right')
         navigate({ to: '/progetti/dettaglio/' + projectPath + '/step/' + (+numberStep - 1) })
     }
     const goNext = () => {
+        setDirection('left')
         navigate({ to: '/progetti/dettaglio/' + projectPath + '/step/' + (+numberStep + 1) })
-        handleChange()
     }
     return (
         <MobileStepper

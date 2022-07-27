@@ -4,6 +4,7 @@ export type MenuObject = {
   number?: number,
   path: string,
   icon?: any,
+  disabled?: boolean,
   filter: MenuFilter
 }
 

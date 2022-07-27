@@ -1,16 +1,19 @@
 import React from 'react'
 import { Avatar, Box, Fade, Paper } from '@mui/material'
-import { Outlet, useMatch } from '@tanstack/react-location'
+import { Outlet, useLocation, useMatch } from '@tanstack/react-location'
 import ButtonBarDetails from '../components/buttons/ButtonBarDetails'
 import HeaderDetail from '../components/details/HeaderDetail'
 import { END_POINT_LOAD_IMAGE } from '../services/endpoint/URI_RESOURCES'
 import { useGetDetailsQuery } from '../api/projectsApi'
+import { includes } from 'lodash'
 
 const DetailsPage = () => {
     const {
         params: { projectPath }
     } = useMatch()
-    const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath)
+    const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath, { refetchOnMountOrArgChange: true })
+    const location = useLocation()
+    const isStep = includes(location.current.pathname, 'step')
 
     return (
         <Fade timeout={1000} in={true} unmountOnExit>
@@ -29,7 +32,7 @@ const DetailsPage = () => {
                     </Box>
                 </Paper>
                 <Outlet />
-                <ButtonBarDetails started={currentProject?.lastStep !== 0} />
+                {!isStep && <ButtonBarDetails started={currentProject?.lastStep !== 0} />}
             </Box>
         </Fade>
     )

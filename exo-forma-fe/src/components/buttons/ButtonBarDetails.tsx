@@ -6,7 +6,6 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt'
 import { useLocation, useMatch, useNavigate } from '@tanstack/react-location'
 import { useGetDetailsQuery } from '../../api/projectsApi'
 import ConfirmDialog from '../misc/ConfirmDialog'
-import { includes } from 'lodash'
 
 interface ButtonProps {
     started: boolean;
@@ -21,7 +20,6 @@ const ButtonBarDetails = ({ started }: ButtonProps) => {
     const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath)
     const navigate = useNavigate()
     const location = useLocation()
-    const isStep = includes(location.current.pathname, 'step')
 
     const restartAction = () => {
         navigate({ to: '/progetti/dettaglio/' + projectPath + '/step/1' })
@@ -34,21 +32,21 @@ const ButtonBarDetails = ({ started }: ButtonProps) => {
 
     return (
         <Stack direction="row" spacing={2} sx={{ mt: 4, mb: 2 }}>
-            <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => navigate({ to: '/progetti' })}>
-                Indietro
-            </Button>
-            {isStep || (
-                <>
-                    <Button variant="contained" size="large" startIcon={<PlayCircleFilledIcon />} onClick={() => setTriggerRestart(true)}>
-                        Inizia
+            <div>
+                <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => navigate({ to: '/progetti' })}>
+                    Indietro
+                </Button>
+            </div>
+            <>
+                <Button variant="contained" size="large" startIcon={<PlayCircleFilledIcon />} onClick={() => setTriggerRestart(true)}>
+                    Inizia
+                </Button>
+                {started && (
+                    <Button variant="contained" size="large" startIcon={<RestartAltIcon />} onClick={() => setTriggerContinue(true)}>
+                        Riprendi
                     </Button>
-                    {started && (
-                        <Button variant="contained" size="large" startIcon={<RestartAltIcon />} onClick={() => setTriggerContinue(true)}>
-                            Riprendi
-                        </Button>
-                    )}
-                </>
-            )}
+                )}
+            </>
             <ConfirmDialog
                 body={`Sei sicuro di ricominciare il progetto ?`}
                 open={triggerRestart}

@@ -6,7 +6,7 @@ import { Outlet, ReactLocation, Router } from "@tanstack/react-location";
 import { useCheckUserMutation } from "../api/userApi";
 import { Project, User } from "../types/models";
 import { QueryStatus } from "@reduxjs/toolkit/dist/query/react";
-import DrawnerLaterale from "./DrawnerLaterale";
+import DrawnerLaterale, { drawerWidth } from "./DrawnerLaterale";
 import { location, menuRoutes, privateRoutes, publicRoutes } from "../utility/RoutesMap";
 import DynamicBreadCrumb from "../utility/DynamicBreadCrumb";
 import { useSelector } from "react-redux";
@@ -54,7 +54,8 @@ const ContainerHeader = styled(Container)(({ theme }) => ({
     display: "flex",
     padding: "1rem",
     background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)",
-    borderBottom: `5px ${theme.palette.secondary.light} solid`
+    borderBottom: `5px ${theme.palette.secondary.light} solid`,
+    marginLeft: drawerWidth
   }
 }));
 const ContainerMain = styled(Container)(({ theme }) => ({
@@ -75,7 +76,8 @@ const ContainerFooter = styled(Container)(({ theme }) => ({
     display: "flex",
     padding: "1rem",
     background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)",
-    borderTop: `5px ${theme.palette.secondary.light} solid`
+    borderTop: `5px ${theme.palette.secondary.light} solid`,
+    marginLeft: drawerWidth
   }
 }));
 

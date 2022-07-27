@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="chiamata al dettaglio separata">
-      <change afterPath="$PROJECT_DIR$/src/components/details/PaginationSteps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/projectsApi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/BodyDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/BodyDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/StepIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/StepIndicator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/PaginationSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/PaginationSteps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menus/StepMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/StepMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/CustomMui.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/menuItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/menuItems.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/RoutesMap.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +104,7 @@
       <workItem from="1658476653245" duration="2705000" />
       <workItem from="1658490254388" duration="16619000" />
       <workItem from="1658735587671" duration="19537000" />
-      <workItem from="1658828378824" duration="26129000" />
+      <workItem from="1658828378824" duration="40074000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>

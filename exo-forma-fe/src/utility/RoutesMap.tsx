@@ -6,6 +6,8 @@ import EditNewContainer from '../containers/EditNewContainer'
 import HomeMenu from '../components/menus/HomeMenu'
 import DetailsMenu from '../components/menus/DetailsMenu'
 import BodyDetails from '../components/details/BodyDetails'
+import DetailsStep from '../pages/DetailsStep'
+import StepMenu from '../components/menus/StepMenu'
 
 export const location = new ReactLocation()
 
@@ -42,8 +44,12 @@ export const privateRoutes: Route[] = [
                                 element: <BodyDetails />
                             },
                             {
-                                path: ':numberStep',
-                                element: <p>Step details</p>
+                                path: 'step/:numberStep',
+                                element: <DetailsStep />
+                            },
+                            {
+                                path: '/step',
+                                element: <p>Nessuna pagina trovata</p>
                             }
                         ]
                     }
@@ -94,8 +100,22 @@ export const menuRoutes = [
                 element: <HomeMenu />
             },
             {
-                path: '/dettaglio/:projectPath',
-                element: <DetailsMenu />
+                path: 'dettaglio',
+                children: [
+                    {
+                        path: ':projectPath',
+                        children: [
+                            {
+                                path: '/',
+                                element: <DetailsMenu />
+                            },
+                            {
+                                path: 'step/:numberStep',
+                                element: <StepMenu />
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 path: '*',

@@ -24,4 +24,5 @@ public class ProjectUserService {
         List<ProjectUser> myProjects = projectUserRepository.getProjectsByUser(user.getId());
         return ResponseEntity.ok(myProjects);
     }
+    
 }

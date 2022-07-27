@@ -30,7 +30,8 @@ const projectsApi = rootApi.injectEndpoints({
         } else {
           return `${GET_STEP_BY_NUMBER}${queryArgs.idProject}/step/${queryArgs.number}`;
         }
-      }
+      },
+      keepUnusedDataFor: 1
     })
   }),
   overrideExisting: false

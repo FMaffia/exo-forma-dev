@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, LinearProgress, LinearProgressProps, Rating, styled, Typography } from '@mui/material'
+import { purple } from '@mui/material/colors'
 
 export const Div = styled('div')(({ theme }) => ({
     ...theme.typography.subtitle1,
@@ -14,7 +15,7 @@ export const StyledRating = styled(Rating)({
 })
 export const CustomTitleAccordion = styled(Typography)(({ theme }) => ({
     fontWeight: 600,
-    color: 'white'
+    color: purple['800']
 }))
 
 export function a11yProps(index: number) {

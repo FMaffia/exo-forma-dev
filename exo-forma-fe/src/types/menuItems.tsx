@@ -12,7 +12,8 @@ export const stepMenuFunc = (steps: Steps[]): MenuObject[] => {
     let array = steps.map(s => ({
         menuLabel: s.title,
         order: s.number,
-        path: '/' + s.number,
+        number: s.number,
+        path: '/step/' + s.number,
         filter: MenuFilter.TUTTI,
         icon: s.completed ? <EmojiFlagsOutlinedIcon color={'primary'} fontSize="large" /> : <PlayCircleOutlineRoundedIcon fontSize="large" />
     }))

@@ -1,6 +1,7 @@
 export type MenuObject = {
   menuLabel: string,
   order: number,
+  number?: number,
   path: string,
   icon?: any,
   filter: MenuFilter
@@ -52,7 +53,7 @@ export type Project = {
   path: string,
   steps: Steps[],
   lastStep: number,
-  stepsCount: number
+  stepsCount: number | 0
 }
 export type Steps = StepView & {
   id: string,

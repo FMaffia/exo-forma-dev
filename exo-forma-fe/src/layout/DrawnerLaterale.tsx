@@ -18,7 +18,7 @@ const DrawnerLaterale = () => {
                 [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' }
             }}
         >
-            <Box sx={{ height: '100vh!important', width: drawerWidth, overflow: 'auto', position: 'inherit!important' }}>
+            <Box sx={{ maxHeight: window.innerHeight, width: drawerWidth, overflowY: 'auto', position: 'inherit!important' }}>
                 <Outlet />
             </Box>
         </Drawer>

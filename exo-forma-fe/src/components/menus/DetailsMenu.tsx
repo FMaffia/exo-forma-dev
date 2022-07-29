@@ -12,6 +12,8 @@ import ArticleIcon from '@mui/icons-material/Article'
 import StepIndicator from '../details/StepIndicator'
 import ConfirmDialog from '../misc/ConfirmDialog'
 import { useGetDetailsQuery } from '../../api/projectsApi'
+import { useUpdateLastStepMutation } from '../../api/projectsUsersApi'
+import { ProjectUser } from '../../types/models'
 
 const DetailsMenu = () => {
     const [triggerRestart, setTriggerRestart] = React.useState(false)
@@ -24,8 +26,14 @@ const DetailsMenu = () => {
     } = useMatch()
     const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath)
     const notStartedYet = currentProject?.lastStep === 0
+    const [updateLastStep] = useUpdateLastStepMutation()
 
     const restartAction = () => {
+        const requestBody: ProjectUser = {
+            lastStep: 1,
+            idProject: currentProject?.id
+        }
+        updateLastStep(requestBody)
         navigate({ to: '/progetti/dettaglio/' + projectPath + '/step/1' })
         setTriggerRestart(false)
     }

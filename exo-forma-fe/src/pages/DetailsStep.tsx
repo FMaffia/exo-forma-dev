@@ -18,8 +18,8 @@ const DetailsStep = () => {
     const { data: currentProject } = useGetDetailsQuery(projectPath)
     const { data: step, isSuccess } = useGetStepByNumberQuery({ idProject: currentProject?.id, number: +numberStep })
     const containerRef = React.useRef(null)
-
     const [direction, setDirection] = useState('left')
+
     return (
         <Paper
             sx={{

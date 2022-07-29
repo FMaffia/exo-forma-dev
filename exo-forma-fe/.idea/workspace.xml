@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="chiamata al dettaglio separata">
+    <list default="true" id="73e8a525-27d9-4356-b269-bdf3bb4a7650" name="Changes" comment="step ********">
+      <change afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/saveactions_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ServerMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/projectsUsersApi.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/access/ProjectUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/ProjectUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/ProjectUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buttons/ButtonBarDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/apiConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/apiConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/projectsApi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/details/PaginationSteps.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/PaginationSteps.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/DetailsMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menus/StepMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/StepMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/DrawnerLaterale.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DetailsStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/endpoint/URI_PROJECTS.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,36 +46,30 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2BXNPljECZN8L6JcbTZLINRvh8S" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/layout" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="optimize.imports.on.save" value="true" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\prettier" />
-    <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Sviluppo/Progetti/exo-forma-dev/exo-forma-fe/src/api",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Sviluppo\\Progetti\\exo-forma-dev\\exo-forma-fe\\node_modules\\prettier",
+    "ts.external.directory.path": "D:\\Sviluppo\\Progetti\\exo-forma-dev\\exo-forma-fe\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\api" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\layout" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\components\menus" />
-      <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\api" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\public" />
       <recent name="D:\Sviluppo\Progetti\exo-forma-dev\exo-forma-fe\src\img" />
     </key>
@@ -104,7 +114,8 @@
       <workItem from="1658476653245" duration="2705000" />
       <workItem from="1658490254388" duration="16619000" />
       <workItem from="1658735587671" duration="19537000" />
-      <workItem from="1658828378824" duration="40074000" />
+      <workItem from="1658828378824" duration="40483000" />
+      <workItem from="1659086534140" duration="5060000" />
     </task>
     <task id="LOCAL-00001" summary="Commit ore 15.28">
       <created>1657114198609</created>
@@ -162,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658765295677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="step ********">
+      <created>1658936216362</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658936216362</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +196,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit ore 15.28" />
@@ -189,7 +206,8 @@
     <MESSAGE value="****" />
     <MESSAGE value="Pagina dettaglio ok" />
     <MESSAGE value="chiamata al dettaglio separata" />
-    <option name="LAST_COMMIT_MESSAGE" value="chiamata al dettaglio separata" />
+    <MESSAGE value="step ********" />
+    <option name="LAST_COMMIT_MESSAGE" value="step ********" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

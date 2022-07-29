@@ -70,9 +70,9 @@ export type StepView = {
 }
 
 export type ProjectUser = {
-  idProject: string,
-  idUser: string,
-  lastStep: number
+  idProject: string | undefined,
+  idUser?: string,
+  lastStep: number | undefined
 }
 export type Attachments = {
   idDoc: string,

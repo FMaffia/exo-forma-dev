@@ -104,9 +104,11 @@ public class ProjectRepository {
         //aggiungiamo il mergesteps per calcolare se i singoli step sono completati
         pipelineOperations.add(new CustomProjectAggregationOperation(computeAddFieldMergeSteps()));
         //escludiamo lastStep perché nn ci serve più
-        ProjectionOperation projection2 = Aggregation.project().andExclude("lastStep");
+        ProjectionOperation projection2 = Aggregation.project().andExclude("lastStep", "steps.desc");
+        //escludiamo la desc
+        UnsetOperation unsetOperation = UnsetOperation.unset("steps.desc");
         pipelineOperations.add(projection2);
-
+        pipelineOperations.add(unsetOperation);
         //assemblaggio, l'ordine è importante
         Aggregation agg = Aggregation.newAggregation(pipelineOperations);
 

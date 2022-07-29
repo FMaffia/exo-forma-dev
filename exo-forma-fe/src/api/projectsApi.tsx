@@ -21,7 +21,7 @@ const projectsApi = rootApi.injectEndpoints({
     ),
     getStepsById: build.query<Steps[], string | undefined>({
       query: (id) => `${GET_STEPS_BY_ID}${id}`,
-      keepUnusedDataFor: 0
+      keepUnusedDataFor: 1
     }),
     getStepByNumber: build.query<Steps, QueryArgs>({
       query: (queryArgs: QueryArgs) => {

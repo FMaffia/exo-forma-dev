@@ -11,6 +11,7 @@ import { useMatch, useNavigate } from '@tanstack/react-location'
 import { useGetDetailsQuery, useGetStepsByIdQuery } from '../../api/projectsApi'
 import { stepMenuFunc } from '../../types/menuItems'
 import StepIndicator from '../details/StepIndicator'
+import { useUpdateLastStepMutation } from '../../api/projectsUsersApi'
 
 const StepMenu = () => {
     const navigate = useNavigate()
@@ -22,7 +23,6 @@ const StepMenu = () => {
     } = useMatch()
     const { data: currentProject } = useGetDetailsQuery(projectPath)
     const { data: steps } = useGetStepsByIdQuery(currentProject?.id, { skip: !currentProject?.id, refetchOnMountOrArgChange: true })
-
     const handleClick = (menu: MenuObject) => {
         // @ts-ignore
         if (menu?.number <= currentProject?.lastStep) {

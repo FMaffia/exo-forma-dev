@@ -4,9 +4,13 @@ import { Box, Grid } from '@mui/material'
 import CardProject from '../../components/ricerca/CardProject'
 import { useGetProjectsQuery } from '../../api/projectsApi'
 import { cloneDeep } from 'lodash'
-/*{ refetchOnMountOrArgChange: true }*/
+import ReduxBreadcrumb from '../../components/breadcrumb/ArrayBreadcrumb'
+import ArrayBreadcrumb from '../../components/breadcrumb/ArrayBreadcrumb'
+import { homeSegment } from '../../store/reducers/uiReducer'
+
 const RisultatiRicerca = () => {
     const { data, isLoading } = useGetProjectsQuery('', { refetchOnMountOrArgChange: true })
+
     const filteredProjects: Project[] | undefined = cloneDeep(data)
     return (
         <Box

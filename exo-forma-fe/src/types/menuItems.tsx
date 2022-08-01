@@ -6,16 +6,23 @@ import HourglassBottomIcon from '@mui/icons-material/HourglassBottom'
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech'
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded'
 import { sortBy } from 'lodash'
-import EmojiFlagsOutlinedIcon from '@mui/icons-material/EmojiFlagsOutlined'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 
-export const stepMenuFunc = (steps: Steps[]): MenuObject[] => {
+const checkDisabled = (lastStep: number, menu: Steps): boolean => {
+    if (lastStep == 0 && menu.number === 1) {
+        return false
+    }
+    return lastStep >= menu.number
+}
+export const stepMenuFunc = (steps: Steps[], lastStep: number | 0): MenuObject[] => {
     let array = steps.map(s => ({
         menuLabel: s.title,
         order: s.number,
         number: s.number,
         path: '/step/' + s.number,
         filter: MenuFilter.TUTTI,
-        icon: s.completed ? <EmojiFlagsOutlinedIcon color={'primary'} fontSize="large" /> : <PlayCircleOutlineRoundedIcon fontSize="large" />
+        disabled: !s.completed && s.number !== lastStep,
+        icon: s.completed ? <CheckCircleIcon color={'primary'} fontSize="large" /> : <PlayCircleOutlineRoundedIcon fontSize="large" />
     }))
     return sortBy(array, [a => a.order, 'asc'])
 }

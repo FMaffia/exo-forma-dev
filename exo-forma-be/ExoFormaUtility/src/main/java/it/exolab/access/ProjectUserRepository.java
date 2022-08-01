@@ -27,7 +27,10 @@ public class ProjectUserRepository {
         Query q = new Query();
         q.addCriteria((Criteria.where("idUser").is(requestBody.getIdUser()).and("idProject").is(requestBody.getIdProject())));
         ProjectUser docToUpdate = mongoTemplate.findOne(q, ProjectUser.class);
-        if (Objects.nonNull(docToUpdate) && requestBody.getLastStep() <= docToUpdate.getLastStep()) {
+        if (Objects.isNull(docToUpdate)) {
+            return mongoTemplate.save(requestBody);
+        }
+        if (requestBody.getLastStep() <= docToUpdate.getLastStep()) {
             docToUpdate.setLastStep(requestBody.getLastStep() + 1);
             return mongoTemplate.save(docToUpdate);
         }

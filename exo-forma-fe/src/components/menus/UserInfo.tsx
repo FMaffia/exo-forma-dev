@@ -2,7 +2,7 @@ import React from 'react'
 import { useCheckUserMutation } from '../../api/userApi'
 import Box from '@mui/material/Box'
 import { QueryStatus } from '@reduxjs/toolkit/dist/query/react'
-import { Avatar } from '@mui/material'
+import { Avatar, Fade } from '@mui/material'
 import { END_POINT_LOAD_IMAGE } from '../../services/endpoint/URI_RESOURCES'
 import Typography from '@mui/material/Typography'
 import { purple } from '@mui/material/colors'
@@ -16,9 +16,8 @@ const UserInfo = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     whiteSpace: 'no-wrap',
-                    flexGrow: 3,
                     alignItems: 'center',
-                    px: 1,
+                    p: 2,
                     backgroundColor: 'rgba(106, 27, 154, 0.08)'
                 }}
             >
@@ -30,17 +29,20 @@ const UserInfo = () => {
                         variant="rounded"
                     />
                 )}
-
-                <Typography sx={{ p: 1, fontWeight: 600, fontSize: '1.5rem' }} variant={'button'} color={'inherit'}>
-                    <span style={{ color: purple[600], textAlign: 'center', lineHeight: '1rem' }}>{user?.username}</span>
+                <Typography variant="body1" display="block" sx={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'primary'}>
+                    {user?.username}
                 </Typography>
-                <Box sx={{ display: 'flex', flexDirection: 'row', mb: 2 }}>
+                <Typography variant="subtitle1" display="block" gutterBottom>
+                    {user?.email}
+                </Typography>
+                {/* <Box sx={{ display: 'flex', flexDirection: 'row', mb: 2 }}>
+
                     {user?.permissions?.map((p, index) => (
                         <Typography key={index} component="span" color="gray" variant="caption" sx={{ pr: 1, fontWeight: 600 }}>
                             {p} {user?.permissions?.length !== undefined && index !== user?.permissions?.length - 1 && '-'}
                         </Typography>
                     ))}
-                </Box>
+                </Box>*/}
             </Box>
         </>
     )

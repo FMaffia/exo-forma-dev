@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Typography } from '@mui/material'
+import { Box, Breadcrumbs, Button, Divider, IconButton, Typography } from '@mui/material'
 import { useMatch, useNavigate } from '@tanstack/react-location'
 import ListItemText from '@mui/material/ListItemText'
 import MenuList from '@mui/material/MenuList'
@@ -15,6 +15,10 @@ import { useGetDetailsQuery } from '../../api/projectsApi'
 import { useUpdateLastStepMutation } from '../../api/projectsUsersApi'
 import { ProjectUser } from '../../types/models'
 
+import UserInfo from './UserInfo'
+import NavigateNextIcon from '@mui/icons-material/NavigateNext'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 const DetailsMenu = () => {
     const [triggerRestart, setTriggerRestart] = React.useState(false)
     const [triggerContinue, setTriggerContinue] = React.useState(false)
@@ -25,12 +29,12 @@ const DetailsMenu = () => {
         params: { projectPath }
     } = useMatch()
     const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath)
-    const notStartedYet = currentProject?.lastStep === 0
+    const isStarted = currentProject?.lastStep ? currentProject.lastStep > 0 : false
     const [updateLastStep] = useUpdateLastStepMutation()
 
     const restartAction = () => {
         const requestBody: ProjectUser = {
-            lastStep: 1,
+            lastStep: 0,
             idProject: currentProject?.id
         }
         updateLastStep(requestBody)
@@ -43,19 +47,21 @@ const DetailsMenu = () => {
     }
     return (
         <>
+            <Box sx={{ p: 1, alignSelf: 'left' }}>
+                <Button id="basic-button" aria-haspopup="true" onClick={() => navigate({ to: '/progetti' })}>
+                    <ArrowBackIcon color={'primary'} />
+                    Indietro
+                </Button>
+            </Box>
+            <UserInfo />
+            <Divider />
             <Typography sx={{ p: 2, fontWeight: 600, pb: 1, display: 'flex', alignItems: 'center' }} variant={'h5'}>
                 <ArticleIcon color={'primary'} sx={{ mr: 2 }} /> {currentProject?.title}
             </Typography>
-            {notStartedYet || (
+            {isStarted ? (
                 <MenuList>
                     <StepIndicator currentProject={currentProject} />
                     <Divider />
-                    <MenuItem onClick={() => setTriggerRestart(true)}>
-                        <ListItemIcon>
-                            <RestartAltRoundedIcon color={'primary'} />
-                        </ListItemIcon>
-                        <ListItemText>Ricomincia</ListItemText>
-                    </MenuItem>
                     <MenuItem onClick={() => setTriggerContinue(true)}>
                         <ListItemIcon>
                             <PlayCircleFilledWhiteIcon color={'primary'} />
@@ -63,6 +69,21 @@ const DetailsMenu = () => {
                         <ListItemText>
                             Riprendi dallo <span style={{ color: purple[800], fontWeight: 'bold' }}> step {currentProject?.lastStep}</span>
                         </ListItemText>
+                    </MenuItem>
+                    <MenuItem onClick={() => setTriggerRestart(true)}>
+                        <ListItemIcon>
+                            <RestartAltRoundedIcon color={'primary'} />
+                        </ListItemIcon>
+                        <ListItemText>Ricomincia</ListItemText>
+                    </MenuItem>
+                </MenuList>
+            ) : (
+                <MenuList>
+                    <MenuItem onClick={() => setTriggerRestart(true)}>
+                        <ListItemIcon>
+                            <PlayCircleFilledWhiteIcon color={'primary'} />
+                        </ListItemIcon>
+                        <ListItemText>Inizia a progettare</ListItemText>
                     </MenuItem>
                 </MenuList>
             )}
@@ -75,7 +96,11 @@ const DetailsMenu = () => {
                 }}
             />
             <ConfirmDialog
-                body={`Sei sicuro di voler riprendere dallo step ${currentProject?.lastStep} ?`}
+                body={
+                    <p>
+                        Sei sicuro di voler riprendere dallo<strong> step {currentProject?.lastStep} </strong> ?
+                    </p>
+                }
                 open={triggerContinue}
                 handleClose={() => setTriggerContinue(false)}
                 handleConfirm={() => {

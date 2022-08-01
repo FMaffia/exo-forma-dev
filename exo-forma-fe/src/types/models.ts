@@ -1,10 +1,12 @@
+import { ReactElement } from "react";
+
 export type MenuObject = {
   menuLabel: string,
   order: number,
   number?: number,
   path: string,
   icon?: any,
-  disabled?: boolean,
+  disabled?: boolean | undefined,
   filter: MenuFilter
 }
 
@@ -121,13 +123,16 @@ export type Social = {
   title: any,
   subTitle: string
 }
-export type MenuDoc = {
-  items: MenuObject[]
+export type Path = {
+  label: string | undefined
+  href: string
+  icon:any
 }
 
 export interface UiState {
   loading: boolean;
   loaders: string[];
+  breadcrumb: Path[];
   message: Message;
   menu: MenuObject[];
   menuFilter: MenuFilter;

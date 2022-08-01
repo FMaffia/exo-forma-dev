@@ -82,7 +82,7 @@ const ContainerFooter = styled(Container)(({ theme }) => ({
 }));
 
 export const datiLogin: User = {
-  email: "edo.galizia@exolab.it",
+  email: "f.maffia@exolab.it",
   pass: "12345"
 };
 export const Layout = () => {
@@ -90,7 +90,6 @@ export const Layout = () => {
   const isLoading = status !== QueryStatus.fulfilled;
   const currentProject: Project = useSelector<RootState, Project>((state) => state.selectedProjects);
   const notStartedYet = currentProject.lastStep === 0;
-
   useEffect(() => {
     checkUser(datiLogin);
   }, []);
@@ -110,7 +109,6 @@ export const Layout = () => {
         <ContainerMain maxWidth={false}>
           <CssBaseline />
           <Router location={location} routes={privateRoutes}>
-            <DynamicBreadCrumb />
             <Outlet />
           </Router>
         </ContainerMain>

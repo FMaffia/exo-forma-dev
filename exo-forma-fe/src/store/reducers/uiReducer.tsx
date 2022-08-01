@@ -1,10 +1,16 @@
 import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { MenuFilter, MenuObject, Message, UiState } from "../../types/models";
+import { MenuFilter, MenuObject, Message, Path, UiState } from "../../types/models";
 import { remove, uniq } from "lodash";
+import HomeIcon from '@mui/icons-material/Home';
+
+export const homeSegment = {label:'Progetti', href:'/progetti', icon:<HomeIcon sx={{ mr: 0.5, display:"flex" }} color={"primary"} fontSize="inherit" />}
+export const detailsSegment = {label:'Dettaglio', href:'', icon:<HomeIcon sx={{ mr: 0.5, display:"flex" }} color={"primary"} fontSize="inherit" />}
+
 
 const initialState: UiState = {
   loading: false,
   loaders: [],
+  breadcrumb: [homeSegment],
   message: { show: false, type: "Success", body: "" },
   menu: [],
   menuFilter: MenuFilter.TUTTI
@@ -34,6 +40,7 @@ const uiSlice: Slice<UiState> = createSlice({
         body: ""
       } as Message;
     },
+
     addLoaders(state, action) {
       const payload = action.payload;
       state.loaders.push(payload);
@@ -49,9 +56,9 @@ const uiSlice: Slice<UiState> = createSlice({
 export const {
   disableLoading,
   enableLoading,
-  setMenu,
   setMessage,
   hideMessage,
+
   addLoaders,
   setMenuFilter,
   removeLoaders

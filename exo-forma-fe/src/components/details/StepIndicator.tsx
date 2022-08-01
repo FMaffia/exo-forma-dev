@@ -9,7 +9,7 @@ interface Props {
 }
 
 const StepIndicator = ({ currentProject }: Props) => {
-    const calculatePerc: number | undefined = currentProject?.lastStep ? (currentProject?.lastStep * 100) / currentProject.stepsCount : undefined
+    const calculatePerc: number | undefined = currentProject?.lastStep ? ((currentProject?.lastStep - 1) * 100) / currentProject.stepsCount : undefined
     return (
         <>
             <Typography sx={{ p: 2, fontWeight: 600 }} variant={'button'} color={'inherit'}>
@@ -23,7 +23,8 @@ const StepIndicator = ({ currentProject }: Props) => {
                 variant={'button'}
                 color={'inherit'}
             >
-                {`Steps completati ${currentProject?.lastStep}/${currentProject?.stepsCount}`}
+                {/*@ts-ignore*/}
+                {`Steps completati ${currentProject?.lastStep - 1}/${currentProject?.stepsCount}`}
             </Typography>
         </>
     )

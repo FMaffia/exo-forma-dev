@@ -1,11 +1,13 @@
 import React from 'react'
-import { Avatar, Box, Fade, Paper } from '@mui/material'
-import { Outlet, useLocation, useMatch } from '@tanstack/react-location'
-import ButtonBarDetails from '../components/buttons/ButtonBarDetails'
+import { Avatar, Box, Button, Fade, Paper, Stack } from '@mui/material'
+import { Outlet, useLocation, useMatch, useNavigate } from '@tanstack/react-location'
 import HeaderDetail from '../components/details/HeaderDetail'
 import { END_POINT_LOAD_IMAGE } from '../services/endpoint/URI_RESOURCES'
 import { useGetDetailsQuery } from '../api/projectsApi'
 import { includes } from 'lodash'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
+
+import HomeIcon from '@mui/icons-material/Home'
 
 const DetailsPage = () => {
     const {
@@ -13,6 +15,7 @@ const DetailsPage = () => {
     } = useMatch()
     const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath, { refetchOnMountOrArgChange: true })
     const location = useLocation()
+    const navigate = useNavigate()
     const isStep = includes(location.current.pathname, 'step')
 
     return (
@@ -32,7 +35,13 @@ const DetailsPage = () => {
                     </Box>
                 </Paper>
                 <Outlet />
-                {!isStep && <ButtonBarDetails started={currentProject?.lastStep !== 0} />}
+                <Stack direction="row" spacing={2} sx={{ mt: 4, mb: 2 }}>
+                    <div>
+                        <Button size="large" startIcon={<ArrowBackIosIcon />} variant="outlined" onClick={() => navigate({ to: '/progetti' })}>
+                            Indietro
+                        </Button>
+                    </div>
+                </Stack>
             </Box>
         </Fade>
     )

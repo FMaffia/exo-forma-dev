@@ -20,8 +20,8 @@ import ConfirmDialog from "../misc/ConfirmDialog";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { useLocation, useNavigate } from "@tanstack/react-location";
-import { useCheckUserMutation } from "../../api/userApi";
 import UserInfo from "./UserInfo";
+import useKeyRoles from "../../utility/useKeyRoles";
 
 const HomeMenu = () => {
   const [open, setOpen] = React.useState(false);
@@ -29,7 +29,7 @@ const HomeMenu = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-  const [, { data: user }] = useCheckUserMutation({ fixedCacheKey: "userKey" });
+  const role = useKeyRoles();
 
   const handleClick = (menu: MenuObject) => {
     navigate({ to: menu.path });
@@ -52,7 +52,7 @@ const HomeMenu = () => {
           </ListItem>
         ))}
       </List>
-      {includes(user?.permissions, "WRITE") && (
+      {role === "ADMIN" && (
         <>
           <Divider />
           <List>

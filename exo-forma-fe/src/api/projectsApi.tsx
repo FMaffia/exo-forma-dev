@@ -25,6 +25,7 @@ const projectsApi = rootApi.injectEndpoints({
       providesTags: ['Steps'],
       keepUnusedDataFor: 1
     }),
+
     getStepByNumber: build.query<Steps, QueryArgs>({
       query: (queryArgs: QueryArgs) => {
         if (!queryArgs.number) {

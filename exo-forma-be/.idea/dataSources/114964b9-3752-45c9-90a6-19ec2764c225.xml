@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.40">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.45">
     <root id="1"/>
     <schema id="2" parent="1" name="FORMAZIONE_INTERNA"/>
     <schema id="3" parent="1" name="MDA_PNA"/>
@@ -10,23 +10,23 @@
     <table id="7" parent="2" name="projects"/>
     <table id="8" parent="2" name="users"/>
     <column id="9" parent="8" name="_id">
-      <DataType>ObjectId|12s</DataType>
+      <DasType>ObjectId|12s</DasType>
       <Position>1</Position>
     </column>
     <column id="10" parent="8" name="_class">
-      <DataType>String|12s</DataType>
+      <DasType>String|12s</DasType>
       <Position>2</Position>
     </column>
     <column id="11" parent="8" name="pass">
-      <DataType>String|12s</DataType>
+      <DasType>String|12s</DasType>
       <Position>3</Position>
     </column>
     <column id="12" parent="8" name="roles">
-      <DataType>Array|2003s</DataType>
+      <DasType>Array|2003s</DasType>
       <Position>4</Position>
     </column>
     <column id="13" parent="8" name="username">
-      <DataType>String|12s</DataType>
+      <DasType>String|12s</DasType>
       <Position>5</Position>
     </column>
   </database-model>

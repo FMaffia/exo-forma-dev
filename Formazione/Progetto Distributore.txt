@@ -1,0 +1,37 @@
+DISTRIBUTORE con diverse in base alla tipologia del prodotto viene erogato in maniera differente nell'apposita uscita.
+Tipologie di prodotto:
+Bevande istantanee fredde e calde (erogazione a spina)
+Snack vari (Erogazione a caduta)
+Bevande confezionate (Gassate || lattina || vetro ? erogazione a braccio : erogazione caduta)
+Piatti pronti (Piatti freddi || piatti da forno || piatti da microonde) -> erogazione fornetto
+
+Model SuperClasse Astratta Prodotto
+Prezzo:float
+Nome:String
+In base alla tipologia di erogazione viene usato un prefisso specifico per il codice
+
+selezionaProdotto(float credito)
+controlla credito(float denaro) throws Poveraccio
+
+eroga(){
+abstract procedimento()
+abstract consegnaProdotto()
+}//Dove devo rilasciare il prodotto
+
+La console non dovrà prendere input affinche non finisce il processo
+
+
+Classe distributore (main) 4 Funzionalità:
+- Visualizza prodotti&codici (Visualizza V)
+- Inserisci monete (Paga P)
+- Scegli (S + codice)
+- Resto   
+
+all'avvio si devono creare di prodotti tramite reflections&polimorfismo
+(Clazz prezzo titolo oggetto per la creazione dinamica dei prodotti):Prodotto
+Nome nel costruttore
+Prezzo nel setter
+
+
+
+

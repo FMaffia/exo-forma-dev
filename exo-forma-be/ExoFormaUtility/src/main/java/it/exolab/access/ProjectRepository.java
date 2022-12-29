@@ -73,7 +73,7 @@ public class ProjectRepository {
 
         //escludiamo le cose non necessarie dal risultato
         ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
-        MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is("/" + path));
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is(path));
 
 
         ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();

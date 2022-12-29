@@ -34,9 +34,7 @@ export const store = configureStore({
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: false
-        })
-            .concat(sagaMiddleware)
-            .concat(rootApi.middleware),
+        }).concat(rootApi.middleware),
     devTools: true,
     enhancers: [reduxBatch]
 })

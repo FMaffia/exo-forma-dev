@@ -1,14 +1,15 @@
 import React from 'react'
-import { useCheckUserMutation } from '../../api/userApi'
 import Box from '@mui/material/Box'
-import { QueryStatus } from '@reduxjs/toolkit/dist/query/react'
-import { Avatar, Fade } from '@mui/material'
-import { END_POINT_LOAD_IMAGE } from '../../services/endpoint/URI_RESOURCES'
+import { Avatar } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import { purple } from '@mui/material/colors'
+import { useKeycloak } from '@react-keycloak/web'
+import useKeyRoles from '../../utility/useKeyRoles'
+import woman from '../../img/woman.png'
 
 const UserInfo = () => {
-    const [, { status, data: user }] = useCheckUserMutation({ fixedCacheKey: 'userKey' })
+    const { keycloak } = useKeycloak()
+    const role = useKeyRoles()
+
     return (
         <>
             <Box
@@ -21,20 +22,18 @@ const UserInfo = () => {
                     backgroundColor: 'rgba(106, 27, 154, 0.08)'
                 }}
             >
-                {status === QueryStatus.fulfilled && (
-                    <Avatar
-                        sx={{ width: '50%', p: 1, m: 'auto', height: 'auto' }}
-                        alt="Remy Sharp"
-                        src={END_POINT_LOAD_IMAGE + '?id=' + user?.id + '.jpg'}
-                        variant="rounded"
-                    />
-                )}
+                <Avatar sx={{ width: '50%', p: 1, m: 'auto', height: 'auto' }} alt="Remy Sharp" src={woman} variant="rounded" />
+
                 <Typography variant="body1" display="block" sx={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'primary'}>
-                    {user?.username}
+                    {keycloak?.tokenParsed?.name}
                 </Typography>
                 <Typography variant="subtitle1" display="block" gutterBottom>
-                    {user?.email}
+                    {keycloak?.tokenParsed?.email}
                 </Typography>
+                <Typography variant="subtitle1" display="block" gutterBottom>
+                    {role}
+                </Typography>
+
                 {/* <Box sx={{ display: 'flex', flexDirection: 'row', mb: 2 }}>
 
                     {user?.permissions?.map((p, index) => (

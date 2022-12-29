@@ -1,9 +1,12 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
-import { Box, styled } from '@mui/material'
+import { Box, Button, styled } from '@mui/material'
 import betaLogo from '../../img/beta.png'
 import betaLogoWhite from '../../img/beta_white.png'
 import { lime } from '@mui/material/colors'
+import { useKeycloak } from '@react-keycloak/web'
+import { Key } from '@mui/icons-material'
+import useKeyRoles from '../../utility/useKeyRoles'
 
 interface Props {
     small?: boolean;
@@ -36,10 +39,14 @@ export const Logo = ({ footer }: Props) => {
     )
 }
 export const Title = ({ small, footer }: Props) => {
+    const { keycloak } = useKeycloak()
+    const isLoggedIn = keycloak.authenticated
+    const role = useKeyRoles()
+
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch', width: '100%' }}>
             <Logo footer={footer} />
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', mx: 2 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', mx: 2, flexGrow: 1 }}>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
                     <TypographyHeaderPre variant={small ? 'h5' : 'body1'} noWrap color="secondary">
                         EXO
@@ -49,9 +56,16 @@ export const Title = ({ small, footer }: Props) => {
                     </TypographyHeader>
                 </Box>
                 <Box component={'span'} color={'white'}>
-                    Repository di progetti utili allo sviluppo e all'apprendimento durante il periodo di stage
+                    <Typography> Repository di progetti utili allo sviluppo e all'apprendimento durante il periodo di stage</Typography>
                 </Box>
             </Box>
+            {isLoggedIn && role !== 'UNAUTHORIZED' && footer === false && (
+                <Box sx={{ display: 'flex', flexGrow: 1 }}>
+                    <Button sx={{ color: 'white' }} onClick={() => keycloak.logout()}>
+                        <Key sx={{ mr: 1 }} /> Logout
+                    </Button>
+                </Box>
+            )}
         </Box>
     )
 }

@@ -1,0 +1,8 @@
+Rubrica 
+p 
+JSF 2.3
+Wildfly 
+Mysql 
+EAR EJB WAR
+Con semplici operazioni di aggiunta lettura ricerca e dettaglio
+2 bean una lista una operazioni

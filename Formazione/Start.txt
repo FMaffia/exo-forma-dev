@@ -1,0 +1,6 @@
+Git
+7Zip
+Notepad ++
+WildFly + Jboss Tools
+Jdk 8/11
+Java Home

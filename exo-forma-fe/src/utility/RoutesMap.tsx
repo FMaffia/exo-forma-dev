@@ -1,4 +1,3 @@
-import LoginContainer from '../containers/LoginContainer'
 import { Navigate, ReactLocation, Route } from '@tanstack/react-location'
 import RisultatiRicerca from '../containers/ricerca/RisultatiRicerca'
 import DetailsPage from '../pages/DetailsPage'
@@ -77,17 +76,6 @@ export const privateRoutes: Route[] = [
     {
         path: '*',
         element: <p>Nessuna pagina trovata</p>
-    }
-]
-
-export const publicRoutes = [
-    {
-        path: '/',
-        element: <Navigate to={'/login'} />
-    },
-    {
-        path: 'login',
-        element: <LoginContainer />
     }
 ]
 

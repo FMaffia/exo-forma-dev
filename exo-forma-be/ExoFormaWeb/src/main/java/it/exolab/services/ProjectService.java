@@ -22,12 +22,6 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepo;
 
-//    @GetMapping("/test")
-//    public ResponseEntity<List<StepView>> getTest() {
-//        log.debug("-----> PROJECT_SERVICES: GetTest");
-//        return ResponseEntity.ok(this.projectRepo.getStepsByIdProject("62bcb592aa4ab15c340bdbbb").getSteps());
-//    }
-
     @GetMapping(ApiConstants.Project.ALL_PROJECT)
     public ResponseEntity<List<ProjectCard>> getAll() {
         log.debug("-----> PROJECT_SERVICES: GetAll");

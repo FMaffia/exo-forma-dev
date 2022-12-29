@@ -20,7 +20,6 @@ public class Project implements Serializable {
     private String creationDate;
     private String authors;
     private List<String> categories;
-    private List<String> carousel;
     private int difficult;
     private int order;
     private boolean published;

@@ -1,0 +1,6 @@
+Struttura progetto maven
+Parent 
+
+EAR ->
+ che ha il war 
+ dentro la cartella lib ha EJB e utility

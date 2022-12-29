@@ -25,10 +25,8 @@ export function a11yProps(index: number) {
     }
 }
 
-export interface TabPanelProps {
+export interface ChildProps {
     children?: React.ReactNode;
-    index: number;
-    value: number;
 }
 
 export function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {

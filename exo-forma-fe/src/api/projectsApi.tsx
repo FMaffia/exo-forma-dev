@@ -9,6 +9,7 @@ type QueryArgs = {
 const projectsApi = rootApi.injectEndpoints({
 
   endpoints: build => ({
+
     getProjects: build.query<Project[], void | string>({
         query: (id) => GET_PROJECTS_API,
         keepUnusedDataFor: 1

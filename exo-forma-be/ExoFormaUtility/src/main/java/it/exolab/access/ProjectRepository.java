@@ -5,6 +5,7 @@ import it.exolab.model.Project;
 import it.exolab.model.StepProject;
 import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -66,6 +68,7 @@ public class ProjectRepository {
         AggregationResults<ProjectCard> aggRes = mongoTemplate.aggregate(agg, Project.class, ProjectCard.class);
         return aggRes.getMappedResults();
     }
+
 
     public ProjectCard findProjectByPath(String path) {
 
@@ -201,7 +204,15 @@ public class ProjectRepository {
                 "}";
     }
 
-    public void insert(Project newProject) {
-        this.mongoTemplate.insert(newProject);
+
+    public Project getProjectById(Project project) {
+        if (Objects.isNull(project.getId())) {
+            return this.mongoTemplate.insert(new Project());
+        }
+        return this.mongoTemplate.findById(new ObjectId(project.getId()), Project.class);
+    }
+
+    public Project save(Project project) {
+        return this.mongoTemplate.save(project);
     }
 }

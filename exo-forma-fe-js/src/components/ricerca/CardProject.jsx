@@ -1,6 +1,6 @@
 import React from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
-import {PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO} from "../../constants/Routes";
+import {PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT_NEW} from "../../constants/Routes";
 import {purple} from "@mui/material/colors";
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography'
 import {Box, CardActionArea, Chip, Fab, Fade, LinearProgress} from '@mui/material'
 import {END_POINT_LOAD_IMAGE} from "../../api/URI";
 import ModeEditIcon from '@mui/icons-material/ModeEdit'
+import {setSelectedProject} from "../../slices/projectSlice";
+import {useDispatch} from "react-redux";
 
 const CardProject = ({project}) => {
     const fabStyle = {
@@ -17,7 +19,6 @@ const CardProject = ({project}) => {
         top: 16,
         right: 16
     }
-
     const navigate = useNavigate()
     const calculatePerc = project.lastStep > project.stepsCount ? 100 : (project.lastStep * 100) / project.stepsCount
     const location = useLocation()
@@ -25,6 +26,11 @@ const CardProject = ({project}) => {
     const isInCorso = location.pathname === PROJECT_IN_CORSO
     const isCompletati = location.pathname === PROJECT_COMPLETATI
     const completed = project.lastStep > project.stepsCount
+    const dispatch = useDispatch()
+    const ediProject = (project) => {
+        dispatch(setSelectedProject(project))
+        navigate(PROJECT_ROOT_NEW)
+    }
     return (
         <Card sx={{maxWidth: '100%', position: 'relative'}}>
             <CardActionArea
@@ -68,7 +74,7 @@ const CardProject = ({project}) => {
                            alt={project.title}/>
                 <CardContent>
                     <Typography variant="body2">
-                        <span className="content" dangerouslySetInnerHTML={{__html: project.descBreve}}/>
+                        <span className="content" dangerouslySetInnerHTML={{__html: project.summary}}/>
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -80,7 +86,7 @@ const CardProject = ({project}) => {
                         size={'small'}
                         title={'Modifica progetto'}
                         aria-label="Modifica progetto"
-                        onClick={() => navigate({to: PROJECT_EDIT + `${project.path}`})}
+                        onClick={() => ediProject(project)}
                     >
                         <ModeEditIcon/>
                     </Fab>
@@ -88,6 +94,7 @@ const CardProject = ({project}) => {
             )}
         </Card>
     )
+
 };
 
 export default CardProject;

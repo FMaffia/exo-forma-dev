@@ -1,0 +1,91 @@
+{
+  "_id": {
+    "$oid": "62bcb592aa4ab15c340bdbbb"
+  },
+  "desc": "In questo progetto creerete una copia in <strong>React</strong> del famoso gioco di Windows: <strong>Campo Minato</strong>. Lo farete utilizzando il <strong>Context</strong> di react, salverete i risultati sul LocalStorage del browser e creerete la grafica con <strong>Bootstrap 4</strong>. <br/>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.1914 translation by H. Rackham On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.",
+  "title": "Mines React",
+  "categories": [
+    "React",
+    "Context",
+    "Bootstrap"
+  ],
+  "creationDate": "29/06/2022",
+  "authors": "E.Galizia",
+  "difficult": 2,
+  "published": true,
+  "steps": [
+    {
+      "number": 1,
+      "title": "Getting started",
+      "desc": "Eseguire il comando <code>npx create-react-app campo-minato-context</code>.<br/>Alla fine della creazione del progetto entrare nella cartella <code>campo-minato-context</code> e aprire il progetto con l’editor preferito.<br/><br/>"
+    },
+    {
+      "number": 2,
+      "title": "BoardContext",
+      "desc": "Crea il context, con un oggetto di stato globale contenente la proprietà gameState di tipo GAME_STATE (andremo ad implementare altre proprietà man mano) e una funzione per iniziare il gioco.<br/><br/><code><br/>export const GAME_STATE = {<br/>    IDLE: 'IDLE',<br/>    STARTED: 'STARTED',<br/>    LOST: 'LOST',<br/>    WON: 'WON',<br/>};<br/></code><br/><br/>Utilizza il context per iniziare il gioco tramite pulsante e mostra lo stato attuale del gioco in pagina.<br/><br/>"
+    },
+    {
+      "number": 3,
+      "title": "Creiamo la scacchiera di gioco",
+      "desc": "Inizialmente creeremo una scacchiera di 24 x 24 caselle con 99 mine.<br/><br/>Andremo a creare due nuove proprietà (array) sullo stato globale:<br/><br/>boardState -> manterrà lo stato visivo della scacchiera (tramite CELL_STATE);<br/>mines -> conterrà l’informazione della presenza o meno di una mina su ogni coordinata.<br/><br/><code><br/>export const CELL_STATE = {<br/>    UNCOVERED: -1,<br/>    COVERED: 0,<br/>    MINE_SUPPOSED: 1,<br/>    MINE_UNKNOWN: 2,<br/>};<br/></code><br/><br/>Crea una funzione <code>createBoardMines()</code> che posiziona le mine in modo randomico nell’array ed inizializza il boardState con l’oggetto <code>{ adiacentMines: 0, state: CELL_STATE.COVERED }</code>.<br/><br/>Crea una funzione <code>computeAdiacentMines(mines, boardState)</code> che calcola le mine adiacenti per ogni cella e la salva nella property adiacentMines.<br/><br/>Richiama le due funzioni all’interno della funzione startGame().<br/><br/>Stampa i due array in pagina.<br/><br/>"
+    },
+    {
+      "number": 4,
+      "title": "Visualizzazione scacchiera",
+      "desc": "Crea righe e celle e visualizza la scacchiera su browser.<br/>Crea la scacchiera di 24 * 24 celle e fai in modo che si alternino 2 colori.<br/><br/>I componenti previsti sono Board, BoardRow e BoardCol."
+    },
+    {
+      "number": 5,
+      "title": "Visualizzazione di debug",
+      "desc": "Aggiungiamo la proprietà debugMines al context e una funzione che la toggla.<br/><br/>Aggiungiamo un componente di visualizzazione celle in debug, mostrerà sulla scacchiera le bombe e le mine adiacenti se debugMines è true.<br/><br/>Fai in modo che in base a questa proprietà il componente BoardCol mostri la cella normale o quella di debug; fallo creando due componenti DebugView e CellView.<br/><br/>"
+    },
+    {
+      "number": 6,
+      "title": "Implementazione handelRightCellClick()",
+      "desc": "Implementiamo il click con il tasto destro del mouse.<br/><br/>Creiamo una funzione handleRightCellClick(), che verrà chiamata al click destro.<br/><br/>Se la cella cliccata è già in stato UNCOVERED non farà nulla, altrimenti ciclar visualizzazione mina (MINE_SUPPOSED) -> dubbio (MINE_UNKNOWN) -> nulla (COVERED).<br/><br/>"
+    },
+    {
+      "number": 7,
+      "title": "Aggiornamento visualizzazione rightClick()",
+      "desc": "Aggiorna il componente CellView e visualizza gli stati COVERED (vuoto), MINE_SUPPOSED (mina), MINE_UNKNOWN (punto interrogativo).<br/><br/>"
+    },
+    {
+      "number": 8,
+      "title": "Implementazione handleLeftCellClick()",
+      "desc": "Aggiorna il componente CellView e visualizza gli stati COVERED (vuoto), MINE_SUPPOSED (mina), MINE_UNKNOWN (punto interrogativo).<br/><br/>"
+    },
+    {
+      "number": 9,
+      "title": "Aggiornamento visualizzazione leftClick()",
+      "desc": "Modifica CellView e aggiungi la visualizzazione per lo stato UNCOVERED, numeri colorati su sfondo grigio in caso di mine adiacenti > 0 altrimenti vuoto con sfondo grigio.<br/><br/>"
+    },
+    {
+      "number": 10,
+      "title": "Controlli fine gioco",
+      "desc": "In caso di stato LOST o WON mostrare la schermata di vittoria/sconfitta con la possibilità di ricominciare il gioco.<br/><br/>"
+    },
+    {
+      "number": 11,
+      "title": "Statistiche di gioco",
+      "desc": "Aggiungi statistiche di tempo di gioco, vittorie, sconfitte e best time.<br/><br/>Mostrale in un riquadro laterale accanto alla scacchiera.<br/><br/>"
+    },
+    {
+      "number": 12,
+      "title": "Abbellimento interfaccia",
+      "desc": "Implementa Gioca/Rigioca.<br/><br/>Visualizza un header e un footer.<br/><br/>"
+    },
+    {
+      "number": 13,
+      "title": "Aggiunta livelli di difficoltà.",
+      "desc": "Aggiungi i livelli di difficoltà da cui scegliere all’avvio del gioco.<br/><br/>Modifica startGame() in modo che prenda in input un oggetto di difficoltà tra i seguenti:<br/><br/><code>export const GAME_DIFFICULTIES = {<br/>    EASY: {<br/>        label: 'Facile',<br/>        cols: 9,<br/>        rows: 9,<br/>        mines: 10,<br/>    },<br/>    INTERMEDIATE: {<br/>        label: 'Medio',<br/>        cols: 16,<br/>        rows: 16,<br/>        mines: 40,<br/>    },<br/>    HARD: {<br/>        label: 'Difficile',<br/>        cols: 30,<br/>        rows: 16,<br/>        mines: 99,<br/>    },<br/>};</code><br/><br/>Al click di gioca visualizza un dialog modale con la possibilità di scegliere la difficoltà.<br/><br/>"
+    },
+    {
+      "number": 14,
+      "title": "Congratulazioni",
+      "desc": "Congratulazioni, hai terminato il progetto.<br/><br/>Prova a personalizzare qualcosa, aggiungere una difficoltà personalizzata dall’utente o altro.<br/><br/>Qui sotto alcuni screenshot del risultato atteso."
+    }
+  ],
+  "path": "mines-react",
+  "order": 4,
+  "descBreve": "In questo progetto creerete una copia in <strong>React</strong> del famoso gioco di Windows: <strong>Campo Minato</strong>. Lo farete utilizzando il <strong>Context</strong> di react, salverete i risultati sul LocalStorage del browser e creerete la grafica con <strong>Bootstrap 4</strong>"
+}

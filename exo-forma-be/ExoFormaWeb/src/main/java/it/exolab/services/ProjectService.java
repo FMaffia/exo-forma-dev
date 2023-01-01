@@ -28,6 +28,13 @@ public class ProjectService {
         return ResponseEntity.ok(this.projectRepo.findAll());
     }
 
+    @PostMapping(ApiConstants.Project.PROJECT_BY_ID)
+    public ResponseEntity<Project> getProjectById(@RequestBody Project project) {
+        log.debug("-----> PROJECT_SERVICES: Get project by id");
+        Project response = this.projectRepo.getProjectById(project);
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping(ApiConstants.Project.PROJECT_DETAILS)
     public ResponseEntity<ProjectCard> getProjectByPath(@PathVariable String path) {
         log.debug("-----> PROJECT_SERVICES: Get project by path: " + path);
@@ -54,11 +61,11 @@ public class ProjectService {
         return ResponseEntity.ok(step);
     }
 
-    @PostMapping(ApiConstants.Project.INSERT)
-    public ResponseEntity<String> insert(@RequestBody Project newProject) {
-        this.projectRepo.insert(newProject);
-        return ResponseEntity.ok("Il progetto è stato inserito correttamente");
-    }
 
+    @PostMapping(ApiConstants.Project.UPDATE)
+    public ResponseEntity<Project> save(@RequestBody Project project) {
+        log.debug("-----> PROJECT_SERVICES: Save project id: " + project.getId());
+        return ResponseEntity.ok(this.projectRepo.save(project));
+    }
 
 }

@@ -5,121 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="Step visualizzazione">
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/exo-forma-fe-js.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/keycloak.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsUserApi.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/rootApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/DetailBC.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/ProjectsBC.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/DetailsMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/FilterMap.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/StepMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/UserInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/mui/accordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/mui/containersMui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/mui/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/mui/typographyMui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/Routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/UserRole.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/BodyDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/CircularProgress.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/DettaglioContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/HeaderDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/StepIndicator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/ResultProject.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/DettaglioSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/StepSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/steps/NavigationSteps.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/steps/StepContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/hooks/useKeyRoles.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/beta_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/default-placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/error404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/exolab-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/leaf-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/log-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/unauth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/Logo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/OutletSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PublicLayout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/Title.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/LogoutPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/Page404.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/UnauthorizedPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/projectSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/stepSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/rootReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/ui/ConfirmDialog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/public/keycloak.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/PublicContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/pages/LogoutPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/pages/Page404.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/pages/UnauthorizedPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/error404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/log-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/unauth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/img/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/useKeyRoles.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Formazione/Mines react.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/EditBC.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/EditMenu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/newedit/ButtonBardEdit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/newedit/DescForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/newedit/FeatureForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/newedit/NewEditContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/newedit/StepForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/NewEditSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/newProject.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/backupProjectSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/1/3/13cf092940e884fab4b9a9fb63c13a5ef20d82e6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/1/c/1cdc5c495286318c13fc78cd290a7753d43470a5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/4/1/41b84a4eff678645065136a9ebf28b75435c8a94" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/4/3/43a41625fbe2e6fb0d574cc9228c007c52107df0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/8/3/835da56f32df714aaed6285a5b7fc3a7807851e4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/b/b/bbf019abfde0534ebb61af1a555550d24ab63a41" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/c/2/c2d1bdb265f2216a4a828eac76f5ffc42ae0432b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/d/9/d9f91537b80f9c7516653980b375f3b562125cb0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ResourcesServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/projectSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/projectSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/api/projectsApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/api/projectsApi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/header/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/HomeMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/HomeMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/UserInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/components/menus/UserInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/LoginContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/containers/ricerca/RisultatiRicerca.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/CustomMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/Constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/src/utility/RoutesMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/src/utility/RoutesMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +205,7 @@
       <workItem from="1670862849457" duration="515000" />
       <workItem from="1671189310813" duration="15000" />
       <workItem from="1671463470660" duration="777000" />
-      <workItem from="1671894247415" duration="4198000" />
+      <workItem from="1671894247415" duration="14710000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

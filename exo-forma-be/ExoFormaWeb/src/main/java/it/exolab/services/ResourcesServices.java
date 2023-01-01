@@ -22,7 +22,7 @@ public class ResourcesServices {
     private ResourceRepository resourceRepo;
 
 
-    @GetMapping(value = "/images", produces = MediaType.IMAGE_JPEG_VALUE)
+    @GetMapping(value = "/images", produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE})
     public @ResponseBody
     byte[] getImage(@RequestParam String id) throws IOException {
         File file = new File(FOLDER_IMG_PATH + id);

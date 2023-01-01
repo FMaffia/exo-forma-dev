@@ -11,12 +11,7 @@ export const MenuFilter = {
     COMPLETATI: "COMPLETATI",
     BOZZA: "BOZZA"
 }
-const checkDisabled = (lastStep, menu) => {
-    if (lastStep == 0 && menu.number === 1) {
-        return false
-    }
-    return lastStep >= menu.number
-}
+
 export const stepMenuFunc = (steps, lastStep) => {
     let array = steps.map(s => ({
         menuLabel: s.title,

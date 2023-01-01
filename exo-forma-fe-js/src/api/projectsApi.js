@@ -1,11 +1,48 @@
 import {rootApi} from "./rootApi";
-import {GET_PROJECT_BY_PATH, GET_PROJECTS_API, GET_STEP_BY_NUMBER, GET_STEPS_BY_ID} from "./URI";
+import {
+    GET_PROJECT,
+    GET_PROJECT_BY_PATH,
+    GET_PROJECTS_API,
+    GET_STEP_BY_NUMBER,
+    GET_STEPS_BY_ID,
+    UPDATE_PROJECT
+} from "./URI";
+import {store} from "../store/store"
+import {setBackupProject} from "../slices/backupProjectSlice";
+import {setSelectedProject} from "../slices/projectSlice";
 
 const projectsApi = rootApi.injectEndpoints({
     endpoints: build => ({
         getProjects: build.query({
                 query: () => GET_PROJECTS_API,
                 keepUnusedDataFor: 1
+            }
+        ),
+        update: build.mutation({
+                query: (project) => ({
+                    url: UPDATE_PROJECT,
+                    method: "POST",
+                    body: project
+                }),
+                transformResponse: (responseData) => {
+                    store.dispatch(setBackupProject(responseData))
+                    return responseData
+                }
+
+            }
+        ),
+        getProjectById: build.query({
+                query: (project) => ({
+                    url: GET_PROJECT,
+                    method: "POST",
+                    body: project
+                }),
+                transformResponse: (responseData) => {
+                    store.dispatch(setSelectedProject(responseData))
+                    store.dispatch(setBackupProject(responseData))
+                    return responseData
+                },
+                providesTags: ['editProject'],
             }
         ),
         getDetails: build.query({
@@ -33,4 +70,11 @@ const projectsApi = rootApi.injectEndpoints({
     }),
     overrideExisting: false
 });
-export const {useGetProjectsQuery, useGetDetailsQuery, useGetStepsByIdQuery, useGetStepByNumberQuery} = projectsApi;
+export const {
+    useGetProjectsQuery,
+    useGetDetailsQuery,
+    useGetStepsByIdQuery,
+    useGetStepByNumberQuery,
+    useGetProjectByIdQuery,
+    useUpdateMutation
+} = projectsApi;

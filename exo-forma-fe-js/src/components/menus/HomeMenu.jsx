@@ -20,7 +20,7 @@ import ConfirmDialog from "../../ui/ConfirmDialog";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 
-const ProgettiMenu = ({filter, setFilter}) => {
+const HomeMenu = ({filter, setFilter}) => {
     const [open, setOpen] = React.useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -121,11 +121,11 @@ const ProgettiMenu = ({filter, setFilter}) => {
                 open={open}
                 handleClose={() => setOpen(false)}
                 handleConfirm={() => {
-                    navigate({to: PROJECT_ROOT_NEW});
+                    navigate(PROJECT_ROOT_NEW);
                     setOpen(false);
                 }}
             /></>
     );
 };
 
-export default ProgettiMenu;
+export default HomeMenu;

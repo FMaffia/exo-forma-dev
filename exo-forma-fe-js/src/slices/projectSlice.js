@@ -1,33 +1,29 @@
-import { createSlice } from '@reduxjs/toolkit'
-const selectedProjectState  = {
-    authors: "",
-    carousel: [],
-    categories: [],
-    creationDate: "",
-    desc: "",
-    descBreve: "",
-    difficult: 0,
-    order: 0,
-    path: "",
-    published: false,
-    steps: [],
-    lastStep: 0,
-    stepsCount: 0,
-    title: ""
-};
+import {createSlice} from '@reduxjs/toolkit'
+
 
 const selectedProjectSlice = createSlice({
     name: 'selectedProjects',
-    initialState: selectedProjectState,
+    initialState: {},
     reducers: {
+        setPartialProject(state, action) {
+            state[action.payload.field] = action.payload.value
+        },
         setSelectedProject(state, action) {
             return action.payload
         },
         setStepsByProject(state, action) {
             state.steps = action.payload
-        }
+        },
+        resetSelectedProject(state) {
+            return {}
+        },
     }
 })
 
-export const { setSelectedProject, setStepsByProject } = selectedProjectSlice.actions
+export const {
+    setSelectedProject,
+    setStepsByProject,
+    resetSelectedProject,
+    setPartialProject
+} = selectedProjectSlice.actions
 export default selectedProjectSlice.reducer

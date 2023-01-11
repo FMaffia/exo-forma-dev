@@ -25,6 +25,17 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <version>19.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->

@@ -10,8 +10,10 @@ import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -23,7 +25,8 @@ public class ProjectService {
     private ProjectRepository projectRepo;
 
     @GetMapping(ApiConstants.Project.ALL_PROJECT)
-    public ResponseEntity<List<ProjectCard>> getAll() {
+    public ResponseEntity<List<ProjectCard>> getAll(Principal principal) {
+        log.debug(principal.getName());
         log.debug("-----> PROJECT_SERVICES: GetAll");
         return ResponseEntity.ok(this.projectRepo.findAll());
     }
@@ -63,6 +66,7 @@ public class ProjectService {
 
 
     @PostMapping(ApiConstants.Project.UPDATE)
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")//singolo ruolo
     public ResponseEntity<Project> save(@RequestBody Project project) {
         log.debug("-----> PROJECT_SERVICES: Save project id: " + project.getId());
         return ResponseEntity.ok(this.projectRepo.save(project));

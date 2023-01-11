@@ -48,6 +48,15 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-security-adapter</artifactId>
+            <version>19.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

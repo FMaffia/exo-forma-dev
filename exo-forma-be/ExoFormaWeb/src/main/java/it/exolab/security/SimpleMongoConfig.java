@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "it.exolab.repository")
+@EnableMongoRepositories(basePackages = "it.exolab.access")
 public class SimpleMongoConfig {
     @Bean
     public MongoClient mongo() {

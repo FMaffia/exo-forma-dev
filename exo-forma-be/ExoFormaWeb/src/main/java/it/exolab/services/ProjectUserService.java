@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,11 +32,10 @@ public class ProjectUserService {
     }
 
     @PostMapping(ApiConstants.UserProject.UPDATE_LAST_STEP)
-    public ResponseEntity updateLastStep(@RequestBody ProjectUser requestBody) {
+    public ResponseEntity updateLastStep(@RequestBody ProjectUser requestBody, Principal principal) {
         log.debug("-----> UPDATE LAST STEP: " + requestBody.getLastStep() + " ID PROJECT: " + requestBody.getIdProject());
         try {
-            String idUser = "62a85bce9512066fdab1bfb7";
-            requestBody.setIdUser(idUser);
+            requestBody.setIdUser(principal.getName());
             ProjectUser updated = projectUserRepository.updateLastStep(requestBody);
             if (Objects.isNull(updated)) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(INTERNAL_SERVER_ERROR_MSG);

@@ -27,6 +27,8 @@ public class Project implements Serializable {
     private List<String> categories = new ArrayList<>();
     private Integer difficult;
     private Boolean published;
+    private String image;
+
     private List<StepProject> steps = new ArrayList<>();
 
 }

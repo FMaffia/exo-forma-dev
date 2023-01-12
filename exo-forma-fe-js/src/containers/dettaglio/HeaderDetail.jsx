@@ -16,7 +16,7 @@ const HeaderDetail = ({currentProject}) => {
                             sx={{mr: 2, color: 'white'}}/> {`Creato il ${currentProject?.creationDate}`}
                     </Box>
                     <Box sx={{display: 'flex'}}>
-                        <CreateIcon sx={{mr: 2, color: 'white'}}/> {`${currentProject?.authors}`}
+                        <CreateIcon sx={{mr: 2, color: 'white'}}/> {`${currentProject?.author}`}
                     </Box>
                 </Box>
             </Typography>

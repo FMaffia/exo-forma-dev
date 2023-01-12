@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import it.exolab.access.ProjectRepository;
+import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
 import it.exolab.model.view.ProjectCard;
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
 
@@ -26,9 +28,8 @@ public class ProjectService {
 
     @GetMapping(ApiConstants.Project.ALL_PROJECT)
     public ResponseEntity<List<ProjectCard>> getAll(Principal principal) {
-        log.debug(principal.getName());
-        log.debug("-----> PROJECT_SERVICES: GetAll");
-        return ResponseEntity.ok(this.projectRepo.findAll());
+        log.debug("-----> PROJECT_SERVICES: GetAll" + principal.getName());
+        return ResponseEntity.ok(this.projectRepo.findAll(principal.getName()));
     }
 
     @PostMapping(ApiConstants.Project.PROJECT_BY_ID)
@@ -39,16 +40,16 @@ public class ProjectService {
     }
 
     @GetMapping(ApiConstants.Project.PROJECT_DETAILS)
-    public ResponseEntity<ProjectCard> getProjectByPath(@PathVariable String path) {
+    public ResponseEntity<ProjectCard> getProjectByPath(@PathVariable String path, Principal principal) {
         log.debug("-----> PROJECT_SERVICES: Get project by path: " + path);
-        ProjectCard response = this.projectRepo.findProjectByPath(path);
+        ProjectCard response = this.projectRepo.findProjectByPath(path, principal.getName());
         return ResponseEntity.ok(response);
     }
 
     @GetMapping(ApiConstants.Project.ALL_STEPS)
-    public ResponseEntity<List<StepProject>> getSteps(@PathVariable String projectId) {
+    public ResponseEntity<List<StepProject>> getSteps(@PathVariable String projectId, Principal principal) {
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
-        List<StepProject> stepsFull = this.projectRepo.getStepsByIdProject(projectId).getSteps();
+        List<StepProject> stepsFull = this.projectRepo.getStepsByIdProject(projectId, principal.getName()).getSteps();
         return ResponseEntity.ok(stepsFull);
     }
 
@@ -67,9 +68,17 @@ public class ProjectService {
 
     @PostMapping(ApiConstants.Project.UPDATE)
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")//singolo ruolo
-    public ResponseEntity<Project> save(@RequestBody Project project) {
+    public ResponseEntity<Project> save(@RequestBody Project project, Principal principal) {
         log.debug("-----> PROJECT_SERVICES: Save project id: " + project.getId());
+        project.setAuthor(principal.getName());
+
         return ResponseEntity.ok(this.projectRepo.save(project));
     }
 
+    @PostMapping(value = ApiConstants.Project.UPLOAD_IMAGE)
+    public String addImage(@RequestBody ImageCover image) throws IOException {
+        log.debug("-----> PROJECT_SERVICES: Upload image for project id " + image.getId());
+        this.projectRepo.addImage(image);
+        return "bravo";
+    }
 }

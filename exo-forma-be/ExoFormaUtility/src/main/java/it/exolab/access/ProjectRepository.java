@@ -1,6 +1,7 @@
 package it.exolab.access;
 
 import it.exolab.aggregationoperations.CustomProjectAggregationOperation;
+import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
 import it.exolab.model.view.ProjectCard;
@@ -11,6 +12,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,15 +26,6 @@ public class ProjectRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
-
-    public Project getStepByIndexAndIdProject2(String projectId, int indexStep) {
-
-        Query query = new Query()
-                .addCriteria(Criteria.where("_id").is(projectId));
-        query.fields().elemMatch("steps", Criteria.where("number").is(indexStep));
-
-        return mongoTemplate.findOne(query, Project.class);
-    }
 
     public StepProject getStepByIndexAndIdProject(String projectId, int indexStep) {
         MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
@@ -51,9 +44,8 @@ public class ProjectRepository {
         return aggRes.getUniqueMappedResult();
     }
 
-    public List<ProjectCard> findAll() {
+    public List<ProjectCard> findAll(String idUser) {
 
-        String idUser = "62a85bce9512066fdab1bfb7";
 
         //escludiamo le cose non necessarie dal risultato
         ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
@@ -70,9 +62,8 @@ public class ProjectRepository {
     }
 
 
-    public ProjectCard findProjectByPath(String path) {
+    public ProjectCard findProjectByPath(String path, String idUser) {
 
-        String idUser = "62a85bce9512066fdab1bfb7";
 
         //escludiamo le cose non necessarie dal risultato
         ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
@@ -92,8 +83,7 @@ public class ProjectRepository {
         return aggRes.getUniqueMappedResult();
     }
 
-    public Project getStepsByIdProject(String id) {
-        String idUser = "62a85bce9512066fdab1bfb7";
+    public Project getStepsByIdProject(String id, String idUser) {
         ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();
 
         //prendiamo solo il progetto richiesto
@@ -213,6 +203,13 @@ public class ProjectRepository {
     }
 
     public Project save(Project project) {
+        project.setPath(project.getTitle().replace(" ", ""));
         return this.mongoTemplate.save(project);
+    }
+
+    public void addImage(ImageCover image) {
+        Query query = new Query(new Criteria("id").is(new ObjectId(image.getId())));
+        Update update = new Update().set("image", image.getImage());
+        this.mongoTemplate.updateFirst(query, update, Project.class);
     }
 }

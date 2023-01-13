@@ -1,0 +1,10 @@
+$theme-colors: (
+        "primary": #4a148b,
+  /*
+  "gradient": "linear-gradient(180deg, rgba(124, 42, 175, 1) 0%, rgba(74, 20, 140, 1) 92%)",
+  */
+        "info": #c6ff00,
+        "danger": #ff4136
+);
+
+@import '~bootstrap/scss/bootstrap.scss';

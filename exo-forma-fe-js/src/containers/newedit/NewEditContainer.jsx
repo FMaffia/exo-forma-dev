@@ -1,19 +1,21 @@
 import React from 'react'
-import { Box } from '@mui/material'
-import ButtonBardEdit from './ButtonBardEdit'
-import { Outlet } from 'react-router-dom'
-import Grid from '@mui/material/Grid'
+import ButtonBarEdit from './ButtonBarEdit'
+import { Outlet, useLocation } from 'react-router-dom'
+import { includes } from 'lodash'
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
 
 const NewEditContainer = () => {
+    const location = useLocation()
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12} lg={8} xl={6}>
-                <Box sx={{ minHeight: '50vh' }}>
+        <Container className="mb-2">
+            <Card className="p-3">
+                <Card.Body>
                     <Outlet />
-                </Box>
-                <ButtonBardEdit />
-            </Grid>
-        </Grid>
+                    {!includes(location.pathname, 'step') && <ButtonBarEdit />}
+                </Card.Body>
+            </Card>
+        </Container>
     )
 }
 

@@ -7,9 +7,11 @@ import it.exolab.access.ProjectRepository;
 import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
+import it.exolab.model.request.StepRequest;
 import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -73,6 +75,20 @@ public class ProjectService {
         project.setAuthor(principal.getName());
 
         return ResponseEntity.ok(this.projectRepo.save(project));
+    }
+
+    @PostMapping(ApiConstants.Project.UPDATE_STEP)
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public ResponseEntity<Object> saveStep(@RequestBody StepRequest stepRequest) {
+        log.debug("PROJECT_SERVICES: Aggiungi step al progetto: " + stepRequest.getIdProject());
+        try {
+            this.projectRepo.saveStep(stepRequest);
+            return ResponseEntity.ok().build();
+        } catch (Exception ex) {
+            log.error(ex.getMessage(), ex);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+
+        }
     }
 
     @PostMapping(value = ApiConstants.Project.UPLOAD_IMAGE)

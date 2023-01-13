@@ -26,7 +26,7 @@ const UploadCover = () => {
     return isLoading ? (
         <p>Loading</p>
     ) : image ? (
-        <img alt="" src={image} height={400} />
+        <img alt="" src={image} style={{ width: 'inherit' }} />
     ) : (
         <Button variant="contained" component="label">
             Upload File

@@ -1,6 +1,6 @@
 package it.exolab.model.view;
 
-import it.exolab.model.StepProject;
+import it.exolab.model.request.StepRequest;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,8 +14,8 @@ public class StepView implements Serializable {
     private String title;
     private boolean completed;
 
-    public StepView(StepProject stepProject) {
-        this.number = stepProject.getNumber();
-        this.title = stepProject.getTitle();
+    public StepView(StepRequest stepRequest) {
+        this.number = stepRequest.getNumber();
+        this.title = stepRequest.getTitle();
     }
 }

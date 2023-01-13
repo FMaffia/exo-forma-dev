@@ -1,6 +1,7 @@
 export const ROOT_API = 'http://localhost:8080/'
 export const GET_PROJECTS_API = 'projects/all'
 export const UPDATE_PROJECT = 'projects/update'
+export const UPDATE_STEP = 'projects/update/step'
 export const GET_PROJECT_BY_PATH = 'projects/path/'
 export const GET_PROJECT = 'projects/find'
 export const UPLOAD_IMAGE = 'projects/uploadImage'

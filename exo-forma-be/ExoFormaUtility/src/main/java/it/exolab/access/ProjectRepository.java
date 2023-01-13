@@ -4,6 +4,7 @@ import it.exolab.aggregationoperations.CustomProjectAggregationOperation;
 import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
+import it.exolab.model.request.StepRequest;
 import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
@@ -210,6 +211,19 @@ public class ProjectRepository {
     public void addImage(ImageCover image) {
         Query query = new Query(new Criteria("id").is(new ObjectId(image.getId())));
         Update update = new Update().set("image", image.getImage());
+        this.mongoTemplate.updateFirst(query, update, Project.class);
+    }
+
+    public void saveStep(StepRequest stepRequest) {
+        Query query = new Query(new Criteria("id").is(new ObjectId(stepRequest.getIdProject())));
+        StepProject stepToUpdated = new StepProject(stepRequest);
+        Update update;
+        if (!stepRequest.getUpdate()) {
+            update = new Update().push("steps", stepToUpdated);
+        } else {
+            query.addCriteria(new Criteria("steps.number").is(stepRequest.getNumber()));
+            update = new Update().set("steps.$", stepToUpdated);
+        }
         this.mongoTemplate.updateFirst(query, update, Project.class);
     }
 }

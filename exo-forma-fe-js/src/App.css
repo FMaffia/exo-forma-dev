@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-family: Quicksand, serif;
+
+}
 
 #root {
     background-color: #E9EEF1

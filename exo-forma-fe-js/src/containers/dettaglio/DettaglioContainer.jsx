@@ -7,6 +7,7 @@ import BodyDetail from './BodyDetail'
 
 const DettaglioContainer = ({ currentProject }) => {
     const navigate = useNavigate()
+
     const prefix = 'data:image/png;base64,'
     const srcImage = prefix + currentProject.image
     return (
@@ -36,4 +37,4 @@ const DettaglioContainer = ({ currentProject }) => {
     )
 }
 
-export default DettaglioContainer;
+export default DettaglioContainer

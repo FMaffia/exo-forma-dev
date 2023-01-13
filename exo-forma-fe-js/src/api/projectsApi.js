@@ -1,5 +1,5 @@
 import { rootApi } from './rootApi'
-import { GET_PROJECT, GET_PROJECT_BY_PATH, GET_PROJECTS_API, GET_STEP_BY_NUMBER, GET_STEPS_BY_ID, UPDATE_PROJECT, UPLOAD_IMAGE } from './URI'
+import { GET_PROJECT, GET_PROJECT_BY_PATH, GET_PROJECTS_API, GET_STEP_BY_NUMBER, GET_STEPS_BY_ID, UPDATE_PROJECT, UPDATE_STEP, UPLOAD_IMAGE } from './URI'
 import { store } from '../store/store'
 import { setBackupProject } from '../slices/backupProjectSlice'
 import { setSelectedProject } from '../slices/projectSlice'
@@ -8,7 +8,8 @@ const projectsApi = rootApi.injectEndpoints({
     endpoints: build => ({
         getProjects: build.query({
             query: () => GET_PROJECTS_API,
-            keepUnusedDataFor: 1
+            keepUnusedDataFor: 1,
+            providesTags: ['all']
         }),
         update: build.mutation({
             query: project => ({
@@ -16,10 +17,19 @@ const projectsApi = rootApi.injectEndpoints({
                 method: 'POST',
                 body: project
             }),
+            invalidatesTags: ['all'],
             transformResponse: responseData => {
                 store.dispatch(setBackupProject(responseData))
                 return responseData
             }
+        }),
+        updateStep: build.mutation({
+            query: step => ({
+                url: UPDATE_STEP,
+                method: 'POST',
+                body: step
+            }),
+            invalidatesTags: ['editProject']
         }),
         getProjectById: build.query({
             query: project => ({
@@ -32,6 +42,7 @@ const projectsApi = rootApi.injectEndpoints({
                 store.dispatch(setBackupProject(responseData))
                 return responseData
             },
+            keepUnusedDataFor: 10000,
             providesTags: ['editProject']
         }),
         uploadImage: build.mutation({
@@ -53,7 +64,6 @@ const projectsApi = rootApi.injectEndpoints({
             providesTags: ['Steps'],
             keepUnusedDataFor: 1
         }),
-
         getStepByNumber: build.query({
             query: queryArgs => {
                 if (!queryArgs.number) {
@@ -74,5 +84,6 @@ export const {
     useGetStepByNumberQuery,
     useGetProjectByIdQuery,
     useUpdateMutation,
+    useUpdateStepMutation,
     useUploadImageMutation
 } = projectsApi

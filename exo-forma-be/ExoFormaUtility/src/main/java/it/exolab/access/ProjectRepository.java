@@ -15,11 +15,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Service
 @Slf4j
@@ -49,7 +47,7 @@ public class ProjectRepository {
 
 
         //escludiamo le cose non necessarie dal risultato
-        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
+        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString","image");
 
         ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>(aggregateProjectJoins(idUser, true));
         pipelineOperations.add(projection);
@@ -67,7 +65,7 @@ public class ProjectRepository {
 
 
         //escludiamo le cose non necessarie dal risultato
-        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString");
+        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString","image");
         MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is(path));
 
 
@@ -82,6 +80,15 @@ public class ProjectRepository {
 
         AggregationResults<ProjectCard> aggRes = mongoTemplate.aggregate(agg, Project.class, ProjectCard.class);
         return aggRes.getUniqueMappedResult();
+    }
+
+    public String getImageProjectByPath(String path){
+        ProjectionOperation projection = Aggregation.project().andInclude("image");
+        MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is(path));
+        Aggregation aggregation = Aggregation.newAggregation(Project.class,matchOperation,projection);
+        AggregationResults<Project> aggRes = mongoTemplate.aggregate(aggregation, Project.class, Project.class);
+        Project project = aggRes.getUniqueMappedResult();
+        return Objects.nonNull(project) && StringUtils.hasText(project.getImage()) ? project.getImage() : "";
     }
 
     public Project getStepsByIdProject(String id, String idUser) {

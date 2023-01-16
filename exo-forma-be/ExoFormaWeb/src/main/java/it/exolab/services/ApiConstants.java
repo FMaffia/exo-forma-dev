@@ -17,4 +17,8 @@ public class ApiConstants {
         public final static String UPDATE_LAST_STEP = "/updateLastStep";
     }
 
+    public static class Utility {
+        public final static String GET_ALL_CATEGORIES = "/categories";
+    }
+
 }

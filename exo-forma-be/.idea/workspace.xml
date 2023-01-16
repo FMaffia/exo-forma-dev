@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="Inizio form modifica/inserimento">
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout2.jsx" afterDir="false" />
+    <list default="true" id="eabdbdc9-c12d-40f8-af6f-f82c43d6e60d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/UtilityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/UtilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +31,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -40,6 +50,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7868294c-770b-476d-bdd7-5a56f842834c" />
+        <option name="url" value="git@github.com:FMaffia/exo-forma-dev.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/3.4.0/spring-data-mongodb-3.4.0.jar!/org/springframework/data/mongodb/core/aggregation/AggregationOperation.class" root0="SKIP_INSPECTION" />
@@ -71,7 +89,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/development/workspaces/workspace-interno/exo-forma-dev/exo-forma-be",
+    "last_opened_file_path": "C:/Users/valet/Desktop/progetto/exo-forma-dev/exo-forma-fe-js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +136,7 @@
       <method v="2" />
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-11.0.16.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="exoFormaWeb" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="it.exolab.ExoFormaApplication" />

@@ -7,6 +7,7 @@ import Skeleton from 'react-loading-skeleton'
 import ResultProject from '../ricerca/ResultProject'
 import { useGetProjectsQuery } from '../../api/projectsApi'
 import { MenuFilter } from '../../models/menuItems'
+import HomeMenu2 from "../../components/menus/HomeMenu2";
 
 const ProgettiSection = () => {
     const [filter, setFilter] = useState()
@@ -32,7 +33,8 @@ const ProgettiSection = () => {
     }
     return (
         <div>
-            <Drawer
+          <HomeMenu2/>
+           {/* <Drawer
                 variant={'permanent'}
                 sx={{
                     width: drawerWidth,
@@ -41,7 +43,7 @@ const ProgettiSection = () => {
                 }}
             >
                 <HomeMenu filter={filter} setFilter={setFilter} />
-            </Drawer>
+            </Drawer>*/}
             <ProjectsBC filter={filter} setFilter={setFilter} />
             {isLoading ? <Skeleton count={20} /> : <ResultProject projects={filteredProjects} />}
         </div>

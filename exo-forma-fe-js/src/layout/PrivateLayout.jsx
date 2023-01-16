@@ -15,10 +15,12 @@ import NewEditSection from '../containers/sections/NewEditSection'
 import FeatureForm from '../containers/newedit/FeatureForm'
 import DescForm from '../containers/newedit/DescForm'
 import StepForm from '../containers/newedit/StepForm'
+import ContainerHeader2 from './ContainerHeader2'
 
 const PrivateLayout = () => {
     return (
         <ThemeProvider theme={theme}>
+            <ContainerHeader2 />
             <ContainerHeader maxWidth={false}>
                 <Title footer={false} />
             </ContainerHeader>

@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"FORMAZIONE_INTERNA.projects"}],"uuid":"ab5bceb0ea1f42aaacb0b18060e898fa"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"d9a0d322d7e34fe093a23358f150e5b4","collectionName":"projects","type":"collection"}

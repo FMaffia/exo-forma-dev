@@ -1,41 +1,32 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import HomeIcon from '@mui/icons-material/Home';
-import {MenuFilter} from "../../models/menuItems";
-import {FilterMap} from "../menus/FilterMap";
-import {useNavigate} from "react-router-dom";
+import * as React from 'react'
+import { MenuFilter } from '../../models/menuItems'
+import { useNavigate } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FilterMap } from '../menus/FilterMap'
+import { Breadcrumb } from 'react-bootstrap'
+import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
+import { PROJECT_ROOT } from '../../constants/Routes'
 
-
-export default function ProjectsBC({filter, setFilter}) {
+export default function ProjectsBC({ filter, setFilter }) {
     const navigate = useNavigate()
-    const onClickFunc = (e) => {
+    const onClickFunc = e => {
         e.preventDefault()
         setFilter(MenuFilter.TUTTI)
-        navigate('/progetti')
+        navigate(PROJECT_ROOT)
     }
     return (
-        <div>
-            <Breadcrumbs aria-label="breadcrumb" sx={{marginBottom: 2}}>
-                <Link
-                    onClick={onClickFunc}
-                    underline="hover"
-                    sx={{display: 'flex', alignItems: 'center'}}
-                    color="inherit"
-                    href="/"
-                >
-                    <HomeIcon color={"primary"} sx={{mr: 0.5}} fontSize="inherit"/>
-                    Progetti
-                </Link>
-                {filter && filter !== MenuFilter.TUTTI && <Typography
-                    sx={{display: 'flex', alignItems: 'center'}}
-                    color="text.primary"
-                >
+        <Breadcrumb>
+            <Breadcrumb.Item href="/" onClick={onClickFunc}>
+                <FontAwesomeIcon className="me-1" fontSize={13} icon={faFolderOpen} />
+                Progetti
+            </Breadcrumb.Item>
+            {filter && filter !== MenuFilter.TUTTI && (
+                <Breadcrumb.Item active>
+                    {' '}
                     {FilterMap[filter]?.icon}
                     {FilterMap[filter]?.label}
-                </Typography>}
-            </Breadcrumbs>
-        </div>
-    );
+                </Breadcrumb.Item>
+            )}
+        </Breadcrumb>
+    )
 }

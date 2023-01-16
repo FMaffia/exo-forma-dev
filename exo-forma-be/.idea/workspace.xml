@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="Inizio form modifica/inserimento">
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/UserInfo2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/EmptyResult.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/tools.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/ProjectsBC.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/ProjectsBC.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/FilterMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/FilterMap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/ResultProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/ResultProject.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/beta_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/default-placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/leaf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout2.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/themeCustom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/themeCustom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/ui/ConfirmDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/ui/ConfirmDialog.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +200,7 @@
       <workItem from="1671894247415" duration="14710000" />
       <workItem from="1673522939489" duration="3081000" />
       <workItem from="1673530397565" duration="14811000" />
-      <workItem from="1673855971312" duration="2346000" />
+      <workItem from="1673855971312" duration="3571000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

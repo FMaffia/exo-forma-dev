@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { ReactKeycloakProvider, useKeycloak } from '@react-keycloak/web'
 import useKeyRoles from './hooks/useKeyRoles'
@@ -8,7 +9,6 @@ import UnauthorizedPage from './pages/UnauthorizedPage'
 import * as UserRoles from './constants/UserRole'
 import PrivateLayout from './layout/PrivateLayout'
 import LogoutPage from './pages/LogoutPage'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const KeycloackApp = () => {
     return (

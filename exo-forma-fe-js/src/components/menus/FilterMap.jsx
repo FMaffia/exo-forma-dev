@@ -1,20 +1,20 @@
-import * as React from "react";
-import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
-import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import * as React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
+import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
 
 export const FilterMap = {
     TUTTI: {},
     COMPLETATI: {
         label: 'Completati',
-        icon: <MilitaryTechIcon color={'primary'} fontSize="inherit"/>
+        icon: <FontAwesomeIcon fontSize={14} className="text-primary mx-1" icon={faFlagCheckered} />
     },
     IN_CORSO: {
         label: 'In corso',
-        icon: <HourglassBottomIcon color={'primary'} fontSize="inherit"/>
+        icon: <FontAwesomeIcon fontSize={14} className="text-primary mx-1" icon={faHourglassHalf} />
     },
     BOZZA: {
         label: 'In bozza',
-        icon: <DesignServicesIcon color={'primary'} fontSize="inherit"/>
+        icon: <FontAwesomeIcon fontSize={14} className="text-primary mx-1" icon={faFlagCheckered} />
     }
 }

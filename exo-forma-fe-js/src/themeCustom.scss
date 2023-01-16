@@ -1,10 +1,12 @@
+$link-color: #6a1b9a;
+$nav-pills-link-active-bg: #6a1b9a;
+$font-family-base: 'Sofia Sans Semi Condensed', sans-serif !important;
+$tooltip-bg: #efefef;
+$tooltip-color: #6a1b9a;
 $theme-colors: (
-        "primary": #4a148b,
-  /*
-  "gradient": "linear-gradient(180deg, rgba(124, 42, 175, 1) 0%, rgba(74, 20, 140, 1) 92%)",
-  */
+        "primary": #6a1b9a,
         "info": #c6ff00,
-        "danger": #ff4136
+        "dark":#2E065E,
 );
 
 @import '~bootstrap/scss/bootstrap.scss';

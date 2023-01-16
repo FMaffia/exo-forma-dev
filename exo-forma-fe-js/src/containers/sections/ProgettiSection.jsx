@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import HomeMenu from '../../components/menus/HomeMenu'
-import Drawer from '@mui/material/Drawer'
-import { drawerWidth } from '../../components/mui/theme'
 import ProjectsBC from '../../components/breadcrumbs/ProjectsBC'
 import Skeleton from 'react-loading-skeleton'
 import ResultProject from '../ricerca/ResultProject'
 import { useGetProjectsQuery } from '../../api/projectsApi'
 import { MenuFilter } from '../../models/menuItems'
-import HomeMenu2 from "../../components/menus/HomeMenu2";
+import HomeMenu2 from '../../components/menus/HomeMenu2'
+import { Col, Row } from 'react-bootstrap'
 
 const ProgettiSection = () => {
     const [filter, setFilter] = useState()
@@ -32,22 +30,14 @@ const ProgettiSection = () => {
         setFilteredProjects(data)
     }
     return (
-        <div>
-          <HomeMenu2/>
-           {/* <Drawer
-                variant={'permanent'}
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' }
-                }}
-            >
-                <HomeMenu filter={filter} setFilter={setFilter} />
-            </Drawer>*/}
-            <ProjectsBC filter={filter} setFilter={setFilter} />
-            {isLoading ? <Skeleton count={20} /> : <ResultProject projects={filteredProjects} />}
-        </div>
+        <Row style={{ minHeight: '80vh' }}>
+            <HomeMenu2 filter={filter} setFilter={setFilter} />
+            <Col className="p-4" sm={12} md={11}>
+                <ProjectsBC filter={filter} setFilter={setFilter} />
+                {isLoading ? <Skeleton count={20} /> : <ResultProject projects={filteredProjects} />}
+            </Col>
+        </Row>
     )
 }
 
-export default ProgettiSection;
+export default ProgettiSection

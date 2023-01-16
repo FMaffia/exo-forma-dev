@@ -1,23 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;600&family=Saira+Stencil+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Rock+Salt&display=swap');
-
-/*
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;800&family=Sofia+Sans+Semi+Condensed:wght@200;400;900&family=Sriracha&display=swap');
 
 body {
     margin: 0 !important;
     overflow-x: hidden;
+    height: 100vh;
 }
 
-h1 {
-    font-family: Quicksand, serif;
+.tooltip-inner {
+    font-weight: bold;
+}
 
+.logo {
+    height: 100px
+}
+
+h1, h2, h3, h4, h5 {
+    /*font-family: 'Sriracha', cursive;*/
+}
+
+.bg-gradient-custom {
+    background: linear-gradient(180deg, rgba(124, 42, 175, 1), rgba(74, 20, 140, 1));
+    border-bottom: 5px #c6ff00 solid;
+}
+
+.bg-gradient-custom-inverted {
+    background: linear-gradient(180deg, rgba(124, 42, 175, 1), rgba(74, 20, 140, 1));
+    border-top: 5px #c6ff00 solid;
 }
 
 #root {
     background-color: #E9EEF1
 }
 
-.css-1wtc51h-MuiDrawer-docked .MuiDrawer-paper {
-    position: inherit !important;
-}

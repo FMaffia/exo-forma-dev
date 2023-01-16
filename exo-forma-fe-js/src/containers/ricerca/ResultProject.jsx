@@ -1,26 +1,22 @@
-import React from 'react';
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import CardProject from "../../components/ricerca/CardProject";
+import React from 'react'
+import CardProject from '../../components/ricerca/CardProject'
+import { Col, Row } from 'react-bootstrap'
+import EmptyResult from './EmptyResult'
 
-const ResultProject = ({projects}) => {
-
+const ResultProject = ({ projects }) => {
     return (
-        <Box
-            sx={{
-                position: 'relative'
-            }}
-        >
-            <Grid container spacing={2} sx={{display: 'flex', justifyContent: 'left'}}>
-                {
-                    projects?.map(fp => (
-                        <Grid key={fp.id} item xs={12} sm={6} md={4} lg={3} xl={4}>
-                            <CardProject project={fp}/>
-                        </Grid>
-                    ))}
-            </Grid>
-        </Box>
+        <Row className="mb-4 h-100">
+            {projects?.length > 0 ? (
+                projects.map(fp => (
+                    <Col key={fp.id} xs={12} sm={6} lg={4} xl={3}>
+                        <CardProject project={fp} />
+                    </Col>
+                ))
+            ) : (
+                <EmptyResult />
+            )}
+        </Row>
     )
-};
+}
 
-export default ResultProject;
+export default ResultProject

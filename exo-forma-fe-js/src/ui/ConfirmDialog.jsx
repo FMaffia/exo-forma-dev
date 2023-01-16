@@ -1,33 +1,23 @@
-import DialogTitle from "@mui/material/DialogTitle";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import {Button} from "@mui/material";
+import Modal from 'react-bootstrap/Modal'
+import { Button } from 'react-bootstrap'
 
-const ConfirmDialog = ({handleClose, open, body, handleConfirm}) => {
-
+const ConfirmDialog = ({ handleClose, open, body, handleConfirm }) => {
     return (
-        <Dialog
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-        >
-            <DialogTitle id="alert-dialog-title">Conferma</DialogTitle>
-            <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                    {body}
-                </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={handleClose}>Annulla</Button>
-                <Button variant={"contained"} onClick={handleConfirm} autoFocus>
+        <Modal show={open} onHide={handleClose}>
+            <Modal.Body>
+                <p>{body}</p>
+            </Modal.Body>
+
+            <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Annulla
+                </Button>
+                <Button variant="primary" onClick={handleConfirm}>
                     Conferma
                 </Button>
-            </DialogActions>
-        </Dialog>
-    );
-};
+            </Modal.Footer>
+        </Modal>
+    )
+}
 
-export default ConfirmDialog;
+export default ConfirmDialog

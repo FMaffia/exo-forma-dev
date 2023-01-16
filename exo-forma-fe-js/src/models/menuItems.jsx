@@ -1,15 +1,20 @@
 import React from 'react'
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom'
-import MilitaryTechIcon from '@mui/icons-material/MilitaryTech'
-import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded'
-import {sortBy} from 'lodash'
+
+import { sortBy } from 'lodash'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
+import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
+import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
+import { PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT, PROJECT_ROOT_NEW } from '../constants/Routes'
+import { faAdd } from '@fortawesome/free-solid-svg-icons/faAdd'
+import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil'
 
 export const MenuFilter = {
-    TUTTI: "TUTTI",
-    IN_CORSO: "IN_CORSO",
-    COMPLETATI: "COMPLETATI",
-    BOZZA: "BOZZA"
+    TUTTI: 'TUTTI',
+    IN_CORSO: 'IN_CORSO',
+    COMPLETATI: 'COMPLETATI',
+    BOZZA: 'BOZZA'
 }
 
 export const stepMenuFunc = (steps, lastStep) => {
@@ -19,24 +24,45 @@ export const stepMenuFunc = (steps, lastStep) => {
         number: s.number,
         path: '/step/' + s.number,
         disabled: !s.completed && s.number !== lastStep,
-        icon: s.completed ? <CheckCircleIcon color={'primary'} fontSize="large"/> :
-            <PlayCircleOutlineRoundedIcon fontSize="large"/>
+        icon: s.completed ? <CheckCircleIcon color={'primary'} fontSize="large" /> : <CheckCircleIcon fontSize="large" />
     }))
     return sortBy(array, [a => a.order, 'asc'])
 }
-export const drawnerMenu = [
+export const ricercaMenu = [
+    {
+        menuLabel: 'Sfoglia progetti',
+        order: 1,
+        path: PROJECT_ROOT,
+        filter: MenuFilter.TUTTI,
+        icon: <FontAwesomeIcon fontSize={20} icon={faFolderOpen} />
+    },
     {
         menuLabel: 'Progetti in corso',
-        order: 1,
-        path: "/progetti/in-corso",
+        order: 2,
+        path: PROJECT_IN_CORSO,
         filter: MenuFilter.IN_CORSO,
-        icon: <HourglassBottomIcon color={'primary'} fontSize="small"/>
+        icon: <FontAwesomeIcon fontSize={20} icon={faHourglassHalf} />
     },
     {
         menuLabel: 'Progetti completati',
         order: 2,
-        path: "/progetti/completati",
+        path: PROJECT_COMPLETATI,
         filter: MenuFilter.COMPLETATI,
-        icon: <MilitaryTechIcon color={'primary'} fontSize="small"/>
+        icon: <FontAwesomeIcon fontSize={20} icon={faFlagCheckered} />
+    }
+]
+export const adminMenu = [
+    {
+        menuLabel: 'Aggiungi progetto',
+        order: 4,
+        path: PROJECT_ROOT_NEW,
+        icon: <FontAwesomeIcon fontSize={20} icon={faAdd} />
+    },
+    {
+        menuLabel: 'Modifica',
+        order: 5,
+        path: PROJECT_EDIT,
+        filter: MenuFilter.IN_CORSO,
+        icon: <FontAwesomeIcon fontSize={20} icon={faPencil} />
     }
 ]

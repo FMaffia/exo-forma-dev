@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eabdbdc9-c12d-40f8-af6f-f82c43d6e60d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/UtilityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/UtilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaUtility/src/main/java/it/exolab/access/ProjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ApiConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/DettaglioContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/dettaglio/DettaglioContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/DettaglioSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/DettaglioSection.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
     </list>

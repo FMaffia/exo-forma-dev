@@ -12,6 +12,7 @@ import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +47,13 @@ public class ProjectService {
         log.debug("-----> PROJECT_SERVICES: Get project by path: " + path);
         ProjectCard response = this.projectRepo.findProjectByPath(path, principal.getName());
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping(value = ApiConstants.Project.GET_IMAGE,produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> getImageByPath(@PathVariable String path){
+        log.debug("-----> PROJECT_SERVICES: Get image by path: " + path);
+        String imageBase64 = this.projectRepo.getImageProjectByPath(path);
+        return ResponseEntity.ok(imageBase64);
     }
 
     @GetMapping(ApiConstants.Project.ALL_STEPS)

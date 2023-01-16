@@ -11,6 +11,7 @@ public class ApiConstants {
         public final static String UPDATE = "/update";
         public final static String UPDATE_STEP = "/update/step";
         public final static String UPLOAD_IMAGE = "/uploadImage";
+        public final static String GET_IMAGE = "/getImage/{path}";
     }
 
     public static class UserProject {

@@ -31,8 +31,10 @@ const ProgettiSection = () => {
     }
     return (
         <Row style={{ minHeight: '80vh' }}>
-            <HomeMenu2 filter={filter} setFilter={setFilter} />
-            <Col className="p-4" sm={12} md={11}>
+            <Col sm={12} lg={2} xl={1} className="pt-3 pt-0">
+                <HomeMenu2 filter={filter} setFilter={setFilter} />
+            </Col>
+            <Col className="p-md-4" sm={12} lg={10} xl={11}>
                 <ProjectsBC filter={filter} setFilter={setFilter} />
                 {isLoading ? <Skeleton count={20} /> : <ResultProject projects={filteredProjects} />}
             </Col>

@@ -11,11 +11,10 @@ import { faCalendarDay } from '@fortawesome/free-solid-svg-icons/faCalendarDay'
 import { faFireFlameCurved } from '@fortawesome/free-solid-svg-icons/faFireFlameCurved'
 import { range } from 'lodash'
 import clsx from 'clsx'
+import ImageCard from './ImageCard'
 
 const CardProject = ({ project }) => {
     const maxDifficult = 6
-    const prefix = 'data:image/png;base64,'
-    const srcImage = prefix + project.image
     const navigate = useNavigate()
     const calculatePerc = project.lastStep > project.stepsCount ? 100 : (project.lastStep * 100) / project.stepsCount
     const location = useLocation()
@@ -30,7 +29,7 @@ const CardProject = ({ project }) => {
     }
     return (
         <Card>
-            <Card.Img style={{ height: '12rem', objectFit: 'cover' }} variant="center" src={srcImage} alt={project.title} />
+            <ImageCard idProject={project.id} />
             <Card.Body>
                 <Card.Title>{project.title} </Card.Title>
                 <Card.Text className={'text-muted small mb-0'}>

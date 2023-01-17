@@ -49,10 +49,12 @@ public class ProjectService {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping(value = ApiConstants.Project.GET_IMAGE,produces = MediaType.TEXT_PLAIN_VALUE)
-    public ResponseEntity<String> getImageByPath(@PathVariable String path){
-        log.debug("-----> PROJECT_SERVICES: Get image by path: " + path);
-        String imageBase64 = this.projectRepo.getImageProjectByPath(path);
+    @GetMapping(value = ApiConstants.Project.GET_IMAGE, produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> getImageById(@PathVariable String id) {
+        log.debug("-----> PROJECT_SERVICES: Get image by id: " + id);
+        String prefix = "data:image/png;base64,";
+
+        String imageBase64 = prefix + this.projectRepo.getImageProjectById(id);
         return ResponseEntity.ok(imageBase64);
     }
 

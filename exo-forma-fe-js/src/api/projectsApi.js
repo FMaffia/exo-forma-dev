@@ -1,5 +1,14 @@
 import { rootApi } from './rootApi'
-import { GET_PROJECT, GET_PROJECT_BY_PATH, GET_PROJECTS_API, GET_STEP_BY_NUMBER, GET_STEPS_BY_ID, UPDATE_PROJECT, UPDATE_STEP, UPLOAD_IMAGE } from './URI'
+import {
+    GET_PROJECT_API,
+    GET_PROJECT_BY_PATH_API,
+    GET_PROJECTS_API,
+    GET_STEPS_BY_ID_API,
+    IMAGE_API,
+    UPDATE_PROJECT_API,
+    UPDATE_STEP_API,
+    UPLOAD_IMAGE_API
+} from './URI'
 import { store } from '../store/store'
 import { setBackupProject } from '../slices/backupProjectSlice'
 import { setSelectedProject } from '../slices/projectSlice'
@@ -13,7 +22,7 @@ const projectsApi = rootApi.injectEndpoints({
         }),
         update: build.mutation({
             query: project => ({
-                url: UPDATE_PROJECT,
+                url: UPDATE_PROJECT_API,
                 method: 'POST',
                 body: project
             }),
@@ -25,7 +34,7 @@ const projectsApi = rootApi.injectEndpoints({
         }),
         updateStep: build.mutation({
             query: step => ({
-                url: UPDATE_STEP,
+                url: UPDATE_STEP_API,
                 method: 'POST',
                 body: step
             }),
@@ -33,7 +42,7 @@ const projectsApi = rootApi.injectEndpoints({
         }),
         getProjectById: build.query({
             query: project => ({
-                url: GET_PROJECT,
+                url: GET_PROJECT_API,
                 method: 'POST',
                 body: project
             }),
@@ -47,29 +56,35 @@ const projectsApi = rootApi.injectEndpoints({
         }),
         uploadImage: build.mutation({
             query: request => ({
-                url: UPLOAD_IMAGE,
+                url: UPLOAD_IMAGE_API,
                 method: 'POST',
                 credentials: 'include',
                 body: request
             })
         }),
-
+        getImage: build.query({
+            query: path => ({
+                url: IMAGE_API + path,
+                method: 'GET',
+                responseHandler: 'text'
+            })
+        }),
         getDetails: build.query({
-            query: path => GET_PROJECT_BY_PATH + path,
+            query: path => GET_PROJECT_BY_PATH_API + path,
             keepUnusedDataFor: 1,
             providesTags: ['Detail']
         }),
         getStepsById: build.query({
-            query: id => `${GET_STEPS_BY_ID}${id}`,
+            query: id => `${GET_STEPS_BY_ID_API}${id}`,
             providesTags: ['Steps'],
             keepUnusedDataFor: 1
         }),
         getStepByNumber: build.query({
             query: queryArgs => {
                 if (!queryArgs.number) {
-                    return `${GET_STEP_BY_NUMBER}${queryArgs?.idProject}/step/0`
+                    return `${GET_STEPS_BY_ID_API}${queryArgs?.idProject}/step/0`
                 } else {
-                    return `${GET_STEP_BY_NUMBER}${queryArgs?.idProject}/step/${queryArgs.number}`
+                    return `${GET_STEPS_BY_ID_API}${queryArgs?.idProject}/step/${queryArgs.number}`
                 }
             },
             keepUnusedDataFor: 1
@@ -80,6 +95,7 @@ const projectsApi = rootApi.injectEndpoints({
 export const {
     useGetProjectsQuery,
     useGetDetailsQuery,
+    useGetImageQuery,
     useGetStepsByIdQuery,
     useGetStepByNumberQuery,
     useGetProjectByIdQuery,

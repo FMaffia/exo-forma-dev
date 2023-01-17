@@ -2,11 +2,10 @@ import React, { useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import useKeyRoles from '../../hooks/useKeyRoles'
 import UserInfo2 from './UserInfo2'
-import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { adminMenu, ricercaMenu } from '../../models/menuItems'
-import clsx from 'clsx'
 import { PROJECT_ROOT_NEW } from '../../constants/Routes'
 import ConfirmDialog from '../../ui/ConfirmDialog'
+import ButtonMenu from './ButtonMenu'
 
 const HomeMenu2 = ({ filter, setFilter }) => {
     const [open, setOpen] = React.useState(false)
@@ -29,48 +28,22 @@ const HomeMenu2 = ({ filter, setFilter }) => {
         }
     }
 
-    const renderTooltip = menu => {
-        return (
-            <Tooltip id={menu.path}>
-                <span>{menu.menuLabel}</span>
-            </Tooltip>
-        )
-    }
-
     return (
-        <div className="d-flex flex-column flex-shrink-0 bg-light " style={{ width: '5.5rem' }}>
-            <UserInfo2 />
-            <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <div className=" d-flex flex-column p-0 p-md-2 ">
+            <div className="d-flex flex-row flex-lg-column justify-content-evenly">
+                <UserInfo2 />
                 {ricercaMenu.map(m => (
-                    <li key={m.path} className={'py-1 '}>
-                        <OverlayTrigger placement="right" delay={{ show: 250, hide: 400 }} overlay={renderTooltip(m)}>
-                            <Button
-                                ref={target}
-                                className={clsx(location.pathname === m.path && 'active', 'nav-link py-3 border-bottom col-12 shadow-sm')}
-                                variant="link"
-                                onClick={() => handleClickFilter(m)}
-                            >
-                                {m.icon}
-                            </Button>
-                        </OverlayTrigger>
-                    </li>
+                    <div key={m.path} className={'py-1 '}>
+                        <ButtonMenu m={m} handleClick={handleClickFilter} />
+                    </div>
                 ))}
                 {role === 'ADMIN' &&
                     adminMenu.map(m => (
-                        <li key={m.path} className={'py-1 '}>
-                            <OverlayTrigger placement="right" delay={{ show: 250, hide: 400 }} overlay={renderTooltip(m)}>
-                                <Button
-                                    ref={target}
-                                    className={clsx(location.pathname === m.path && 'active', 'nav-link py-3 border-bottom col-12 shadow-sm')}
-                                    variant="link"
-                                    onClick={() => handleClick(m)}
-                                >
-                                    {m.icon}
-                                </Button>
-                            </OverlayTrigger>
-                        </li>
+                        <div key={m.path} className={'py-1 '}>
+                            <ButtonMenu m={m} handleClick={handleClick} />
+                        </div>
                     ))}
-            </ul>
+            </div>
             <ConfirmDialog
                 body="Sei sicuro di voler creare un nuovo progetto?"
                 open={open}

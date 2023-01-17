@@ -5,33 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="068c93f3-fccd-4d6e-91cc-fa3c2e1c74b3" name="Changes" comment="Inizio form modifica/inserimento">
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/UserInfo2.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/EmptyResult.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/tools.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/ProjectsBC.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/breadcrumbs/ProjectsBC.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/FilterMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/FilterMap.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/menus/HomeMenu2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/components/ricerca/CardProject.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/ResultProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/ricerca/ResultProject.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/beta_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/default-placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/design.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/img/leaf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/ContainerHeader2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PrivateLayout2.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/models/menuItems.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/themeCustom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/themeCustom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/ui/ConfirmDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/ui/ConfirmDialog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PublicLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PublicLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,27 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/development/workspaces/workspace-interno/exo-forma-dev/exo-forma-be",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "a34796dd18954cbbc5624bd439acd383",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/development/workspaces/workspace-interno/exo-forma-dev/exo-forma-be&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a34796dd18954cbbc5624bd439acd383&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\development\workspaces\workspace-interno\exo-forma-dev\exo-forma-be" />
@@ -200,7 +175,7 @@
       <workItem from="1671894247415" duration="14710000" />
       <workItem from="1673522939489" duration="3081000" />
       <workItem from="1673530397565" duration="14811000" />
-      <workItem from="1673855971312" duration="3571000" />
+      <workItem from="1673855971312" duration="4151000" />
     </task>
     <task id="LOCAL-00001" summary="steps con completed tramite aggregation">
       <created>1657049193376</created>

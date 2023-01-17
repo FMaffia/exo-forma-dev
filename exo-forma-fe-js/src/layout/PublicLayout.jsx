@@ -1,24 +1,18 @@
 import React from 'react'
-import { Box, Container, ThemeProvider } from '@mui/material'
-import { theme } from '../components/mui/theme'
-import { ContainerFooter, ContainerHeader } from '../components/mui/containersMui'
-import Title from './Title'
+import { Box, Container } from '@mui/material'
+import ContainerHeader from './ContainerHeader'
 
 const PublicLayout = ({ children }) => {
     return (
-        <ThemeProvider theme={theme}>
-            <ContainerHeader maxWidth={false}>
-                <Title footer={false} />
-            </ContainerHeader>
+        <>
+            <ContainerHeader footer={false} />
             <Box>
                 <Container sx={{ display: 'flex', height: '80vh' }} maxWidth={false}>
                     {children}
                 </Container>
             </Box>
-            <ContainerFooter maxWidth={false}>
-                <Title footer={true} />
-            </ContainerFooter>
-        </ThemeProvider>
+            <ContainerHeader footer={true} />
+        </>
     )
 }
 

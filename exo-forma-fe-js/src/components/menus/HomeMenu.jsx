@@ -7,13 +7,12 @@ import { PROJECT_ROOT_NEW } from '../../constants/Routes'
 import ConfirmDialog from '../../ui/ConfirmDialog'
 import ButtonMenu from './ButtonMenu'
 
-const HomeMenu2 = ({ filter, setFilter }) => {
+const HomeMenu = ({ filter, setFilter }) => {
     const [open, setOpen] = React.useState(false)
-    const target = useRef(null)
 
     const navigate = useNavigate()
-    const location = useLocation()
     const role = useKeyRoles()
+
     const handleClickFilter = menu => {
         setFilter(menu.filter)
         handleClick(menu)
@@ -57,4 +56,4 @@ const HomeMenu2 = ({ filter, setFilter }) => {
     )
 }
 
-export default HomeMenu2
+export default HomeMenu

@@ -34,21 +34,21 @@ export const ricercaMenu = [
         order: 1,
         path: PROJECT_ROOT,
         filter: MenuFilter.TUTTI,
-        icon: <FontAwesomeIcon fontSize={20} icon={faFolderOpen} />
+        icon: <FontAwesomeIcon icon={faFolderOpen} />
     },
     {
         menuLabel: 'Progetti in corso',
         order: 2,
         path: PROJECT_IN_CORSO,
         filter: MenuFilter.IN_CORSO,
-        icon: <FontAwesomeIcon fontSize={20} icon={faHourglassHalf} />
+        icon: <FontAwesomeIcon icon={faHourglassHalf} />
     },
     {
         menuLabel: 'Progetti completati',
         order: 2,
         path: PROJECT_COMPLETATI,
         filter: MenuFilter.COMPLETATI,
-        icon: <FontAwesomeIcon fontSize={20} icon={faFlagCheckered} />
+        icon: <FontAwesomeIcon icon={faFlagCheckered} />
     }
 ]
 export const adminMenu = [
@@ -56,13 +56,13 @@ export const adminMenu = [
         menuLabel: 'Aggiungi progetto',
         order: 4,
         path: PROJECT_ROOT_NEW,
-        icon: <FontAwesomeIcon fontSize={20} icon={faAdd} />
+        icon: <FontAwesomeIcon icon={faAdd} />
     },
     {
         menuLabel: 'Modifica',
         order: 5,
         path: PROJECT_EDIT,
         filter: MenuFilter.IN_CORSO,
-        icon: <FontAwesomeIcon fontSize={20} icon={faPencil} />
+        icon: <FontAwesomeIcon icon={faPencil} />
     }
 ]

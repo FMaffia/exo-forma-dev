@@ -4,11 +4,11 @@ import Skeleton from 'react-loading-skeleton'
 import ResultProject from '../ricerca/ResultProject'
 import { useGetProjectsQuery } from '../../api/projectsApi'
 import { MenuFilter } from '../../models/menuItems'
-import HomeMenu2 from '../../components/menus/HomeMenu2'
+import HomeMenu from '../../components/menus/HomeMenu'
 import { Col, Row } from 'react-bootstrap'
 
 const ProgettiSection = () => {
-    const [filter, setFilter] = useState()
+    const [filter, setFilter] = useState(MenuFilter.TUTTI)
     const { data, isLoading } = useGetProjectsQuery({ refetchOnMountOrArgChange: true })
     const [filteredProjects, setFilteredProjects] = useState(data)
 
@@ -32,7 +32,7 @@ const ProgettiSection = () => {
     return (
         <Row style={{ minHeight: '80vh' }}>
             <Col sm={12} lg={2} xl={1} className="pt-3 pt-0">
-                <HomeMenu2 filter={filter} setFilter={setFilter} />
+                <HomeMenu filter={filter} setFilter={setFilter} />
             </Col>
             <Col className="p-md-4" sm={12} lg={10} xl={11}>
                 <ProjectsBC filter={filter} setFilter={setFilter} />

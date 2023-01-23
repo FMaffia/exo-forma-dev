@@ -1,29 +1,66 @@
-import React from 'react'
-import {Box, Button, Divider, Typography} from '@mui/material'
-import ListItemText from '@mui/material/ListItemText'
-import MenuList from '@mui/material/MenuList'
-import MenuItem from '@mui/material/MenuItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import {purple} from '@mui/material/colors'
-import RestartAltRoundedIcon from '@mui/icons-material/RestartAltRounded'
-import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite'
-import ArticleIcon from '@mui/icons-material/Article'
-import UserInfo from './UserInfo'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import {useNavigate, useParams} from "react-router-dom";
-import ConfirmDialog from "../../ui/ConfirmDialog";
-import StepIndicator from "../../containers/dettaglio/StepIndicator";
-import {useUpdateLastStepMutation} from "../../api/projectsUserApi";
+import React, { useState } from 'react'
+import UserInfo2 from './UserInfo2'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleLeft, faArrowLeft, faPlay, faRotateLeft } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useUpdateLastStepMutation } from '../../api/projectsUserApi'
+import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
+import ConfirmDialog from '../../ui/ConfirmDialog'
+import { buildStyles, CircularProgressbar } from 'react-circular-progressbar'
+import { PROJECT_ROOT } from '../../constants/Routes'
+import clsx from 'clsx'
 
-const DetailsMenu = ({currentProject}) => {
-    const [triggerRestart, setTriggerRestart] = React.useState(false)
-
+const DetailsMenu = ({ currentProject }) => {
     const navigate = useNavigate()
-
-    const {projectPath} = useParams()
-    const isStarted = currentProject?.lastStep ? currentProject.lastStep > 0 : false
+    const isStarted = currentProject?.lastStep > 0
+    const isFinished = currentProject?.lastStep > currentProject?.stepsCount
+    const [triggerRestart, setTriggerRestart] = useState(false)
     const [updateLastStep] = useUpdateLastStepMutation()
+    const { projectPath } = useParams()
+    const percentageInternal = currentProject?.lastStep ? ((currentProject?.lastStep - 1) * 100) / currentProject?.stepsCount : 0
 
+    const continueStep = () => {
+        if (isFinished) {
+            navigate('/progetti/' + projectPath + '/step/' + (currentProject.lastStep - 1))
+            return
+        }
+        navigate('/progetti/' + projectPath + '/step/' + currentProject.lastStep)
+    }
+
+    const mapViewButton = () => {
+        let arrayButton = ['INDIETRO']
+        if (!isStarted) {
+            arrayButton.unshift('INIZIA')
+            return arrayButton
+        }
+        if (isFinished) {
+            arrayButton.unshift('RIVEDI')
+            arrayButton.unshift('RICOMINCIA')
+            return arrayButton
+        }
+        arrayButton.unshift('RICOMINCIA')
+        arrayButton.unshift('RIPRENDI')
+        return arrayButton
+    }
+
+    const makeButton = (icon, label, func, outline) => {
+        return (
+            <button key={label} className={clsx(outline ? 'btn-outline-primary' : 'btn btn-primary', 'btn mb-2 col-12 ')} onClick={func}>
+                <span>
+                    <FontAwesomeIcon className={'mx-auto d-block mb-1'} icon={icon} />
+                    {label}
+                </span>
+            </button>
+        )
+    }
+
+    const mapButton = {
+        INIZIA: makeButton(faPlay, 'Inizia a progettare', () => setTriggerRestart(true)),
+        RIVEDI: makeButton(faFlagCheckered, 'Rivedi steps', () => continueStep(true)),
+        RICOMINCIA: makeButton(faRotateLeft, 'Ricomincia', () => setTriggerRestart(true)),
+        RIPRENDI: makeButton(faPlay, `Riprendi dallo STEP ${currentProject?.lastStep}`, () => continueStep(true)),
+        INDIETRO: makeButton(faArrowLeft, `Indietro`, () => navigate(PROJECT_ROOT), true)
+    }
     const restartAction = () => {
         const requestBody = {
             lastStep: 0,
@@ -33,71 +70,34 @@ const DetailsMenu = ({currentProject}) => {
         navigate('/progetti/' + projectPath + '/step/1')
         setTriggerRestart(false)
     }
-
-    const continueStep = () => {
-        if (currentProject?.lastStep > currentProject.stepsCount) {
-            navigate('/progetti/' + projectPath + '/step/' + (currentProject.lastStep - 1))
-            return
-        }
-        navigate('/progetti/' + projectPath + '/step/' + (currentProject.lastStep))
-    }
     return (
-        <>
-            <Box sx={{p: 1, alignSelf: 'left'}}>
-                <Button id="basic-button" aria-haspopup="true" onClick={() => navigate("/progetti")}>
-                    <ArrowBackIcon color={'primary'}/>
+        <div className=" d-flex flex-column p-0 p-md-2 ">
+            <div className="d-flex flex-row flex-lg-column justify-content-evenly">
+                <button className="btn btn-link" onClick={() => navigate('/progetti')}>
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} className="me-2" />
                     Indietro
-                </Button>
-            </Box>
-            <UserInfo/>
-            <Divider/>
-            <Typography sx={{p: 2, fontWeight: 600, pb: 1, display: 'flex', alignItems: 'center'}} variant={'h5'}>
-                <ArticleIcon color={'primary'} sx={{mr: 2}}/> {currentProject?.title}
-            </Typography>
-            {isStarted ? (
-                <MenuList>
-                    <StepIndicator currentProject={currentProject}/>
-                    <Divider/>
-                    <MenuItem onClick={() => continueStep(true)}>
-                        <ListItemIcon>
-                            <PlayCircleFilledWhiteIcon color={'primary'}/>
-                        </ListItemIcon>
-                        {currentProject?.lastStep > currentProject.stepsCount ?
-                            <ListItemText>
-                                Rivedi steps
-                            </ListItemText> : <ListItemText>
-                                Riprendi dallo <span
-                                style={{color: purple[800], fontWeight: 'bold'}}> step {currentProject?.lastStep}</span>
-                            </ListItemText>
-                        }
-                    </MenuItem>
-                    <MenuItem onClick={() => setTriggerRestart(true)}>
-                        <ListItemIcon>
-                            <RestartAltRoundedIcon color={'primary'}/>
-                        </ListItemIcon>
-                        <ListItemText>Ricomincia</ListItemText>
-                    </MenuItem>
-                </MenuList>
-            ) : (
-                <MenuList>
-                    <MenuItem onClick={() => setTriggerRestart(true)}>
-                        <ListItemIcon>
-                            <PlayCircleFilledWhiteIcon color={'primary'}/>
-                        </ListItemIcon>
-                        <ListItemText>Inizia a progettare</ListItemText>
-                    </MenuItem>
-                </MenuList>
-            )}
-            <ConfirmDialog
-                body={`Sei sicuro di iniziare il progetto ?`}
-                open={triggerRestart}
-                handleClose={() => setTriggerRestart(false)}
-                handleConfirm={() => {
-                    restartAction()
-                }}
-            />
-
-        </>
+                </button>
+                <UserInfo2 />
+                <p className="fw-bold text-center text-primary">{currentProject?.title}</p>
+                <CircularProgressbar
+                    value={percentageInternal}
+                    text={`${percentageInternal}%`}
+                    styles={buildStyles({
+                        textColor: '#6a1b9a',
+                        pathColor: '#6a1b9a',
+                        pathTransition: percentageInternal === 0 ? 'none' : 'stroke-dashoffset 0.5s ease 0s'
+                    })}
+                />
+                <br />
+                {mapViewButton().map(k => mapButton[k])}
+                <ConfirmDialog
+                    body={`Sei sicuro di iniziare il progetto ?`}
+                    open={triggerRestart}
+                    handleClose={() => setTriggerRestart(false)}
+                    handleConfirm={restartAction}
+                />
+            </div>
+        </div>
     )
 }
 

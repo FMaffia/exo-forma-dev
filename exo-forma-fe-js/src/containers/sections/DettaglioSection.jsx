@@ -1,34 +1,33 @@
-import React from 'react';
-import {useParams} from "react-router-dom";
-import {useGetDetailsQuery} from "../../api/projectsApi";
-import Drawer from "@mui/material/Drawer";
-import {drawerWidth} from "../../components/mui/theme";
-import Skeleton from "react-loading-skeleton";
-import DettaglioContainer from "../dettaglio/DettaglioContainer";
-import DetailBC from "../../components/breadcrumbs/DetailBC";
-import DetailsMenu from "../../components/menus/DetailsMenu";
-
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useGetDetailsQuery } from '../../api/projectsApi'
+import Skeleton from 'react-loading-skeleton'
+import DettaglioContainer from '../dettaglio/DettaglioContainer'
+import DetailBC from '../../components/breadcrumbs/DetailBC'
+import { Col, Row } from 'react-bootstrap'
+import DetailsMenu from '../../components/menus/DetailsMenu'
 
 const DettaglioSection = () => {
-    const {projectPath} = useParams()
-    const {data: currentProject, isLoading} = useGetDetailsQuery(projectPath, {refetchOnMountOrArgChange: true})
+    const { projectPath } = useParams()
+    const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath, { refetchOnMountOrArgChange: true })
 
     return (
-        <div>
-            <Drawer
-                variant={'permanent'}
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: {width: drawerWidth, boxSizing: 'border-box'}
-                }}
-            >
-                <DetailsMenu currentProject={currentProject}/>
-            </Drawer>
-            {isLoading ? <Skeleton/> : <DetailBC currentProject={currentProject}/>}
-            {isLoading ? <Skeleton count={20}/> : <DettaglioContainer currentProject={currentProject}/>}
-        </div>
-    );
-};
+        <Row style={{ minHeight: '80vh' }}>
+            <Col sm={12} lg={2} xl={1} className="pt-3 pt-0">
+                <DetailsMenu currentProject={currentProject} />
+            </Col>
+            <Col className="p-md-4" sm={12} lg={10} xl={11}>
+                {isLoading ? (
+                    <Skeleton count={20} />
+                ) : (
+                    <>
+                        <DetailBC currentProject={currentProject} />
+                        <DettaglioContainer currentProject={currentProject} />
+                    </>
+                )}
+            </Col>
+        </Row>
+    )
+}
 
-export default DettaglioSection;
+export default DettaglioSection

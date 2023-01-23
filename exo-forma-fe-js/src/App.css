@@ -9,7 +9,9 @@ body {
 .tooltip-inner {
     font-weight: bold;
 }
-
+a{
+    text-decoration: none!important;
+}
 .logo {
     height: 100px
 }

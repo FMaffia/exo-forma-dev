@@ -16,7 +16,8 @@ import ImageCard from './ImageCard'
 const CardProject = ({ project }) => {
     const maxDifficult = 6
     const navigate = useNavigate()
-    const calculatePerc = project.lastStep > project.stepsCount ? 100 : (project.lastStep * 100) / project.stepsCount
+    const calculatePerc = project?.lastStep ? ((project?.lastStep - 1) * 100) / project?.stepsCount : 0
+
     const location = useLocation()
     const isModifica = location.pathname === PROJECT_EDIT
     const isInCorso = location.pathname === PROJECT_IN_CORSO

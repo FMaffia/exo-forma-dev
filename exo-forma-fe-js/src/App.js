@@ -11,6 +11,7 @@ import LogoutPage from './pages/LogoutPage'
 import Modal from 'react-bootstrap/Modal'
 import Container from 'react-bootstrap/Container'
 import loadingSrc from './img/loading.svg'
+import 'react-circular-progressbar/dist/styles.css'
 
 const KeycloackApp = () => {
     return (

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import { useGetDetailsQuery } from '../../api/projectsApi'
 import Skeleton from 'react-loading-skeleton'
 import DettaglioContainer from '../dettaglio/DettaglioContainer'
 import DetailBC from '../../components/breadcrumbs/DetailBC'
 import { Col, Row } from 'react-bootstrap'
 import DetailsMenu from '../../components/menus/DetailsMenu'
+import { useParams } from 'react-router-dom'
 
 const DettaglioSection = () => {
     const { projectPath } = useParams()

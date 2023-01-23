@@ -28,6 +28,10 @@ const CardProject = ({ project }) => {
         dispatch(setSelectedProject(project))
         navigate(PROJECT_ROOT_NEW)
     }
+    const detailProject = project => {
+        dispatch(setSelectedProject(project))
+        navigate('/progetti/' + project.path, { relative: 'path' })
+    }
     return (
         <Card>
             <ImageCard idProject={project.id} />
@@ -56,11 +60,9 @@ const CardProject = ({ project }) => {
                 <Row className="align-content-between">
                     <Col className="text-start">
                         <Button
-                            className="stretched-link"
+                            className={clsx(!isModifica && 'stretched-link')}
                             variant={completed ? 'success' : 'primary'}
-                            onClick={() => {
-                                navigate('/progetti/' + project.path, { relative: 'path' })
-                            }}
+                            onClick={() => detailProject(project)}
                         >
                             Dettaglio
                         </Button>

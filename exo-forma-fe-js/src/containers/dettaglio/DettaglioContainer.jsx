@@ -1,43 +1,58 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import HeaderDetail from './HeaderDetail'
+import Card from 'react-bootstrap/Card'
+import StepView from './StepView'
 
 const DettaglioContainer = ({ currentProject }) => {
-    const prefix = 'data:image/png;base64,'
-    const srcImage = prefix + currentProject.image
     return (
         <Row>
             <Col sm={12}>
                 <HeaderDetail currentProject={currentProject} />
             </Col>
-            <Col sm={12}>
-                <Row>
-                    <Col sm={12} md={8}>
-                        colonna 1
-                    </Col>
-                    <Col sm={12} md={4}>
-                        colonna 2
-                    </Col>
-                </Row>
+
+            <Col className="ps-0" sm={12} md={8}>
+                <Card>
+                    <Card.Header>Descrizione</Card.Header>
+                    <Card.Body>{currentProject?.desc}</Card.Body>
+                </Card>
+            </Col>
+            <Col className="pe-0" sm={12} md={4}>
+                <div className="d-flex flex-column">
+                    <Card>
+                        <Card.Header>Risorse</Card.Header>
+                        <Card.Body>Risorsa 1</Card.Body>
+                    </Card>
+                    <Card className="mt-3">
+                        <Card.Header>Steps</Card.Header>
+                        <Card.Body>
+                            <StepView currentProject={currentProject} />
+                        </Card.Body>
+                    </Card>
+                </div>
             </Col>
         </Row>
 
-        /*<Fade timeout={1000} in={true} unmountOnExit>
+        /*
+<Fade timeout={1000} in={true} unmountOnExit>
 <Box sx={{ width: "100%", mt: 1 }}>
 <Paper sx={{ mb: 2 }}>
 <Box
 sx={{
-  display: "flex",
-  background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)"
+display: "flex",
+background: "linear-gradient(180deg, rgba(124,42,175,1) 0%, rgba(74,20,140,1) 92%)"
 }}
 >
 {currentProject && <Avatar alt={currentProject.title} variant="square" src={srcImage} sx={{ width: "20rem", height: "inherit" }} />}
 <HeaderDetailOLD currentProject={currentProject} />
 </Box>
 </Paper>
-<BodyDetail currentProject={currentProject} />
+<BodyDetailOLD currentProject={currentProject} />
 </Box>
-</Fade>;*/
+</Fade>;
+;
+;
+;*/
     )
 }
 

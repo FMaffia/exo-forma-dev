@@ -40,6 +40,7 @@ const projectsApi = rootApi.injectEndpoints({
             }),
             invalidatesTags: ['editProject']
         }),
+        /*Chiamata al dettaglio per la modifica senza aggregazioni*/
         getProjectById: build.query({
             query: project => ({
                 url: GET_PROJECT_API,
@@ -69,6 +70,7 @@ const projectsApi = rootApi.injectEndpoints({
                 responseHandler: 'text'
             })
         }),
+        /*Chiamata al dettaglio per la visualizzazione con aggregazioni*/
         getDetails: build.query({
             query: path => GET_PROJECT_BY_PATH_API + path,
             keepUnusedDataFor: 1,

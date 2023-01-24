@@ -1,9 +1,8 @@
 import React from 'react'
 
 import { sortBy } from 'lodash'
-import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
 import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
 import { PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT, PROJECT_ROOT_NEW } from '../constants/Routes'
@@ -18,13 +17,14 @@ export const MenuFilter = {
 }
 
 export const stepMenuFunc = (steps, lastStep) => {
-    let array = steps.map(s => ({
+    let array = steps?.map(s => ({
         menuLabel: s.title,
         order: s.number,
         number: s.number,
         path: '/step/' + s.number,
         disabled: !s.completed && s.number !== lastStep,
-        icon: s.completed ? <CheckCircleIcon color={'primary'} fontSize="large" /> : <CheckCircleIcon fontSize="large" />
+        completed: s.completed,
+        icon: s.completed ? faCheck : faHourglassHalf
     }))
     return sortBy(array, [a => a.order, 'asc'])
 }
@@ -59,7 +59,7 @@ export const adminMenu = [
         icon: <FontAwesomeIcon icon={faAdd} />
     },
     {
-        menuLabel: 'Modifica',
+        menuLabel: 'Modifica progetto',
         order: 5,
         path: PROJECT_EDIT,
         filter: MenuFilter.IN_CORSO,

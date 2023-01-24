@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button } from '@mui/material'
-import SaveAs from '@mui/icons-material/SaveAs'
+
 import { useNavigate, useParams } from 'react-router-dom'
 import { useUpdateStepMutation } from '../../api/projectsApi'
 import { useSelector } from 'react-redux'
+import { Button } from '@mui/material'
 
 const ButtonBarStepEdit = ({ step, setStep }) => {
     const navigate = useNavigate()
@@ -24,7 +24,7 @@ const ButtonBarStepEdit = ({ step, setStep }) => {
     }
 
     return (
-        <Button disabled={isLoading} size="large" startIcon={<SaveAs />} variant="contained" onClick={() => saveAs()}>
+        <Button disabled={isLoading} size="large" onClick={() => saveAs()}>
             {isLoading ? 'dddddd' : 'Salva step'}
         </Button>
     )

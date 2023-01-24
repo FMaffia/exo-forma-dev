@@ -1,14 +1,14 @@
-import React, { useRef } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useKeyRoles from '../../hooks/useKeyRoles'
-import UserInfo2 from './UserInfo2'
+import UserInfo from './UserInfo'
 import { adminMenu, ricercaMenu } from '../../models/menuItems'
 import { PROJECT_ROOT_NEW } from '../../constants/Routes'
 import ConfirmDialog from '../../ui/ConfirmDialog'
 import ButtonMenu from './ButtonMenu'
+import { useState } from 'react'
 
 const HomeMenu = ({ filter, setFilter }) => {
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
 
     const navigate = useNavigate()
     const role = useKeyRoles()
@@ -29,8 +29,8 @@ const HomeMenu = ({ filter, setFilter }) => {
 
     return (
         <div className=" d-flex flex-column p-0 p-md-2 ">
-            <div className="d-flex flex-row flex-lg-column justify-content-evenly">
-                <UserInfo2 />
+            <div className="d-flex flex-row flex-lg-column justify-content-evenly align-items-center">
+                <UserInfo />
                 {ricercaMenu.map(m => (
                     <div key={m.path} className={'py-1 '}>
                         <ButtonMenu m={m} handleClick={handleClickFilter} />

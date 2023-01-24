@@ -5,6 +5,7 @@ import { Col, FloatingLabel, Row, Spinner } from 'react-bootstrap'
 import ButtonBarStepEdit from './ButtonBarStepEdit'
 import Form from 'react-bootstrap/Form'
 import { useUpdateStepMutation } from '../../api/projectsApi'
+import PreviewStep from './PreviewStep'
 
 const StepForm = () => {
     const steps = useSelector(state => state.currentProject?.steps)
@@ -69,6 +70,10 @@ const StepForm = () => {
                     {isLoading || <ButtonBarStepEdit step={step} setStep={resetStep} />}
                 </Col>
                 <Col></Col>
+            </Row>
+
+            <Row>
+                <PreviewStep step={step} />
             </Row>
         </Row>
     )

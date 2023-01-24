@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import it.exolab.access.ProjectRepository;
+import it.exolab.access.ProjectUserRepository;
 import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
@@ -28,6 +29,8 @@ import java.util.List;
 public class ProjectService {
     @Autowired
     private ProjectRepository projectRepo;
+    @Autowired
+    ProjectUserRepository projectUserRepository;
 
     @GetMapping(ApiConstants.Project.ALL_PROJECT)
     public ResponseEntity<List<ProjectCard>> getAll(Principal principal) {
@@ -71,9 +74,13 @@ public class ProjectService {
             @ApiResponse(responseCode = "406", description = "Step o progetto non presente"),
     })
     @GetMapping(ApiConstants.Project.STEP_DETAILS)
-    public ResponseEntity<StepProject> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex) {
+    public ResponseEntity<StepProject> getStepByIndex(@PathVariable String projectId, @PathVariable int stepIndex, Principal principal) {
+
+
         log.debug("-----> PROJECT_SERVICES: Get steps by projectId:" + projectId);
         StepProject step = this.projectRepo.getStepByIndexAndIdProject(projectId, stepIndex);
+        int lastStep = this.projectUserRepository.getLastStep(projectId, principal.getName()).getLastStep();
+        step.setCompleted(stepIndex < lastStep);
         return ResponseEntity.ok(step);
     }
 

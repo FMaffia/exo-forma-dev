@@ -1,16 +1,11 @@
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import HomeIcon from '@mui/icons-material/Home';
-import {useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from 'react-router-dom'
+import { Breadcrumb } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
+import * as React from 'react'
 
-function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-}
-
-export default function StepBC({currentProject}) {
-    const {numberStep} = useParams()
+export default function StepBC({ currentProject }) {
+    const { numberStep } = useParams()
     const navigate = useNavigate()
 
     const onClickFunc = (e, path) => {
@@ -18,34 +13,13 @@ export default function StepBC({currentProject}) {
         navigate(path)
     }
     return (
-        <div>
-            <Breadcrumbs aria-label="breadcrumb" sx={{marginBottom: 2}}>
-                <Link
-                    underline="hover"
-                    sx={{display: 'flex', alignItems: 'center'}}
-                    color="inherit"
-                    href="/"
-                    onClick={(e) => onClickFunc(e, '/progetti')}
-                >
-                    <HomeIcon color={"primary"} sx={{mr: 0.5}} fontSize="inherit"/>
-                    Progetti
-                </Link>
-                <Link
-                    underline="hover"
-                    sx={{display: 'flex', alignItems: 'center'}}
-                    color="inherit"
-                    onClick={(e) => onClickFunc(e, '/progetti/' + currentProject.path)}
-                    href="/"
-                >
-                    {currentProject.title}
-                </Link>
-                <Typography
-                    sx={{display: 'flex', alignItems: 'center'}}
-                    color="text.primary"
-                >
-                    Step {numberStep}
-                </Typography>
-            </Breadcrumbs>
-        </div>
-    );
+        <Breadcrumb>
+            <Breadcrumb.Item href="/" onClick={e => onClickFunc(e, '/progetti')}>
+                <FontAwesomeIcon className="me-1" fontSize={13} icon={faFolderOpen} />
+                Progetti
+            </Breadcrumb.Item>
+            <Breadcrumb.Item onClick={e => onClickFunc(e, '/progetti/' + currentProject.path)}>{currentProject.title}</Breadcrumb.Item>
+            <Breadcrumb.Item active>Step {numberStep}</Breadcrumb.Item>
+        </Breadcrumb>
+    )
 }

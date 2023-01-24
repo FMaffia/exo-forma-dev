@@ -52,7 +52,7 @@ const CardProject = ({ project }) => {
                     ))}
                 </Card.Text>
 
-                {(isInCorso || isCompletati) && <ProgressBar className="mb-3" variant="primary" now={calculatePerc} label={`${calculatePerc}%`} />}
+                {(isInCorso || isCompletati) && <ProgressBar className="mb-3" variant="primary" now={calculatePerc} label={`${calculatePerc.toFixed(0)}%`} />}
                 {project.categories.map(c => (
                     <Badge key={c} bg="primary me-2">{`#${c}`}</Badge>
                 ))}

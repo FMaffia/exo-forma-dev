@@ -31,7 +31,6 @@ public class ProjectRepository {
 
     public StepProject getStepByIndexAndIdProject(String projectId, int indexStep) {
         MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
-
         ProjectionOperation projectionOperation = Aggregation.project()
                 .andExclude("_id")
                 .and(ArrayOperators.Filter.filter("steps")
@@ -132,7 +131,7 @@ public class ProjectRepository {
             stageAddIdStringBuilder.addField("stepsCount")
                     .withValueOf(
                             ArrayOperators.Size.lengthOfArray("steps")
-                    );
+                                );
         }
         AddFieldsOperation stageAddIdString = stageAddIdStringBuilder.build();
 

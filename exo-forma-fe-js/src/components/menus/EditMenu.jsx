@@ -1,5 +1,4 @@
 import React from 'react'
-import UserInfo from './UserInfo'
 import Divider from '@mui/material/Divider'
 import { Box, Button } from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
@@ -36,7 +35,6 @@ const EditMenu = () => {
                     Indietro
                 </Button>
             </Box>
-            <UserInfo />
             <Divider />
             <MenuList>
                 <Typography sx={{ p: 2, fontWeight: 600 }} variant={'button'} color={'inherit'}>

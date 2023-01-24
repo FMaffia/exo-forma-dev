@@ -12,7 +12,7 @@ const HeaderDetail = ({ currentProject }) => {
         <Skeleton height={300} />
     ) : (
         <Row className="bg-white border shadow-sm mb-4">
-            <Col sm={5} className="p-0">
+            <Col xs={12} md={5} className="p-0">
                 <Image
                     className=""
                     style={{
@@ -24,7 +24,7 @@ const HeaderDetail = ({ currentProject }) => {
                     alt={''}
                 />
             </Col>
-            <Col className="ps-4 pe-0 d-flex flex-column  justify-content-center" sm={7}>
+            <Col className="ps-4 pe-0 d-flex flex-column  justify-content-center" xs={12} md={7}>
                 <div className="h1">{currentProject?.title}</div>
                 <span>
                     <FontAwesomeIcon icon={faCalendarDay} className="me-2 text-primary" />
@@ -34,7 +34,7 @@ const HeaderDetail = ({ currentProject }) => {
                     <FontAwesomeIcon icon={faUser} color={'primary'} className="me-2 text-primary" />
                     Autore : <span className="fw-bold"> {currentProject.author}</span>
                 </span>
-                <div className="d-flex mt-2">
+                <div className="d-flex mt-2 mb-2">
                     {currentProject?.categories.map(c => (
                         <Badge key={c} bg="secondary" className="me-1 p-2">
                             {`#${c}`}

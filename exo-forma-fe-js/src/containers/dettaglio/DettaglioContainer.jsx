@@ -11,19 +11,19 @@ const DettaglioContainer = ({ currentProject }) => {
                 <HeaderDetail currentProject={currentProject} />
             </Col>
 
-            <Col className="ps-0" sm={12} md={8}>
+            <Col className="ps-md-0 mb-2 mb-md-0" sm={12} md={8}>
                 <Card>
                     <Card.Header>Descrizione</Card.Header>
                     <Card.Body>{currentProject?.desc}</Card.Body>
                 </Card>
             </Col>
-            <Col className="pe-0" sm={12} md={4}>
+            <Col className="pe-md-0" sm={12} md={4}>
                 <div className="d-flex flex-column">
-                    <Card>
+                    <Card className="mb-2 mb-md-0">
                         <Card.Header>Risorse</Card.Header>
                         <Card.Body>Risorsa 1</Card.Body>
                     </Card>
-                    <Card className="mt-3">
+                    <Card className="mt-md-3">
                         <Card.Header>Steps</Card.Header>
                         <Card.Body>
                             <StepView currentProject={currentProject} />

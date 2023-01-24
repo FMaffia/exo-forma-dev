@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import UserInfo2 from './UserInfo2'
+import UserInfo from './UserInfo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleLeft, faArrowLeft, faPlay, faRotateLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faPlay, faRotateLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useUpdateLastStepMutation } from '../../api/projectsUserApi'
 import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
@@ -45,7 +45,7 @@ const DetailsMenu = ({ currentProject }) => {
 
     const makeButton = (icon, label, func, outline) => {
         return (
-            <button key={label} className={clsx(outline ? 'btn-outline-primary' : 'btn btn-primary', 'btn mb-2 col-12 ')} onClick={func}>
+            <button key={label} className={clsx(outline ? 'btn-outline-primary' : 'btn btn-primary', 'btn m-1 ')} onClick={func}>
                 <span>
                     <FontAwesomeIcon className={'mx-auto d-block mb-1'} icon={icon} />
                     {label}
@@ -71,17 +71,14 @@ const DetailsMenu = ({ currentProject }) => {
         setTriggerRestart(false)
     }
     return (
-        <div className=" d-flex flex-column p-0 p-md-2 ">
+        <div className=" d-flex flex-column p-0 p-md-2 mb-2 ">
             <div className="d-flex flex-row flex-lg-column justify-content-evenly">
-                <button className="btn btn-link" onClick={() => navigate('/progetti')}>
-                    <FontAwesomeIcon icon={faArrowAltCircleLeft} className="me-2" />
-                    Indietro
-                </button>
-                <UserInfo2 />
-                <p className="fw-bold text-center text-primary">{currentProject?.title}</p>
+                <UserInfo />
+                <p className="d-none d-lg-block fw-bold text-center text-primary">{currentProject?.title}</p>
                 <CircularProgressbar
+                    className="d-none d-lg-block"
                     value={percentageInternal}
-                    text={`${percentageInternal}%`}
+                    text={`${percentageInternal.toFixed(0)}%`}
                     styles={buildStyles({
                         textColor: '#6a1b9a',
                         pathColor: '#6a1b9a',

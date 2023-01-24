@@ -8,5 +8,5 @@ export const GET_PROJECT_API = PROJECT_API + 'find'
 export const UPLOAD_IMAGE_API = PROJECT_API + 'uploadImage/'
 export const IMAGE_API = PROJECT_API + 'image/'
 export const GET_STEPS_BY_ID_API = PROJECT_API + `steps/`
-export const MY_PROJECT_API = PROJECT_API + `myProjects/`
+export const MY_PROJECT_API = `myProjects/`
 export const UPDATE_LAST_STEP_API = MY_PROJECT_API + 'updateLastStep'

@@ -16,6 +16,13 @@ public class ProjectUserRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
+    public ProjectUser getLastStep(String idProject, String idUser) {
+        Query q = new Query();
+        q.addCriteria(Criteria.where("idUser").is(idUser).and("idProject").is(idProject));
+        q.fields().include("lastStep");
+        return mongoTemplate.findOne(q, ProjectUser.class);
+    }
+
     public List<ProjectUser> getProjectsByUser(String idUser) {
         Query q = new Query();
         q.fields().exclude("idUser");

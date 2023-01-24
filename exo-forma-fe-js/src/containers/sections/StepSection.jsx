@@ -1,35 +1,33 @@
-import React from 'react';
-import {useParams} from "react-router-dom";
-import {useGetDetailsQuery} from "../../api/projectsApi";
-import Drawer from "@mui/material/Drawer";
-import {drawerWidth} from "../../components/mui/theme";
-import Skeleton from "react-loading-skeleton";
-import StepMenu from "../../components/menus/StepMenu";
-import StepBC from "../../components/breadcrumbs/StepBC";
-import StepContainer from "../steps/StepContainer";
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useGetDetailsQuery } from '../../api/projectsApi'
+import Skeleton from 'react-loading-skeleton'
+import StepBC from '../../components/breadcrumbs/StepBC'
+import StepContainer from '../steps/StepContainer'
+import { Col, Row } from 'react-bootstrap'
+import StepMenu from '../../components/menus/StepMenu'
 
 const StepSection = () => {
-    const {numberStep} = useParams()
-    const {projectPath} = useParams()
-    const {data: currentProject, isLoading} = useGetDetailsQuery(projectPath, {refetchOnMountOrArgChange: true})
-
+    const { projectPath } = useParams()
+    const { data: currentProject, isLoading } = useGetDetailsQuery(projectPath, { refetchOnMountOrArgChange: true })
 
     return (
-        <div>
-            <Drawer
-                variant={'permanent'}
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: {width: drawerWidth, boxSizing: 'border-box'}
-                }}
-            >
-                <StepMenu currentProject={currentProject}/>
-            </Drawer>
-            {isLoading ? <Skeleton/> : <StepBC currentProject={currentProject}/>}
-            {isLoading ? <Skeleton count={20}/> : <StepContainer/>}
-        </div>
-    );
-};
+        <Row style={{ minHeight: '80vh' }}>
+            <Col sm={12} lg={2} className="pt-3 pt-0">
+                <StepMenu currentProject={currentProject} />
+            </Col>
+            <Col className="p-md-4" sm={12} lg={10}>
+                {isLoading ? (
+                    <Skeleton count={20} />
+                ) : (
+                    <>
+                        <StepBC currentProject={currentProject} />
+                        <StepContainer currentProject={currentProject} />
+                    </>
+                )}
+            </Col>
+        </Row>
+    )
+}
 
-export default StepSection;
+export default StepSection

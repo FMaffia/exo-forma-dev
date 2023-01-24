@@ -1,51 +1,48 @@
-import React from 'react';
-import {useKeycloak} from "@react-keycloak/web";
-import useKeyRoles from "../../hooks/useKeyRoles";
-import {Box} from "@mui/material";
-import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
+import React from 'react'
 import woman from '../../img/woman.png'
+import { UNAUTHORIZED } from '../../constants/UserRole'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons/faRightFromBracket'
+import { useKeycloak } from '@react-keycloak/web'
+import useKeyRoles from '../../hooks/useKeyRoles'
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons/faUserCircle'
 
 const UserInfo = () => {
-    const {keycloak} = useKeycloak()
+    const { keycloak } = useKeycloak()
+    const isLoggedIn = keycloak.authenticated
     const role = useKeyRoles()
 
     return (
-        <>
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    whiteSpace: 'no-wrap',
-                    alignItems: 'center',
-                    p: 2,
-                    backgroundColor: 'rgba(106, 27, 154, 0.08)'
-                }}
+        <div className="dropdown">
+            <a
+                href="#"
+                className="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                id="dropdownUser3"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
             >
-                <Avatar sx={{width: '50%', p: 1, m: 'auto', height: 'auto'}} alt="Remy Sharp" src={woman}
-                        variant="rounded"/>
+                <img src={woman} alt="mdo" style={{ width: '3.5rem' }} className="rounded-circle" />
+            </a>
+            <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                <li>
+                    <button className="btn btn-link dropdown-item" type="submit">
+                        <FontAwesomeIcon icon={faUserCircle} /> Profile
+                    </button>
+                </li>
 
-                <Typography variant="body1" display="block" sx={{fontWeight: 'bold', fontSize: '1.2rem'}}
-                            color={'primary'}>
-                    {keycloak?.tokenParsed?.name}
-                </Typography>
-                <Typography variant="subtitle1" display="block" gutterBottom>
-                    {keycloak?.tokenParsed?.email}
-                </Typography>
-                <Typography variant="subtitle1" display="block" gutterBottom>
-                    {role}
-                </Typography>
+                <li>
+                    <hr className="dropdown-divider" />
+                </li>
+                <li>
+                    {isLoggedIn && role !== UNAUTHORIZED && (
+                        <button className="btn btn-link dropdown-item" type="submit" onClick={() => keycloak.logout()}>
+                            <FontAwesomeIcon icon={faRightFromBracket} /> Sign out
+                        </button>
+                    )}
+                </li>
+            </ul>
+        </div>
+    )
+}
 
-                {/* <Box sx={{ display: 'flex', flexDirection: 'row', mb: 2 }}>
-
-                    {user?.permissions?.map((p, index) => (
-                        <Typography key={index} component="span" color="gray" variant="caption" sx={{ pr: 1, fontWeight: 600 }}>
-                            {p} {user?.permissions?.length !== undefined && index !== user?.permissions?.length - 1 && '-'}
-                        </Typography>
-                    ))}
-                </Box>*/}
-            </Box>
-        </>)
-};
-
-export default UserInfo;
+export default UserInfo

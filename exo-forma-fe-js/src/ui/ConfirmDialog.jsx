@@ -9,10 +9,10 @@ const ConfirmDialog = ({ handleClose, open, body, handleConfirm }) => {
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="outline-primary" onClick={handleClose}>
                     Annulla
                 </Button>
-                <Button variant="primary" onClick={handleConfirm}>
+                <Button variant="info" onClick={handleConfirm}>
                     Conferma
                 </Button>
             </Modal.Footer>

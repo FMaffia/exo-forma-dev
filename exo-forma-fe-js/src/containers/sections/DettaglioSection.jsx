@@ -22,6 +22,7 @@ const DettaglioSection = () => {
                 ) : (
                     <>
                         <DetailBC currentProject={currentProject} />
+
                         <DettaglioContainer currentProject={currentProject} />
                     </>
                 )}

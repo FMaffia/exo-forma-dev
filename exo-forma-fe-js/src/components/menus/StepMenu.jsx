@@ -34,8 +34,8 @@ const StepMenu = ({ currentProject }) => {
     }
     return (
         <div className=" d-flex flex-column p-0 p-md-2 mb-2 ">
-            <div className="d-flex flex-row flex-lg-column justify-content-evenly">
-                <button className="btn btn-outline-primary" onClick={() => navigate(`/progetti/${currentProject?.path}`)}>
+            <div className="d-none  d-md-flex flex-row flex-lg-column justify-content-evenly">
+                <button className="btn btn-outline-primary d-none d-lg-block" onClick={() => navigate(`/progetti/${currentProject?.path}`)}>
                     <FontAwesomeIcon icon={faSave} className="me-2" />
                     Salva e esci
                 </button>
@@ -60,7 +60,7 @@ const StepMenu = ({ currentProject }) => {
                 </div>
                 <hr />
                 {stepMenuFunc(steps, currentProject?.lastStep)?.map(s => (
-                    <button key={s.number} className="border-0 nav-link" onClick={() => handleClick(s)}>
+                    <button key={s.number} className="d-none d-md-block border-0 nav-link" onClick={() => handleClick(s)}>
                         <span className="row align-items-center" key={s.number}>
                             <span className="col-4 ">
                                 <h3>

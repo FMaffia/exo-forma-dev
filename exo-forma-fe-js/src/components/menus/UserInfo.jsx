@@ -6,11 +6,15 @@ import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons/faRightFro
 import { useKeycloak } from '@react-keycloak/web'
 import useKeyRoles from '../../hooks/useKeyRoles'
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons/faUserCircle'
+import useKeyInfos from '../../hooks/useKeyInfos'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 const UserInfo = () => {
     const { keycloak } = useKeycloak()
     const isLoggedIn = keycloak.authenticated
     const role = useKeyRoles()
+    const username = useKeyInfos()
+    const isAdmin = role === 'ADMIN'
 
     return (
         <div className="dropdown">
@@ -21,8 +25,9 @@ const UserInfo = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
             >
-                <img src={woman} alt="mdo" style={{ width: '3.5rem' }} className="rounded-circle" />
+                {isAdmin ? <FontAwesomeIcon size={'lg'} icon={faPencilAlt} /> : <FontAwesomeIcon size={'lg'} icon={faUserCircle} />}
             </a>
+            <p>{username}</p>
             <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
                 <li>
                     <button className="btn btn-link dropdown-item" type="submit">

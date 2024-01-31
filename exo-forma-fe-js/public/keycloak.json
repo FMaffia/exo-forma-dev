@@ -1,5 +1,5 @@
 {
-  "realm": "exolab-sso",
+  "realm": "exolab-sso-test",
   "auth-server-url": "https://sso.exolab.it/",
   "ssl-required": "external",
   "resource": "exo_forma",

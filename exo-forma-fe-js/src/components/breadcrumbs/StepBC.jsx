@@ -13,13 +13,15 @@ export default function StepBC({ currentProject }) {
         navigate(path)
     }
     return (
-        <Breadcrumb>
-            <Breadcrumb.Item href="/" onClick={e => onClickFunc(e, '/progetti')}>
-                <FontAwesomeIcon className="me-1" fontSize={13} icon={faFolderOpen} />
-                Progetti
-            </Breadcrumb.Item>
-            <Breadcrumb.Item onClick={e => onClickFunc(e, '/progetti/' + currentProject.path)}>{currentProject.title}</Breadcrumb.Item>
-            <Breadcrumb.Item active>Step {numberStep}</Breadcrumb.Item>
-        </Breadcrumb>
+        <div className="">
+            <Breadcrumb className="align-baseline mb-0 mb-md-2">
+                <Breadcrumb.Item href="/" onClick={e => onClickFunc(e, '/progetti')}>
+                    <FontAwesomeIcon className="me-1" fontSize={13} icon={faFolderOpen} />
+                    Progetti
+                </Breadcrumb.Item>
+                <Breadcrumb.Item onClick={e => onClickFunc(e, '/progetti/' + currentProject.path)}>{currentProject.title}</Breadcrumb.Item>
+                <Breadcrumb.Item active>Step {numberStep}</Breadcrumb.Item>
+            </Breadcrumb>
+        </div>
     )
 }

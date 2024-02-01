@@ -1,10 +1,11 @@
 import React from 'react'
 import { useGetImageQuery } from '../../api/projectsApi'
 import Skeleton from 'react-loading-skeleton'
-import { Badge, Col, Image, Row } from 'react-bootstrap'
+import { Col, Image, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDay } from '@fortawesome/free-solid-svg-icons/faCalendarDay'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import CustomTags from '../../components/ricerca/CustomTags'
 
 const HeaderDetail = ({ currentProject }) => {
     const { data: srcImage, isLoading } = useGetImageQuery(currentProject.id, { skip: !currentProject?.id })
@@ -36,9 +37,7 @@ const HeaderDetail = ({ currentProject }) => {
                 </span>
                 <div className="d-flex mt-2 mb-2">
                     {currentProject?.categories.map(c => (
-                        <Badge key={c} bg="secondary" className="me-1 p-2">
-                            {`#${c}`}
-                        </Badge>
+                        <CustomTags c={c} />
                     ))}
                 </div>
             </Col>

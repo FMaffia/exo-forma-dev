@@ -7,13 +7,12 @@ const ButtonMenu = ({ m, handleClick }) => {
 
     return (
         <Button
-            className={' p-2 btn col-12 shadow-sm'}
+            className={'w-100  text-start btn col-12 shadow-sm'}
             variant={location.pathname === m.path ? 'primary' : 'outline-primary'}
             onClick={() => handleClick(m)}
-            style={{ minHeight: '3rem', minWidth: '100%' }}
         >
             {m.icon}
-            <br /> <span className="d-none d-sm-block small">{m.menuLabel}</span>
+            <span className=" ms-2 small">{m.menuLabel}</span>
         </Button>
     )
 }

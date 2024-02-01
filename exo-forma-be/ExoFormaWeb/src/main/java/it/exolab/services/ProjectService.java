@@ -81,7 +81,7 @@ public class ProjectService {
 
 
     @PostMapping(ApiConstants.Project.UPDATE)
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")//singolo ruolo
+    /*@PreAuthorize("hasAuthority('ROLE_ADMIN')")//singolo ruolo*/
     public ResponseEntity<Project> save(@RequestBody Project project, Principal principal) {
         log.debug("-----> PROJECT_SERVICES: Save project id: " + project.getId());
         project.setAuthor(principal.getName());
@@ -90,7 +90,7 @@ public class ProjectService {
     }
 
     @PostMapping(ApiConstants.Project.UPDATE_STEP)
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+   /* @PreAuthorize("hasAuthority('ROLE_ADMIN')")*/
     public ResponseEntity<Object> saveStep(@RequestBody StepRequest stepRequest) {
         log.debug("PROJECT_SERVICES: Aggiungi step al progetto: " + stepRequest.getIdProject());
         try {

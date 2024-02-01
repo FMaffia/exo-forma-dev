@@ -7,46 +7,32 @@ import { useKeycloak } from '@react-keycloak/web'
 import useKeyRoles from '../../hooks/useKeyRoles'
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons/faUserCircle'
 import useKeyInfos from '../../hooks/useKeyInfos'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { NavDropdown } from 'react-bootstrap'
 
 const UserInfo = () => {
     const { keycloak } = useKeycloak()
-    const isLoggedIn = keycloak.authenticated
     const role = useKeyRoles()
     const username = useKeyInfos()
     const isAdmin = role === 'ADMIN'
+    const titleAdmin = () => (
+        <span>
+            <FontAwesomeIcon className={' text-primary me-2'} size={'lg'} icon={faUserCircle} />
 
+            <span>{username}</span>
+        </span>
+    )
     return (
-        <div className="dropdown">
-            <a
-                href="#"
-                className="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
-                id="dropdownUser3"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-            >
-                {isAdmin ? <FontAwesomeIcon size={'lg'} icon={faPencilAlt} /> : <FontAwesomeIcon size={'lg'} icon={faUserCircle} />}
-            </a>
-            <p>{username}</p>
-            <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                <li>
-                    <button className="btn btn-link dropdown-item" type="submit">
-                        <FontAwesomeIcon icon={faUserCircle} /> Profile
-                    </button>
-                </li>
-
-                <li>
-                    <hr className="dropdown-divider" />
-                </li>
-                <li>
-                    {isLoggedIn && role !== UNAUTHORIZED && (
-                        <button className="btn btn-link dropdown-item" type="submit" onClick={() => keycloak.logout()}>
-                            <FontAwesomeIcon icon={faRightFromBracket} /> Sign out
-                        </button>
-                    )}
-                </li>
-            </ul>
-        </div>
+        <NavDropdown title={titleAdmin()} id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">
+                <FontAwesomeIcon className={'text-primary me-2'} icon={faInfoCircle} />
+                Informazioni profilo
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item onClick={keycloak.logout} href="#">
+                <FontAwesomeIcon className={'text-primary'} icon={faRightFromBracket} /> Esci
+            </NavDropdown.Item>
+        </NavDropdown>
     )
 }
 

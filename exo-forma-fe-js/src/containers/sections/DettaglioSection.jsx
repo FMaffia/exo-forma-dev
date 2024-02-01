@@ -13,10 +13,10 @@ const DettaglioSection = () => {
 
     return (
         <Row style={{ minHeight: '80vh' }}>
-            <Col sm={12} lg={2} xl={1} className="pt-3 pt-0">
+            <Col sm={12} lg={2} xl={2} className="pt-3 pt-0">
                 <DetailsMenu currentProject={currentProject} />
             </Col>
-            <Col className="p-md-4" sm={12} lg={10} xl={11}>
+            <Col className="p-md-4" sm={12} lg={10} xl={10}>
                 {isLoading ? (
                     <Skeleton count={20} />
                 ) : (

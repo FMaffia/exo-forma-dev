@@ -1,9 +1,12 @@
 $link-color: #6a1b9a;
 $nav-pills-link-active-bg: #6a1b9a;
-$font-family-base: 'Sofia Sans Semi Condensed', sans-serif !important;
+$font-family-base: 'Roboto';
 $tooltip-bg: #efefef;
 $tooltip-color: #6a1b9a;
 $theme-colors: (
+        "be-badge":#67031d,
+        "fe-badge":#0a8ecc,
+        "system-badge":#424142,
         "primary": #6a1b9a,
         "secondary":#7A9818,
         "warning":#a976c3,

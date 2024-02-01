@@ -11,28 +11,22 @@ import DescForm from '../containers/newedit/DescForm'
 import StepForm from '../containers/newedit/StepForm'
 import { Container } from 'react-bootstrap'
 import ContainerHeader from './ContainerHeader'
+import MenuApp from './MenuApp'
+import { GESTIONE_ROOT, PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT } from '../constants/Routes'
+import GestioneSection from '../containers/sections/GestioneSection'
 
 const PrivateLayout = () => {
     return (
-        <>
+        <div>
             <ContainerHeader footer={false} />
-            <Container fluid>
+            <MenuApp />
+            <Container fluid style={{ minHeight: '80vh' }}>
                 <Routes>
                     <Route path="" element={<Navigate to={'progetti'} />} />
-                    <Route path="progetti" element={<OutletSection />}>
+                    <Route path={PROJECT_ROOT} element={<OutletSection />}>
                         <Route index element={<ProgettiSection />} />
-                        <Route path="in-corso" element={<ProgettiSection />} />
-                        <Route path="in-bozza" element={<ProgettiSection />} />
-                        <Route path="completati" element={<ProgettiSection />} />
-                        <Route path="modifica" element={<ProgettiSection />} />
-                        <Route path="edita" element={<NewEditSection />}>
-                            <Route index element={<DescForm />} />
-                            <Route path="caratteristiche" element={<FeatureForm />} />
-                            <Route path="step" element={<OutletSection />}>
-                                <Route index element={<Navigate to={'edita'} />} />
-                                <Route path=":stepEdit" element={<StepForm />} />
-                            </Route>
-                        </Route>
+                        <Route path={PROJECT_IN_CORSO} element={<ProgettiSection />} />
+                        <Route path={PROJECT_COMPLETATI} element={<ProgettiSection />} />
                         <Route path=":projectPath" element={<OutletSection />}>
                             <Route index element={<DettaglioSection />} />
                             <Route path="step" element={<OutletSection />}>
@@ -41,11 +35,23 @@ const PrivateLayout = () => {
                             </Route>
                         </Route>
                     </Route>
+
+                    <Route path={GESTIONE_ROOT} element={<OutletSection />}>
+                        <Route path={PROJECT_EDIT} element={<GestioneSection />} />
+                        <Route path="edita" element={<NewEditSection />}>
+                            <Route index element={<DescForm />} />
+                            <Route path="caratteristiche" element={<FeatureForm />} />
+                            <Route path="step" element={<OutletSection />}>
+                                <Route index element={<Navigate to={'edita'} />} />
+                                <Route path=":stepEdit" element={<StepForm />} />
+                            </Route>
+                        </Route>
+                    </Route>
                     <Route path="*" element={<Page404 />} />
                 </Routes>
             </Container>
             <ContainerHeader footer />
-        </>
+        </div>
     )
 }
 

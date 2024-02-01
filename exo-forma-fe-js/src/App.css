@@ -10,6 +10,16 @@ body {
     font-weight: bold;
 }
 
+.accordion-button {
+    color: #FFF !important;
+    background-color: #581c7c !important;
+    border-bottom: 5px #c6ff00 solid !important;
+}
+
+.dropdown-item:active, .dropdown-item.active {
+    background-color: #581c7c !important;
+}
+
 a {
     text-decoration: none !important;
 }
@@ -36,3 +46,6 @@ h1, h2, h3, h4, h5 {
     background-color: #E9EEF1
 }
 
+.nav-link.active {
+    font-weight: bold;
+}

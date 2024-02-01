@@ -4,7 +4,7 @@ import { PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT_NEW } 
 import Card from 'react-bootstrap/Card'
 import { setSelectedProject } from '../../slices/projectSlice'
 import { useDispatch } from 'react-redux'
-import { Badge, Button, Col, ProgressBar, Row } from 'react-bootstrap'
+import { Button, Col, ProgressBar, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarDay } from '@fortawesome/free-solid-svg-icons/faCalendarDay'
@@ -12,6 +12,7 @@ import { faFireFlameCurved } from '@fortawesome/free-solid-svg-icons/faFireFlame
 import { range } from 'lodash'
 import clsx from 'clsx'
 import ImageCard from './ImageCard'
+import CustomTags from './CustomTags'
 
 const CardProject = ({ project }) => {
     const maxDifficult = 6
@@ -54,7 +55,7 @@ const CardProject = ({ project }) => {
 
                 {(isInCorso || isCompletati) && <ProgressBar className="mb-3" variant="primary" now={calculatePerc} label={`${calculatePerc.toFixed(0)}%`} />}
                 {project.categories.map(c => (
-                    <Badge key={c} bg="primary me-2">{`#${c}`}</Badge>
+                    <CustomTags c={c} />
                 ))}
                 <hr />
                 <Row className="align-content-between">

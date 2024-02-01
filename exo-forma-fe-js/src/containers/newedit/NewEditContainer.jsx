@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 
 const NewEditContainer = () => {
     const location = useLocation()
+
     return (
         <Container className="mb-2">
             <Card className="p-3">

@@ -2,10 +2,10 @@ import React from 'react'
 
 import { sortBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faHourglassHalf, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
 import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
-import { PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT, PROJECT_ROOT_NEW } from '../constants/Routes'
+import { FEATURE_PATH, PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT, PROJECT_ROOT_NEW, STEP_FORM_PATH_NEW } from '../constants/Routes'
 import { faAdd } from '@fortawesome/free-solid-svg-icons/faAdd'
 import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil'
 
@@ -62,7 +62,27 @@ export const adminMenu = [
         menuLabel: 'Modifica progetto',
         order: 5,
         path: PROJECT_EDIT,
-        filter: MenuFilter.IN_CORSO,
+        filter: MenuFilter.TUTTI,
         icon: <FontAwesomeIcon icon={faPencil} />
+    }
+]
+export const editMenu = [
+    {
+        menuLabel: 'Descrizione',
+        order: 1,
+        path: PROJECT_ROOT_NEW,
+        icon: <FontAwesomeIcon icon={faPencil} />
+    },
+    {
+        menuLabel: 'Caratteristiche',
+        order: 1,
+        path: FEATURE_PATH,
+        icon: <FontAwesomeIcon icon={faPencil} />
+    },
+    {
+        menuLabel: 'Aggiungi step',
+        order: 2,
+        path: STEP_FORM_PATH_NEW,
+        icon: <FontAwesomeIcon icon={faPlus} />
     }
 ]

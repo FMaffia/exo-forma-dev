@@ -4,11 +4,11 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import UserInfo from '../components/menus/UserInfo'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { adminMenu, ricercaMenu } from '../models/menuItems'
+import { adminMenu, materialiMenu, ricercaMenu } from '../models/menuItems'
 import { useDispatch } from 'react-redux'
 import { setFilterProject } from '../slices/uiSlice'
 import useKeyRoles from '../hooks/useKeyRoles'
-import { GESTIONE_ROOT, PROJECT_ROOT } from '../constants/Routes'
+import { GESTIONE_ROOT, MATERIALI_ROOT, PROJECT_ROOT } from '../constants/Routes'
 import Container from 'react-bootstrap/Container'
 
 const MenuApp = () => {
@@ -41,6 +41,13 @@ const MenuApp = () => {
                         <Nav className="me-auto">
                             <NavDropdown active={isActive(PROJECT_ROOT, false)} title={'Progetti Formazione'} id="basic-nav-dropdown">
                                 {ricercaMenu.map(menu => (
+                                    <NavDropdown.Item active={isActive(menu.path, true)} key={menu.path} onClick={() => handleClickFilter(menu)}>
+                                        {menu.icon} {menu.menuLabel}
+                                    </NavDropdown.Item>
+                                ))}
+                            </NavDropdown>
+                            <NavDropdown active={isActive(MATERIALI_ROOT, false)} title={'Materiali Formazione'} id="basic-nav-dropdown">
+                                {materialiMenu.map(menu => (
                                     <NavDropdown.Item active={isActive(menu.path, true)} key={menu.path} onClick={() => handleClickFilter(menu)}>
                                         {menu.icon} {menu.menuLabel}
                                     </NavDropdown.Item>

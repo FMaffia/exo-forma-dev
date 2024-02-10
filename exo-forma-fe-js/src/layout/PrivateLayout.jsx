@@ -12,8 +12,9 @@ import StepForm from '../containers/newedit/StepForm'
 import { Container } from 'react-bootstrap'
 import ContainerHeader from './ContainerHeader'
 import MenuApp from './MenuApp'
-import { GESTIONE_ROOT, PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT } from '../constants/Routes'
+import { GESTIONE_ROOT, MATERIALI_ROOT, PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT } from '../constants/Routes'
 import GestioneSection from '../containers/sections/GestioneSection'
+import MaterialiSection from '../containers/sections/MaterialiSection'
 
 const PrivateLayout = () => {
     return (
@@ -22,7 +23,8 @@ const PrivateLayout = () => {
             <MenuApp />
             <Container fluid style={{ minHeight: '80vh' }}>
                 <Routes>
-                    <Route path="" element={<Navigate to={'progetti'} />} />
+                    <Route path="" element={<Navigate to={'/exoforma-fe/'} />} />
+                    <Route path="/exoforma-fe/" element={<Navigate to={'/exoforma-fe/progetti'} />} />
                     <Route path={PROJECT_ROOT} element={<OutletSection />}>
                         <Route index element={<ProgettiSection />} />
                         <Route path={PROJECT_IN_CORSO} element={<ProgettiSection />} />
@@ -46,6 +48,9 @@ const PrivateLayout = () => {
                                 <Route path=":stepEdit" element={<StepForm />} />
                             </Route>
                         </Route>
+                    </Route>
+                    <Route path={MATERIALI_ROOT} element={<OutletSection />}>
+                        <Route path={MATERIALI_ROOT} element={<MaterialiSection />} />
                     </Route>
                     <Route path="*" element={<Page404 />} />
                 </Routes>

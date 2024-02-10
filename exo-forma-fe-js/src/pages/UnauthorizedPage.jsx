@@ -1,31 +1,29 @@
 import React from 'react'
-import Avatar from '@mui/material/Avatar'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
+
 import unauth from '../img/unauth.png'
-import Typography from '@mui/material/Typography'
-import {useKeycloak} from '@react-keycloak/web'
+import { useKeycloak } from '@react-keycloak/web'
+import Container from 'react-bootstrap/Container'
+import { Button } from 'react-bootstrap'
 
 const UnauthorizedPage = () => {
-    const {keycloak} = useKeycloak()
+    const { keycloak } = useKeycloak()
 
     return (
-        <Box
-            sx={{
+        <Container
+            style={{
                 display: 'flex',
                 flexDirection: 'column',
                 whiteSpace: 'no-wrap',
                 alignItems: 'center',
                 margin: 'auto',
-                p: 2
+                padding: 2
             }}
         >
-            <Avatar variant="square" sx={{p: 1, m: 'auto', height: '256px', width: 'auto'}} alt="Remy Sharp"
-                    src={unauth}/>
+            <img style={{ padding: 1, margin: 'auto', height: '256px', width: 'auto' }} alt="Remy Sharp" src={unauth} />
 
-            <Typography variant="body1" display="block" sx={{fontWeight: 'bold', fontSize: '1.2rem'}} color={'red'}>
+            <span className={'d-block'} sx={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'red'}>
                 Non sei autorizzato ad accedere a questa applicazione.
-            </Typography>
+            </span>
             <Button
                 color={'primary'}
                 onClick={() => {
@@ -34,7 +32,7 @@ const UnauthorizedPage = () => {
             >
                 Ritorna alla login
             </Button>
-        </Box>
+        </Container>
     )
 }
 

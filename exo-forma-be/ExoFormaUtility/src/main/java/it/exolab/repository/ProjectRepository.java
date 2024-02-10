@@ -1,9 +1,9 @@
-package it.exolab.access;
+package it.exolab.repository;
 
 import it.exolab.aggregationoperations.CustomProjectAggregationOperation;
-import it.exolab.model.ImageCover;
 import it.exolab.model.Project;
 import it.exolab.model.StepProject;
+import it.exolab.model.request.IdRequest;
 import it.exolab.model.request.StepRequest;
 import it.exolab.model.view.ProjectCard;
 import lombok.extern.slf4j.Slf4j;
@@ -15,12 +15,10 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @Slf4j
@@ -31,23 +29,14 @@ public class ProjectRepository {
 
     public StepProject getStepByIndexAndIdProject(String projectId, int indexStep) {
         MatchOperation matchOperation = Aggregation.match(Criteria.where("_id").is(projectId));
-        ProjectionOperation projectionOperation = Aggregation.project()
-                .andExclude("_id")
-                .and(ArrayOperators.Filter.filter("steps")
-                        .as("item")
-                        .by(ComparisonOperators.valueOf("item.number").equalToValue(indexStep)))
-                .as("steps");
-        ReplaceRootOperation replaceRootOperation = Aggregation.replaceRoot(ArrayOperators.First.firstOf("steps"));
+        ReplaceRootOperation replaceRootOperation = Aggregation.replaceRoot(ArrayOperators.ArrayElemAt.arrayOf("steps").elementAt(indexStep));
 
-
-        Aggregation agg = Aggregation.newAggregation(Project.class, matchOperation, projectionOperation, replaceRootOperation);
+        Aggregation agg = Aggregation.newAggregation(Project.class, matchOperation, replaceRootOperation);
         AggregationResults<StepProject> aggRes = mongoTemplate.aggregate(agg, Project.class, StepProject.class);
         return aggRes.getUniqueMappedResult();
     }
 
     public List<ProjectCard> findAll(String idUser) {
-
-
         //escludiamo le cose non necessarie dal risultato
         ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString", "image");
 
@@ -62,36 +51,6 @@ public class ProjectRepository {
         return aggRes.getMappedResults();
     }
 
-
-    public ProjectCard findProjectByPath(String path, String idUser) {
-
-
-        //escludiamo le cose non necessarie dal risultato
-        ProjectionOperation projection = Aggregation.project().andExclude("userProject", "steps", "idString", "image");
-        MatchOperation matchOperation = Aggregation.match(Criteria.where("path").is(path));
-
-
-        ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();
-        pipelineOperations.add(matchOperation);
-        pipelineOperations.addAll(aggregateProjectJoins(idUser, true));
-        pipelineOperations.add(projection);
-
-        //assemblaggio, l'ordine è importante
-        Aggregation agg = Aggregation.newAggregation(ProjectCard.class, pipelineOperations);
-
-
-        AggregationResults<ProjectCard> aggRes = mongoTemplate.aggregate(agg, Project.class, ProjectCard.class);
-        return aggRes.getUniqueMappedResult();
-    }
-
-    public String getImageProjectById(String id) {
-        ProjectionOperation projection = Aggregation.project().andInclude("image");
-        MatchOperation matchOperation = Aggregation.match(Criteria.where("id").is(id));
-        Aggregation aggregation = Aggregation.newAggregation(Project.class, matchOperation, projection);
-        AggregationResults<Project> aggRes = mongoTemplate.aggregate(aggregation, Project.class, Project.class);
-        Project project = aggRes.getUniqueMappedResult();
-        return Objects.nonNull(project) && StringUtils.hasText(project.getImage()) ? project.getImage() : "";
-    }
 
     public Project getStepsByIdProject(String id, String idUser) {
         ArrayList<AggregationOperation> pipelineOperations = new ArrayList<>();
@@ -205,10 +164,7 @@ public class ProjectRepository {
     }
 
 
-    public Project getProjectById(Project project) {
-        if (Objects.isNull(project.getId())) {
-            return this.mongoTemplate.insert(new Project());
-        }
+    public Project getProjectById(IdRequest project) {
         return this.mongoTemplate.findById(new ObjectId(project.getId()), Project.class);
     }
 
@@ -217,10 +173,8 @@ public class ProjectRepository {
         return this.mongoTemplate.save(project);
     }
 
-    public void addImage(ImageCover image) {
-        Query query = new Query(new Criteria("id").is(new ObjectId(image.getId())));
-        Update update = new Update().set("image", image.getImage());
-        this.mongoTemplate.updateFirst(query, update, Project.class);
+    public Project updateProject(Project project) {
+        return this.mongoTemplate.save(project);
     }
 
     public void saveStep(StepRequest stepRequest) {

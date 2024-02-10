@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useUpdateStepMutation } from '../../api/projectsApi'
 import { useSelector } from 'react-redux'
-import { Button } from '@mui/material'
+import { Button } from 'react-bootstrap'
 
 const ButtonBarStepEdit = ({ step, setStep }) => {
     const navigate = useNavigate()

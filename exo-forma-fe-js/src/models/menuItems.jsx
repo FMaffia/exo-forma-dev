@@ -2,10 +2,19 @@ import React from 'react'
 
 import { sortBy } from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faHourglassHalf, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCheck, faHourglassHalf, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons/faFolderOpen'
 import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons/faFlagCheckered'
-import { FEATURE_PATH, PROJECT_COMPLETATI, PROJECT_EDIT, PROJECT_IN_CORSO, PROJECT_ROOT, PROJECT_ROOT_NEW, STEP_FORM_PATH_NEW } from '../constants/Routes'
+import {
+    FEATURE_PATH,
+    MATERIALI_ROOT,
+    PROJECT_COMPLETATI,
+    PROJECT_EDIT,
+    PROJECT_IN_CORSO,
+    PROJECT_ROOT,
+    PROJECT_ROOT_NEW,
+    STEP_FORM_PATH_NEW
+} from '../constants/Routes'
 import { faAdd } from '@fortawesome/free-solid-svg-icons/faAdd'
 import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil'
 
@@ -49,6 +58,14 @@ export const ricercaMenu = [
         path: PROJECT_COMPLETATI,
         filter: MenuFilter.COMPLETATI,
         icon: <FontAwesomeIcon icon={faFlagCheckered} />
+    }
+]
+export const materialiMenu = [
+    {
+        menuLabel: 'Sfoglia materiali',
+        order: 1,
+        path: MATERIALI_ROOT,
+        icon: <FontAwesomeIcon icon={faBook} />
     }
 ]
 export const adminMenu = [

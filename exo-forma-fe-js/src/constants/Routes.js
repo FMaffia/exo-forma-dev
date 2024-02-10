@@ -1,5 +1,6 @@
-export const PROJECT_ROOT = '/progetti'
-export const GESTIONE_ROOT = '/gestione'
+export const PROJECT_ROOT = '/exoforma-fe/progetti'
+export const GESTIONE_ROOT = '/exoforma-fe/gestione'
+export const MATERIALI_ROOT = '/exoforma-fe/materiali'
 export const PROJECT_IN_CORSO = PROJECT_ROOT + '/in-corso'
 export const PROJECT_COMPLETATI = PROJECT_ROOT + '/completati'
 export const PROJECT_BOZZA = PROJECT_ROOT + '/in-bozza'

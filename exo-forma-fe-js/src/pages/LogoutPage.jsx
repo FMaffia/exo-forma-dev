@@ -1,15 +1,15 @@
 import React from 'react'
-import { Avatar, Box, Button } from '@mui/material'
 import loginImg from '../img/log-in.png'
-import Typography from '@mui/material/Typography'
 import { useKeycloak } from '@react-keycloak/web'
+import Container from 'react-bootstrap/Container'
+import { Button } from 'react-bootstrap'
 
 const LogoutPage = () => {
     const { keycloak } = useKeycloak()
 
     return (
-        <Box
-            sx={{
+        <Container
+            style={{
                 display: 'flex',
                 flexDirection: 'column',
                 whiteSpace: 'no-wrap',
@@ -17,16 +17,16 @@ const LogoutPage = () => {
                 margin: 'auto'
             }}
         >
-            <Avatar variant="square" sx={{ p: 1, m: 'auto', height: '256px', width: 'auto' }} alt="Remy Sharp" src={loginImg} />
+            <img style={{ padding: 1, margin: 'auto', height: '256px', width: 'auto' }} alt="Remy Sharp" src={loginImg} />
 
-            <Typography variant="body1" display="block" sx={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'primary'}>
+            <span className={'d-block'} style={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'primary'}>
                 Fare la login per accedere al'applicazione
-            </Typography>
+            </span>
             <Button color={'primary'} onClick={() => keycloak.login({ redirectUri: 'http://localhost:3000' })}>
                 Login
             </Button>
-        </Box>
+        </Container>
     )
 }
 
-export default LogoutPage
+export default LogoutPage;

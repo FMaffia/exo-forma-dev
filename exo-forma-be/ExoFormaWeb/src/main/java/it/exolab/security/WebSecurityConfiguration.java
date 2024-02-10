@@ -25,6 +25,22 @@ import java.util.Arrays;
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class WebSecurityConfiguration extends KeycloakWebSecurityConfigurerAdapter {
 
+    private static final String[] AUTH_WHITELIST = {
+            // -- Swagger UI v2
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",
+            // -- Swagger UI v3 (OpenAPI)
+            "/v3/api-docs/**",
+            "/swagger-ui/**"
+            // other public endpoints of your API may be appended to this array
+    };
+
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(this.getKeycloakAuthenticationProvider());
@@ -54,8 +70,8 @@ public class WebSecurityConfiguration extends KeycloakWebSecurityConfigurerAdapt
         super.configure(http);
         http.csrf().disable().cors().and()
                 .authorizeRequests()
-                .anyRequest()
-                .authenticated()
+                .antMatchers(AUTH_WHITELIST).permitAll()
+                .antMatchers("/exo-forma-be/api/v1/**").authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
@@ -64,7 +80,7 @@ public class WebSecurityConfiguration extends KeycloakWebSecurityConfigurerAdapt
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        String FRONT_END_HOST = "http://localhost:3000";
+        String FRONT_END_HOST = "http://localhost:3000/exo-forma";
 
 //        configuration.setAllowedOrigins(Arrays.asList(FRONT_END_HOST, "http://exogest.exolab.it:12000", "http://exogest.exolab.local:12000",
 //                "http://fe.exolab.it:12000", "http://192.168.100.10:12000"));

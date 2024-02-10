@@ -1,16 +1,16 @@
 import React from 'react'
-import { Box, Container } from '@mui/material'
 import ContainerHeader from './ContainerHeader'
+import Container from 'react-bootstrap/Container'
 
 const PublicLayout = ({ children }) => {
     return (
         <>
             <ContainerHeader footer={false} />
-            <Box>
+            <Container>
                 <Container sx={{ display: 'flex', height: '80vh' }} maxWidth={false}>
                     {children}
                 </Container>
-            </Box>
+            </Container>
             <ContainerHeader footer={true} />
         </>
     )

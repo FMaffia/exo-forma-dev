@@ -1,4 +1,4 @@
-package it.exolab.access;
+package it.exolab.repository;
 
 import it.exolab.model.User;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -177,16 +177,16 @@ public class ProjectRepository {
         return this.mongoTemplate.save(project);
     }
 
-    public void saveStep(StepRequest stepRequest) {
+    public long saveStep(StepRequest stepRequest) {
         Query query = new Query(new Criteria("id").is(new ObjectId(stepRequest.getIdProject())));
         StepProject stepToUpdated = new StepProject(stepRequest);
         Update update;
-        if (!stepRequest.getUpdate()) {
+        if (Boolean.FALSE.equals(stepRequest.getUpdate())) {
             update = new Update().push("steps", stepToUpdated);
         } else {
             query.addCriteria(new Criteria("steps.number").is(stepRequest.getNumber()));
             update = new Update().set("steps.$", stepToUpdated);
         }
-        this.mongoTemplate.updateFirst(query, update, Project.class);
+        return this.mongoTemplate.updateFirst(query, update, Project.class).getModifiedCount();
     }
 }

@@ -13,13 +13,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProjectUserService {
     private final ProjectUserRepository projectUserRepository;
-    
+
 
     public List<ProjectUser> getProjectsByUser(String idUser) {
         return projectUserRepository.getProjectsByUser(idUser);
     }
 
-    public ProjectUser updateLastStep(ProjectUser requestBody) {
+    public ProjectUser updateLastStep(ProjectUser requestBody, String idUser) {
+        requestBody.setIdUser(idUser);
         return projectUserRepository.updateLastStep(requestBody);
     }
 }

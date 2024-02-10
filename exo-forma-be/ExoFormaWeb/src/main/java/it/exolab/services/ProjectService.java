@@ -45,7 +45,7 @@ public class ProjectService {
         return projectRepository.updateProject(project);
     }
 
-    public void saveStep(StepRequest stepRequest) {
-        projectRepository.saveStep(stepRequest);
+    public boolean saveStep(StepRequest stepRequest) {
+        return projectRepository.saveStep(stepRequest) > 0;
     }
 }

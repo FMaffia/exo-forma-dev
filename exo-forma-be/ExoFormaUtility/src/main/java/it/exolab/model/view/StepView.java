@@ -1,21 +1,21 @@
 package it.exolab.model.view;
 
-import it.exolab.model.request.StepRequest;
+import it.exolab.model.dto.StepDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@Data
 @NoArgsConstructor
+@Data
 public class StepView implements Serializable {
-    private static final long serialVersionUID = 292572689817176123L;
-    private int number;
+    String idString;
+    private int order;
     private String title;
-    private boolean completed;
 
-    public StepView(StepRequest stepRequest) {
-        this.number = stepRequest.getNumber();
-        this.title = stepRequest.getTitle();
+    public StepView(StepDto stepDto) {
+        this.idString = stepDto.getIdString();
+        this.order = stepDto.getOrder();
+        this.title = stepDto.getTitle();
     }
 }

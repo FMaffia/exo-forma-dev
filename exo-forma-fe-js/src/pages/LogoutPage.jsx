@@ -1,10 +1,8 @@
-import React from 'react'
-import loginImg from '../img/log-in.png'
 import { useKeycloak } from '@react-keycloak/web'
 import Container from 'react-bootstrap/Container'
 import { Button } from 'react-bootstrap'
 
-const LogoutPage = () => {
+const LoginPage = () => {
     const { keycloak } = useKeycloak()
 
     return (
@@ -17,10 +15,8 @@ const LogoutPage = () => {
                 margin: 'auto'
             }}
         >
-            <img style={{ padding: 1, margin: 'auto', height: '256px', width: 'auto' }} alt="Remy Sharp" src={loginImg} />
-
             <span className={'d-block'} style={{ fontWeight: 'bold', fontSize: '1.2rem' }} color={'primary'}>
-                Fare la login per accedere al'applicazione
+                Fare la login per accedere all'applicazione
             </span>
             <Button color={'primary'} onClick={() => keycloak.login({ redirectUri: 'http://localhost:3000' })}>
                 Login
@@ -29,4 +25,4 @@ const LogoutPage = () => {
     )
 }
 
-export default LogoutPage;
+export default LoginPage

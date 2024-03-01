@@ -1,0 +1,105 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:json/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "babel",
+    "html",
+    "json",
+    "jest-dom",
+    "testing-library",
+    "jsx-a11y"
+  ],
+  "ignorePatterns": [
+    "test-report",
+    "public"
+  ],
+  "rules": {
+    "eol-last": "warn",
+    "no-void": "off",
+    "react/jsx-uses-react": "error",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-vars": "warn",
+    "react/no-unknown-property": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/prop-types": [
+      0
+    ],
+    "generator-star-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "react/prefer-stateless-function": [
+      1
+    ],
+    "react/jsx-indent": [
+      "off",
+      4
+    ],
+    "react/jsx-closing-bracket-location": [
+      0,
+      {
+        "selfClosing": "after-props"
+      }
+    ],
+    "react/jsx-closing-tag-location": "off",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "react/jsx-indent-props": [
+      "off",
+      4
+    ],
+    "indent": [
+      "off",
+      4
+    ],
+    "space-before-function-paren": [
+      "off"
+    ],
+    "new-cap": [
+      "warn",
+      {
+        "newIsCapExceptions": [
+          "memo"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

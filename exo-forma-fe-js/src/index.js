@@ -14,7 +14,6 @@ root.render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistorApp}>
             <BrowserRouter>
-                {' '}
                 <KeycloackApp />
             </BrowserRouter>
         </PersistGate>

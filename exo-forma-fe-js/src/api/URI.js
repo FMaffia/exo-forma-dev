@@ -1,4 +1,4 @@
-export const ROOT_API = 'http://localhost:3000/exo-forma-be/api/v1/'
+export const ROOT_API = 'http://localhost:3000/api'
 export const PROJECT_API = `projects/`
 export const GET_PROJECTS_API = PROJECT_API + 'all'
 export const UPDATE_PROJECT_API = PROJECT_API + 'update'

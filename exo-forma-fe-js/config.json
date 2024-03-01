@@ -1,0 +1,11 @@
+{
+  "context": "exoforma-fe",
+  "backendContext": "exoforma-be",
+  "frontendHost": "localhost",
+  "frontendPort": "3008",
+  "reverseProxyHost": "localhost",
+  "backendHost": "0.0.0.0",
+  "backendPort": "8080",
+  "username": "admin",
+  "password": "admin123"
+}

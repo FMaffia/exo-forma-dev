@@ -1,15 +1,29 @@
 package it.exolab.model.view;
 
-import it.exolab.model.Project;
+import it.exolab.model.document.ProjectDocument;
 import lombok.Data;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @Data
-@Document("projects")
-public class ProjectCard extends Project implements Serializable {
+public class ProjectCard extends ProjectDocument implements Serializable {
     private static final long serialVersionUID = 1574006953815072972L;
+    private String idString;
     private int stepsCount;
-    private int lastStep;
+
+
+    public int getStepsCount() {
+        if (Objects.nonNull(this.getSteps())) {
+            return this.getSteps().size();
+        }
+        return 0;
+    }
+
+    public String getIdString() {
+        if (Objects.nonNull(this.getId())) {
+            return getId().toHexString();
+        }
+        return "";
+    }
 }

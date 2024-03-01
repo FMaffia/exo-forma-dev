@@ -26,4 +26,11 @@ public class UtilityController extends ControlledRestResponse {
 
     }
 
+    @Operation(summary = "HELLO WORLD")
+    @GetMapping(ApiConstants.Utility.TEST)
+    public ResponseEntity<?> hello() {
+        return this.controlledResponse(() -> utilityService.test());
+
+    }
+
 }

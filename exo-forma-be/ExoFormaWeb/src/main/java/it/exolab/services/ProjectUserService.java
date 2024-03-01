@@ -1,6 +1,8 @@
 package it.exolab.services;
 
-import it.exolab.model.ProjectUser;
+import it.exolab.model.document.ProjectUserDocument;
+import it.exolab.model.request.MyProjectRequest;
+import it.exolab.model.view.MyProjectCard;
 import it.exolab.repository.ProjectUserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,12 +17,15 @@ public class ProjectUserService {
     private final ProjectUserRepository projectUserRepository;
 
 
-    public List<ProjectUser> getProjectsByUser(String idUser) {
+    public List<MyProjectCard> getProjectsByUser(String idUser) {
         return projectUserRepository.getProjectsByUser(idUser);
     }
 
-    public ProjectUser updateLastStep(ProjectUser requestBody, String idUser) {
-        requestBody.setIdUser(idUser);
-        return projectUserRepository.updateLastStep(requestBody);
+    public boolean updateLastStep(ProjectUserDocument requestBody) {
+        return projectUserRepository.updateLastStep(requestBody) > 0;
+    }
+
+    public ProjectUserDocument startProject(MyProjectRequest requestBody) {
+        return projectUserRepository.insertMyProject(requestBody);
     }
 }

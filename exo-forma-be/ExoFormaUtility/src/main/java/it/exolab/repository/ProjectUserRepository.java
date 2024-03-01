@@ -1,14 +1,18 @@
 package it.exolab.repository;
 
-import it.exolab.model.ProjectUser;
+import it.exolab.model.document.ProjectUserDocument;
+import it.exolab.model.request.MyProjectRequest;
+import it.exolab.model.view.MyProjectCard;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class ProjectUserRepository {
@@ -16,33 +20,34 @@ public class ProjectUserRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    public ProjectUser getLastStep(String idProject, String idUser) {
-        Query q = new Query();
-        q.addCriteria(Criteria.where("idUser").is(idUser).and("idProject").is(idProject));
-        q.fields().include("lastStep");
-        return mongoTemplate.findOne(q, ProjectUser.class);
+
+    public List<MyProjectCard> getProjectsByUser(String idUser) {
+        MatchOperation matchOperation = new MatchOperation(Criteria.where("idUser").is(idUser));
+        AddFieldsOperation addFieldsOperation = Aggregation.addFields().addFieldWithValueOf("idProjectObj",
+                ConvertOperators.ToObjectId.toObjectId("$idProject")).build();
+        LookupOperation lookupOperation = LookupOperation.newLookup().
+                from("projects").
+                localField("idProjectObj").
+                foreignField("_id").as("result");
+        UnwindOperation unwindOperation = Aggregation.unwind("result", true);
+        AddFieldsOperation addFieldsOperation2 = Aggregation.addFields().addField("result.lastStep").withValue("$lastStep").build();
+
+//TODO
+        ReplaceRootOperation replaceRootOperation = Aggregation.replaceRoot("$$ROOT.result");
+        Aggregation aggregation = Aggregation.newAggregation(matchOperation, addFieldsOperation, lookupOperation, unwindOperation, addFieldsOperation2, replaceRootOperation);
+        return mongoTemplate.aggregate(aggregation, ProjectUserDocument.class, MyProjectCard.class).getMappedResults();
     }
 
-    public List<ProjectUser> getProjectsByUser(String idUser) {
+    public long updateLastStep(ProjectUserDocument requestBody) {
         Query q = new Query();
-        q.fields().exclude("idUser");
-        q.addCriteria(Criteria.where("idUser").is(idUser));
-        return mongoTemplate.find(q, ProjectUser.class);
+        q.addCriteria((Criteria.where("idUser").is(requestBody.getIdUser()).and("_id").is(new ObjectId(requestBody.getId()))));
+        Update update = new Update().set("lastStep", requestBody.getLastStep());
+        return this.mongoTemplate.updateFirst(q, update, ProjectUserDocument.class).getModifiedCount();
     }
 
-    public ProjectUser updateLastStep(ProjectUser requestBody) {
-        Query q = new Query();
-        q.addCriteria((Criteria.where("idUser").is(requestBody.getIdUser()).and("idProject").is(requestBody.getIdProject())));
-        ProjectUser docToUpdate = mongoTemplate.findOne(q, ProjectUser.class);
-        if (Objects.isNull(docToUpdate)) {
-            return mongoTemplate.save(requestBody);
-        }
-        if (requestBody.getLastStep() <= docToUpdate.getLastStep()) {
-            docToUpdate.setLastStep(requestBody.getLastStep() + 1);
-            return mongoTemplate.save(docToUpdate);
-        }
-        return null;
-    }
 
+    public ProjectUserDocument insertMyProject(MyProjectRequest project) {
+        return this.mongoTemplate.save(project);
+    }
 
 }

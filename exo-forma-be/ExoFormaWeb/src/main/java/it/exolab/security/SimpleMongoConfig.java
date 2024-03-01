@@ -4,6 +4,7 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -12,9 +13,14 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @Configuration
 @EnableMongoRepositories(basePackages = "it.exolab.repository")
 public class SimpleMongoConfig {
+    @Value("${spring.data.mongodb.uri}")
+    String dbString;
+    @Value("${spring.data.mongodb.database}")
+    String database;
+
     @Bean
     public MongoClient mongo() {
-        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/FORMAZIONE_INTERNA");
+        ConnectionString connectionString = new ConnectionString(dbString);
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();
@@ -24,7 +30,7 @@ public class SimpleMongoConfig {
 
     @Bean
     public MongoTemplate mongoTemplate() throws Exception {
-        return new MongoTemplate(mongo(), "FORMAZIONE_INTERNA");
+        return new MongoTemplate(mongo(), database);
     }
 
 

@@ -13,6 +13,10 @@ import java.util.List;
 public class UtilityService {
     private final UtilityRepository utilityRepository;
 
+    public String test() {
+        return "Hello World";
+    }
+
     public List<String> getAllProjectCategories() {
         return utilityRepository.getAllProjectCategories();
     }

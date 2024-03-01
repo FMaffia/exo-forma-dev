@@ -70,8 +70,10 @@ public class WebSecurityConfiguration extends KeycloakWebSecurityConfigurerAdapt
         super.configure(http);
         http.csrf().disable().cors().and()
                 .authorizeRequests()
-                .antMatchers(AUTH_WHITELIST).permitAll()
-                .antMatchers("/exo-forma-be/api/v1/**").authenticated()
+                .anyRequest().permitAll()
+                //TODO scommentare per attivare la sicurezza
+                //.antMatchers(AUTH_WHITELIST).permitAll()
+                //.antMatchers("/exo-forma-be/api/v1/**").authenticated()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

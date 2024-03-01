@@ -9,11 +9,13 @@ import { Col, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import Container from 'react-bootstrap/Container'
 import FiltriRicerca from '../ricerca/FiltriRicerca'
+import { keyCloak } from '../../constants/Constants'
 
 const ProgettiSection = () => {
     const filter = useSelector(state => state.ui.filterProject)
     const { data, isLoading } = useGetProjectsQuery({ refetchOnMountOrArgChange: true })
     const [filteredProjects, setFilteredProjects] = useState(data)
+    const token = keyCloak.token
 
     useEffect(() => {
         filtra()
@@ -42,6 +44,7 @@ const ProgettiSection = () => {
                     <HomeMenu />
                 </Col>
                 <Col sm={12} lg={10} xl={10}>
+                    <button onClick={() => navigator.clipboard.writeText(token)}>Copy token</button>
                     <FiltriRicerca />
                     {isLoading ? <Skeleton count={20} /> : <ResultProject projects={filteredProjects} />}
                 </Col>

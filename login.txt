@@ -1,0 +1,6 @@
+https://sso.exolab.local/admin/master/console/#/exolab-sso-test/users
+
+users:
+editor@test.it
+reader@test.it
+pass test

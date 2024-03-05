@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7587b925-c9e1-4e26-a21e-f2701d64e9c0" name="Changes" comment="Print progetto setting keycloak">
+      <change afterPath="$PROJECT_DIR$/../skill-buddy-be/skill-buddy-utility/skill-buddy-utility.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skill-buddy-be/skill-buddy-web/skill-buddy-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/custom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/paper-fold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pinwheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/profile-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/rabbit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/shapes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/skillbuddy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CustomCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CustomNavLink.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ProgettiContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/progetti/ProgCompletati.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/progetti/ProgInCorso.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/dataSources/114964b9-3752-45c9-90a6-19ec2764c225.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/exo-forma-be.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/httpRequests/2022-06-24T104918.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/httpRequests/2022-06-24T104934.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/httpRequests/2022-06-24T104943.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/saveactions_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/exoFormaUtility.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/aggregationoperations/CustomProjectAggregationOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/document/MongoConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/document/ProjectDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/document/ProjectUserDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/document/StepDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/document/UserDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/dto/Attachment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/dto/ImageCover.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/dto/Link.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/dto/StepDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/enums/Permissions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/request/IdRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/request/MyProjectRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/request/ProjectRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/request/UserRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/view/MyProjectCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/view/ProjectCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/model/view/StepView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/repository/ProjectRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/repository/ProjectUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/repository/StepRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaUtility/src/main/java/it/exolab/repository/UtilityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/exoFormaWeb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/ExoFormaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/aop/ExceptionRestAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/aop/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/controller/ProjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/controller/ProjectUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/controller/UtilityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/security/GlobalConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/security/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/security/SimpleMongoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/security/WebSecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/ProjectUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/StepService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/services/UtilityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/utility/ApiConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/utility/ControlledRestResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/java/it/exolab/utility/ServerMessages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/ExoFormaWeb/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/exoFormaParent.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-be/settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/exo-forma-fe-js.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/saveactions_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/keycloak.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/setupProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/URI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/projectsUserApi.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/api/rootApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/config.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/Constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/constants/UserRole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/DettaglioSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/GestioneSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/MaterialiSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/NewEditSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/ProgettiSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/containers/sections/StepSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/hooks/useKeyInfos.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/hooks/useKeyRoles.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/PublicLayout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/layout/TemplateApp.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/LogoutPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/Page404.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/pages/UnauthorizedPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/routes/AppRoutes.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/routes/Paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/backupProjectSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/projectSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/stepSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/slices/uiSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/rootReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/src/trigger_mongo_db_step.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/templates/index.template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/webpack.config.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-fe-js/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/exo-forma-react.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/0/1/010b51e007f00315e7c98b0ff66d0f9c814349ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/0/5/05b34717ac2f15c8cd5b17d89c1cf39c3033dff6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/1/3/13f70ca1e2fc60ab1dcb39a5e5b133eafc81d969" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/1/e/1e43fa63aecd2127be034b3fb9d4caa172275714" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/1/e/1ec893a616f6ef39a184977d73fcb5d592f6647c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/2/1/212715ddc1397ec42db2afc638bfe58a7c41c794" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/4/f/4f54e60cc673d5e68e4b76e0dc1267c532b30755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/5/6/56c097c357f627861315bff224e7f26f9dadd079" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/5/9/598adadff0f0159e4869c66fa9bb0419fd7d7997" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/5/e/5e7be59656a18829c9498cb9ff9a0d587fa6ef2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/8/b/8bb307fb6db380ef753f957624efd76a44e602c7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/9/b/9b7ab58e3634e351de2db5d439047c53462216f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/a/2/a26f7d55e365bcbb4207b7ddee969ad5b8349404" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/b/7/b73cd46129ee985b0b0439588aab5121eb23d6c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/c/0/c0e9e59a467e1546695bfa22746b302540797a4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/c/2/c2a1aeefa2d50edfa06a7a271b45e34da018c035" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/c/c/ccccfcb0d76c788afef72a3d5e778f3ce0837047" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/d/c/dc5606f15b109e1bd2e2fe93c673daff3e8584d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/d/d/dda03c1e4abf9874b8b4e5fb06a41b757245a5cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/e/4/e4b36b8f9ee7e793aa53c9b7a828cff69b9b7604" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/e/6/e6c9db4a5f3f7f022dc0cf2e60ebf87232ceee9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/e/9/e9a77f3f1e2e3196fa52265778c4e5d1e1cd5b96" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/e/a/ea2ad6c0878103e96787d5fd1f4c5dc49bdc3624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/f/9/f900edc44cb929c2267a16100a32851f6d5b477d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/0/1/010b51e007f00315e7c98b0ff66d0f9c814349ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/0/5/05b34717ac2f15c8cd5b17d89c1cf39c3033dff6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/1/3/13f70ca1e2fc60ab1dcb39a5e5b133eafc81d969" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/1/e/1e43fa63aecd2127be034b3fb9d4caa172275714" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/1/e/1ec893a616f6ef39a184977d73fcb5d592f6647c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/2/1/212715ddc1397ec42db2afc638bfe58a7c41c794" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/4/f/4f54e60cc673d5e68e4b76e0dc1267c532b30755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/5/6/56c097c357f627861315bff224e7f26f9dadd079" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/5/9/598adadff0f0159e4869c66fa9bb0419fd7d7997" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/5/e/5e7be59656a18829c9498cb9ff9a0d587fa6ef2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/8/b/8bb307fb6db380ef753f957624efd76a44e602c7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/9/b/9b7ab58e3634e351de2db5d439047c53462216f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/a/2/a26f7d55e365bcbb4207b7ddee969ad5b8349404" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/b/7/b73cd46129ee985b0b0439588aab5121eb23d6c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/c/0/c0e9e59a467e1546695bfa22746b302540797a4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/c/2/c2a1aeefa2d50edfa06a7a271b45e34da018c035" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/c/c/ccccfcb0d76c788afef72a3d5e778f3ce0837047" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/d/c/dc5606f15b109e1bd2e2fe93c673daff3e8584d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/d/d/dda03c1e4abf9874b8b4e5fb06a41b757245a5cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/e/4/e4b36b8f9ee7e793aa53c9b7a828cff69b9b7604" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/e/6/e6c9db4a5f3f7f022dc0cf2e60ebf87232ceee9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/e/9/e9a77f3f1e2e3196fa52265778c4e5d1e1cd5b96" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/e/a/ea2ad6c0878103e96787d5fd1f4c5dc49bdc3624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/f/9/f900edc44cb929c2267a16100a32851f6d5b477d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/keycloak.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/setupProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/api/URI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/api/rootApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/api/utilityApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/constants/Constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/constants/Paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/constants/UserRole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/hooks/useKeyInfos.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/hooks/useKeyRoles.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/pages/LogoutPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/pages/UnauthorizedPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/routes/AppRoutes.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/slices/uiSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/store/rootReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exo-forma-react/src/template/Template.jsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2d5TakCMWZuYgLjwdeH8I9DXUsQ" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.TemplateApp.jsx.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/development/workspaces/workspace-interno/Exolab-Apps/SkillBuddy/skill-buddy-react/src/containers/progetti",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "npm.stop.executor": "Run",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\Exolab\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers\progetti" />
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers" />
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\css" />
+      <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\css" />
+      <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\template" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img" />
+      <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\assets" />
+      <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7587b925-c9e1-4e26-a21e-f2701d64e9c0" name="Changes" comment="" />
+      <created>1709297005567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709297005567</updated>
+      <workItem from="1709297007280" duration="6124000" />
+      <workItem from="1709581476649" duration="6577000" />
+      <workItem from="1709588133824" duration="3554000" />
+      <workItem from="1709591976638" duration="19436000" />
+    </task>
+    <task id="LOCAL-00001" summary="Print progetto setting keycloak">
+      <option name="closed" value="true" />
+      <created>1709302689501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709302689501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Print progetto setting keycloak" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print progetto setting keycloak" />
+  </component>
+</project>

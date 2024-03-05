@@ -1,0 +1,23 @@
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.font-small {
+  font-size: 0.9rem;
+}
+
+.card-img-primary {
+  background-color: var(--bs-primary-light);
+  font-size: 3rem;
+  color: var(--bs-dark);
+  width: 5rem;
+  height: 5rem;
+}
+
+.card-img-primary img {
+  width: 4rem;
+  height: 4rem;
+}

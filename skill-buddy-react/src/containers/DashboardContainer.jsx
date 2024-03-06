@@ -1,9 +1,11 @@
 import React from 'react';
 import CustomCard from "../components/CustomCard";
 import {Col, Row} from "react-bootstrap";
-import project from '../assets/img/rabbit.png'
-import allProject from '../assets/img/pinwheel.png'
-import projectInCorso from '../assets/img/paper-fold.png'
+import project from '../assets/img/geometric1.png'
+import allProject from '../assets/img/geometric2.png'
+import projectInCorso from '../assets/img/geometric3.png'
+import TimelineActivity from "../components/TimelineActivity";
+import {GraficoSkills} from "../components/grafici/GraficoSkills";
 
 const DashboardContainer = () => {
     const cardContentExample = [{
@@ -33,22 +35,54 @@ const DashboardContainer = () => {
             </button>
         }
     ]
-    return <div className="pagetitle">
+    const timelineContent = [{
+        id: 1,
+        title: "Alessio Pavino ha pubblicato JPA e Company",
+        date: "23/05/2024",
+        icon: "bi bi-box",
+        content: <p>Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di seguito per coloro
+            <button className={"btn-sm d-block ps-0  btn-link btn"}>Dettaglio</button>
+        </p>
+    },
+        {
+            id: 2,
+            title: "Matteo Bartolin ha pubblicato Maven e Company",
+            date: "23/05/2024",
+            icon: "bi bi-bell",
+            content: <p>Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di seguito
+
+                <button className={"btn-sm d-block ps-0  btn-link btn"}>Dettaglio</button>
+            </p>
+        }
+    ]
+    return <div className="fade-container pagetitle">
         <section className={"section dashboard"}>
             <h1>Dashboard</h1>
             <nav>
-                <ol class="breadcrumb">
+                <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li className="breadcrumb-item active">Dashboard</li>
                 </ol>
             </nav>
             <Row>
+
                 {cardContentExample.map(c => <Col key={c.id} xxl={4} md={6}>
                         <CustomCard cardContent={c}>
                             {c.content}
                         </CustomCard>
                     </Col>
                 )}
+                <Col xxl={8} md={6} sm={12}>
+                    <CustomCard cardContent={{title: "Skills ottenute"}}>
+                        <GraficoSkills/>
+                    </CustomCard>
+                </Col>
+                <Col xxl={4} md={6} sm={12}>
+                    <CustomCard cardContent={{title: "Ultime attività"}}>
+
+                        <TimelineActivity datas={timelineContent}/>
+                    </CustomCard>
+                </Col>
             </Row>
         </section>
     </div>

@@ -1,3 +1,16 @@
+.fade-container {
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
 .card {
   margin-bottom: 30px;
   border: none;
@@ -14,6 +27,7 @@
 }
 
 .card-img-primary {
+  border: 1px solid #51bcb84a;
   background-color: var(--bs-primary-light);
   font-size: 3rem;
   color: var(--bs-dark);
@@ -24,4 +38,59 @@
 .card-img-primary img {
   width: 4rem;
   height: 4rem;
+}
+
+.timeline-with-icons {
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  border: 1px solid #51bcb84a;
+
+  background-color: #e6f5f6;
+  color: black;
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+td > a {
+  font-weight: bold;
+}
+
+th button > img {
+  filter: invert(1);
+  scale: 0.6;
+  transform: rotate(90deg);
+
+}
+
+th {
+  background-color: var(--bs-primary-light) !important;
+  color: var(--bs-dark) !important;
+  font-family: Nunito;
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    --#{$prefix}table-bg-type: var(--bs-primary-light);
+  }
 }

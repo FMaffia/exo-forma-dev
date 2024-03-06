@@ -6,7 +6,7 @@ const ProgCompletati = () => {
         <section className={"section "}>
             <h1>Progetti completati</h1>
             <nav>
-                <ol class="breadcrumb">
+                <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li className="breadcrumb-item active">Progetti completati</li>
                 </ol>

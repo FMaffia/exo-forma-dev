@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7587b925-c9e1-4e26-a21e-f2701d64e9c0" name="Changes" comment="Print progetto template**">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/exolab-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/loading2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/table/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/table/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LoadingModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TimelineActivity.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grafici/GraficoSkills.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/table/Pagination.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/table/RowsPerPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/table/TableCustom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/bird.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/paper-fold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/pinwheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/rabbit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/shapes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/DashboardContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/DashboardContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ProgettiContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProgettiContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/progetti/ProgCompletati.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/progetti/ProgCompletati.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/progetti/ProgInCorso.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/progetti/ProgInCorso.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +80,7 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/development/workspaces/workspace-interno/Exolab-Apps/SkillBuddy/skill-buddy-react/src/assets/img",
+    "last_opened_file_path": "D:/development/workspaces/workspace-interno/Exolab-Apps/SkillBuddy/skill-buddy-react/src/assets/img/table",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,13 +96,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img\table" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers\progetti" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\css" />
-      <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\components\table" />
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img\table" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img" />
       <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\assets" />
       <recent name="D:\development\workspaces\workspace-interno\ExoForma\exo-forma-dev\exo-forma-react\src\css" />
@@ -112,7 +137,7 @@
       <workItem from="1709297007280" duration="6124000" />
       <workItem from="1709581476649" duration="6577000" />
       <workItem from="1709588133824" duration="3554000" />
-      <workItem from="1709591976638" duration="23243000" />
+      <workItem from="1709591976638" duration="44136000" />
     </task>
     <task id="LOCAL-00001" summary="Print progetto setting keycloak">
       <option name="closed" value="true" />
@@ -138,11 +163,38 @@
       <option name="project" value="LOCAL" />
       <updated>1709658779850</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Print progetto template**">
+      <option name="closed" value="true" />
+      <created>1709735230420</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709735230421</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Print progetto template**">
+      <option name="closed" value="true" />
+      <created>1709735241007</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709735241007</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Print progetto setting keycloak" />

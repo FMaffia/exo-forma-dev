@@ -474,3 +474,17 @@ Q.idea/sonarlint/securityhotspotstore/0/1/01cbae29707fa4c7dea0af37cdd27349d36400
 Q.idea/sonarlint/securityhotspotstore/6/5/65b9a458e82ec1db5fe7ee01326844d47a0ae79f,d\a\da62e314fe0ec6fda3c46e78fc14c47a87639f81
 w
 G.idea/sonarlint/issuestore/6/5/65b9a458e82ec1db5fe7ee01326844d47a0ae79f,e\4\e4ee41ce8f3d35023a1e9fbab45683d5b5ec8745
+O
+src/components/LoadingModal.jsx,0\7\07dcc506ab58ae819600884e5c25c986693d8d39
+S
+#src/components/TimelineActivity.jsx,1\9\19d631c13d7e2b2ac67c277c8c5cae93b8fd1fce
+N
+src/components/TableCustom.jsx,2\b\2baa60aaf5207d2d4e7a540427bf8a481e1c08bf
+T
+$src/components/table/TableCustom.jsx,6\9\694e32af4f59068930b73b143319566bf62b9688
+S
+#src/components/table/Pagination.jsx,5\b\5bc98a807fec4c9fe31e8471cde8a662434035b4
+T
+$src/components/table/RowsPerPage.jsx,a\a\aac2bcd4dc874f519049931a05b63de09d560cad
+X
+(src/components/grafici/GraficoSkills.jsx,e\7\e75565a6e198398c429554aa177f986d1fac4e8b

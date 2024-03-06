@@ -1,4 +1,5 @@
 import React from 'react';
+import {isEmpty} from "lodash/lang";
 
 const CustomCard = ({cardContent, children}) => {
 
@@ -10,14 +11,13 @@ const CustomCard = ({cardContent, children}) => {
             </div>
         </div>
         <div className="card-body">
-            <div className="d-flex align-items-center">
-                <div className="card-img-primary rounded-circle d-flex align-items-center justify-content-center">
-                    {cardContent.icon && <i className={cardContent.icon}></i>}
-                    {cardContent.img && <img src={cardContent.img}/>}
-                </div>
-                <div className="ps-3 w-75">
-                    {children}
-                </div>
+            <div className="d-flex align-items-center justify-content-center">
+                {isEmpty(cardContent.img) || isEmpty(cardContent.icon) &&
+                    <div style={{minWidth: "5rem"}} className=" card-img-primary rounded-circle d-flex align-items-center justify-content-center">
+                        {cardContent.icon && <i className={cardContent.icon}></i>}
+                        {cardContent.img && <img src={cardContent.img}/>}
+                    </div>}
+                {children}
             </div>
         </div>
 

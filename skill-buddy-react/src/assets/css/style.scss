@@ -1,14 +1,17 @@
 $primary: #006a65;
+$secondary: #e4f3f5;
 $danger: #bd2285;
 $info: #1aa7a1;
 $success: #009a95;
 $warning: #ffbd59;
 $light: #eceef0;
 $dark: #006a6c;
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "./custom.scss";
+
 :root {
   --bs-primary: #006a65;
   --bs-secondary: #1aa7a1;
@@ -18,6 +21,8 @@ $dark: #006a6c;
   --bs-light: #F8F8F8;
   --bs-primary-light: rgba(128, 206, 208, 0.2);
   --bs-danger-light: rgba(189, 34, 133, 0.42);
+  --bs-pagination-active-bg: rgba(255, 189, 89, 1)
+
 }
 
 /*--------------------------------------------------------------
@@ -25,6 +30,10 @@ $dark: #006a6c;
 --------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
 }
 
 body {
@@ -219,20 +228,20 @@ a {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
+.toggle-sidebar-btn {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
   color: var(--bs-primary);
 }
 
-.header .search-bar {
+.search-bar {
   min-width: 360px;
   padding: 0 20px;
 }
 
 @media (max-width: 1199px) {
-  .header .search-bar {
+  .search-bar {
     position: fixed;
     top: 50px;
     left: 0;
@@ -246,18 +255,18 @@ a {
     opacity: 0;
   }
 
-  .header .search-bar-show {
+  .search-bar-show {
     top: 60px;
     visibility: visible;
     opacity: 1;
   }
 }
 
-.header .search-form {
+.search-form {
   width: 100%;
 }
 
-.header .search-form input {
+.search-form input {
   border: 0;
   font-size: 14px;
   border: 1px solid var(--bs-primary);
@@ -267,21 +276,21 @@ a {
   width: 100%;
 }
 
-.header .search-form input:focus,
-.header .search-form input:hover {
+.search-form input:focus,
+.search-form input:hover {
   outline: none;
   box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
   border: 1px solid var(--bs-primary);
 }
 
-.header .search-form button {
+.search-form button {
   border: 0;
   padding: 0;
   margin-left: -30px;
   background: none;
 }
 
-.header .search-form button i {
+.search-form button i {
   color: var(--bs-primary);
 }
 

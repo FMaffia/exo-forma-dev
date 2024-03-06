@@ -8,21 +8,21 @@ export const publicVoices = [
     new MenuItem(0, "La mia dashboard", PUBLIC_DASHBOARD, "bi bi-columns-gap me-2"),
     new MenuItem(1, "SkillBuddy", PUBLIC_PROJECTS_SFOGLIA, "bi bi-feather me-2", [
         new MenuItem("1a", "Tic Tac Toe", PUBLIC_PROJECTS_SFOGLIA),
-        new MenuItem("1a", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
-        new MenuItem("1a", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
+        new MenuItem("1b", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
+        new MenuItem("1c", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
     ]),
     new MenuItem(2, "Progetti in corso", PUBLIC_PROJECTS_IN_CORSO, "bi bi bi-hourglass me-2",
         [
-            new MenuItem("1a", "Tic Tac Toe", PUBLIC_PROJECTS_SFOGLIA),
-            new MenuItem("1a", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
-            new MenuItem("1a", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
+            new MenuItem("2a", "Tic Tac Toe", PUBLIC_PROJECTS_IN_CORSO),
+            new MenuItem("2b", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
+            new MenuItem("2c", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
 
         ]
     ),
     new MenuItem(3, "Progetti completati", PUBLIC_PROJECTS_COMPLETATI, "bi bi-flag me-2", [
-        new MenuItem("1a", "Tic Tac Toe", PUBLIC_PROJECTS_SFOGLIA),
-        new MenuItem("1a", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
-        new MenuItem("1a", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
+        new MenuItem("3a", "Tic Tac Toe", PUBLIC_PROJECTS_SFOGLIA),
+        new MenuItem("3b", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
+        new MenuItem("3c", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
 
     ]),
 ]

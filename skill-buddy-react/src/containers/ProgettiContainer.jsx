@@ -6,7 +6,7 @@ const ProgettiContainer = () => {
         <section className={"section "}>
             <h1>Progetti SkillBuddy</h1>
             <nav>
-                <ol class="breadcrumb">
+                <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li className="breadcrumb-item active">Progetti SkillBuddy</li>
                 </ol>

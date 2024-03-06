@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import logo from "../assets/img/logo.png"
 import profile from "../assets/img/profile-img.jpg"
+import logoExolab from "../assets/img/exolab-logo.png"
 
 const Header = () => {
     const bodyRef = useRef()
@@ -19,7 +20,9 @@ const Header = () => {
         <div className="d-flex align-items-center justify-content-between">
             <a href="index.html" className="logo d-flex align-items-center">
                 <img src={logo} alt=""/>
-                <span className="d-none d-lg-block">SkillBuddy </span>
+                <div>
+                    <span className="d-none d-lg-block">SkillBuddy </span>
+                </div>
             </a>
             <i className="bi bi-list toggle-sidebar-btn" onClick={onClick}></i>
         </div>
@@ -30,7 +33,11 @@ const Header = () => {
             </form>
         </div>
 
-        <nav className="header-nav ms-auto">
+        <nav className="header-nav ms-auto d-flex">
+             <span className="d-none d-lg-block me-5 text-muted">
+                     <img style={{filter: "brightness(0.8)"}} src={logoExolab} height={50}/>
+                    </span>
+
             <ul className="d-flex align-items-center">
                 <li className="nav-item d-block d-lg-none">
                     <a className="nav-link nav-icon search-bar-toggle " href="#">

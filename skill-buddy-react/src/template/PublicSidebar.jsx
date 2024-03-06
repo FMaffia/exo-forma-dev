@@ -10,7 +10,6 @@ export const publicVoices = [
         new MenuItem("1a", "Tic Tac Toe", PUBLIC_PROJECTS_SFOGLIA),
         new MenuItem("1a", "Tic Tac Toe 2", PUBLIC_PROJECTS_SFOGLIA),
         new MenuItem("1a", "Tic Tac Toe 3", PUBLIC_PROJECTS_SFOGLIA),
-
     ]),
     new MenuItem(2, "Progetti in corso", PUBLIC_PROJECTS_IN_CORSO, "bi bi bi-hourglass me-2",
         [

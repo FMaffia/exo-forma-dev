@@ -3,7 +3,7 @@ import {useKeycloak} from "@react-keycloak/web";
 import Header from "./Header";
 import {Outlet} from "react-router-dom";
 import Footer from "./Footer";
-import PublicSidebar from "./PublicSidebar";
+import Sidebar from "./Sidebar";
 
 const TemplateHome = () => {
     const {keycloak} = useKeycloak()
@@ -12,7 +12,7 @@ const TemplateHome = () => {
     }
     return <div id="wrapper">
         <Header/>
-        <PublicSidebar/>
+        <Sidebar/>
         <main id="main" className={"main"}>
             <Outlet/>
         </main>

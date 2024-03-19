@@ -4,38 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7587b925-c9e1-4e26-a21e-f2701d64e9c0" name="Changes" comment="Print progetto template**">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/geometric3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/loading2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/table/right-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/table/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoadingModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimelineActivity.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grafici/GraficoSkills.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/table/Pagination.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/table/RowsPerPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/table/TableCustom.jsx" afterDir="false" />
+    <list default="true" id="7587b925-c9e1-4e26-a21e-f2701d64e9c0" name="Changes" comment="Dashboard grafici">
+      <change afterPath="$PROJECT_DIR$/src/components/grafici/GraficoCompletamento.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skill-buddy-be/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skill-buddy-be/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skill-buddy-be/skill-buddy-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skill-buddy-be/skill-buddy-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1227cc494bc38f76a534cabc6c14c7d9c1b2e635" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/2660e355a5626f541e453571b036183f996458ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53bc5ff52d14e733073cda844b0cb4ac9e35bf73" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53bc5ff52d14e733073cda844b0cb4ac9e35bf73" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d3b2beaa05be60c67cca7c076b2bc2e33ce7aef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/955e2a1d313da6417a35e0e6aba18cfab82c8be2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/955e2a1d313da6417a35e0e6aba18cfab82c8be2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa394d39979dc6a0c274b6a99142f52791106ca4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa394d39979dc6a0c274b6a99142f52791106ca4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abe9034cb2d66f23c9114b04f20177a670e4c5a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac1500d30dd29a1285853c7411b799f80758a8c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b73cd46129ee985b0b0439588aab5121eb23d6c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be50805f9a43809ea4d34a23785198e94b1bc2ae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be50805f9a43809ea4d34a23785198e94b1bc2ae" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa7fc28eff0760754a5ceadd0841a31011741f23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa945291fb7264a060b9d8d7835de7b95492858c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/1227cc494bc38f76a534cabc6c14c7d9c1b2e635" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/6/2660e355a5626f541e453571b036183f996458ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/d/6d3b2beaa05be60c67cca7c076b2bc2e33ce7aef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/b/abe9034cb2d66f23c9114b04f20177a670e4c5a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/c/ac1500d30dd29a1285853c7411b799f80758a8c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/7/b73cd46129ee985b0b0439588aab5121eb23d6c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa7fc28eff0760754a5ceadd0841a31011741f23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa945291fb7264a060b9d8d7835de7b95492858c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/paper-fold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/pinwheel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/rabbit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/shapes.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CustomCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Paths.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/DashboardContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/DashboardContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ProgettiContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProgettiContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/progetti/ProgCompletati.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/progetti/ProgCompletati.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/progetti/ProgInCorso.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/progetti/ProgInCorso.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useKeyRoles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useKeyRoles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AppRoutes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/AppRoutes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/PublicSidebar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/TemplateHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/TemplateHome.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,36 +76,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.TemplateApp.jsx.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/development/workspaces/workspace-interno/Exolab-Apps/SkillBuddy/skill-buddy-react/src/assets/img/table",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "npm.stop.executor": "Run",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "C:\\Users\\Exolab\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.TemplateApp.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/development/workspaces/workspace-interno/Exolab-Apps/SkillBuddy/skill-buddy-react/src/components/grafici&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.stop.executor&quot;: &quot;Run&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Exolab\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\components\grafici" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img\table" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\img" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers\progetti" />
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\containers" />
-      <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\assets\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\development\workspaces\workspace-interno\Exolab-Apps\SkillBuddy\skill-buddy-react\src\components\table" />
@@ -137,7 +142,9 @@
       <workItem from="1709297007280" duration="6124000" />
       <workItem from="1709581476649" duration="6577000" />
       <workItem from="1709588133824" duration="3554000" />
-      <workItem from="1709591976638" duration="44136000" />
+      <workItem from="1709591976638" duration="50216000" />
+      <workItem from="1710335305274" duration="2312000" />
+      <workItem from="1710837417940" duration="2913000" />
     </task>
     <task id="LOCAL-00001" summary="Print progetto setting keycloak">
       <option name="closed" value="true" />
@@ -179,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709735241007</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dashboard grafici">
+      <option name="closed" value="true" />
+      <created>1709761974923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709761974923</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +215,8 @@
     <MESSAGE value="Print progetto setting keycloak" />
     <MESSAGE value="Print progetto template" />
     <MESSAGE value="Print progetto template**" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print progetto template**" />
+    <MESSAGE value="Dashboard grafici" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard grafici" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -208,7 +224,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/template/Footer.jsx</url>
           <line>5</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

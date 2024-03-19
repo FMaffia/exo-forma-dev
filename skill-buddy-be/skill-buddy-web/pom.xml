@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>skill-buddy-web</artifactId>
-    <name>ExoFormaWeb</name>
+    <name>skill-buddy-web</name>
     <packaging>war</packaging>
 
     <dependencies>

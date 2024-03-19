@@ -6,6 +6,7 @@ import allProject from '../assets/img/geometric2.png'
 import projectInCorso from '../assets/img/geometric3.png'
 import TimelineActivity from "../components/TimelineActivity";
 import {GraficoSkills} from "../components/grafici/GraficoSkills";
+import {GraficoCompletamento} from "../components/grafici/GraficoCompletamento";
 
 const DashboardContainer = () => {
     const cardContentExample = [{
@@ -72,9 +73,14 @@ const DashboardContainer = () => {
                         </CustomCard>
                     </Col>
                 )}
-                <Col xxl={8} md={6} sm={12}>
-                    <CustomCard cardContent={{title: "Skills ottenute"}}>
+                <Col xxl={4} md={6} sm={12}>
+                    <CustomCard cardContent={{title: "Skills ottenute", subTitle: "Skills ottenute per completamento progetti"}}>
                         <GraficoSkills/>
+                    </CustomCard>
+                </Col>
+                <Col xxl={4} md={6} sm={12}>
+                    <CustomCard cardContent={{title: "Completamento progetti", subTitle: "Steps mancanti per completamento progetto"}}>
+                        <GraficoCompletamento/>
                     </CustomCard>
                 </Col>
                 <Col xxl={4} md={6} sm={12}>

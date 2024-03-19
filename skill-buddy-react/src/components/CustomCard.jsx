@@ -5,7 +5,7 @@ const CustomCard = ({cardContent, children}) => {
 
     return <div className="card">
         <div className="card-title h5 p-3">
-            <div className={"d-flex justify-content-between"}>
+            <div className={"d-flex justify-content-between flex-column"}>
                 <div className="d-flex align-items-center">{cardContent.title}</div>
                 <div className="text-muted font-small ">{cardContent.subTitle}</div>
             </div>

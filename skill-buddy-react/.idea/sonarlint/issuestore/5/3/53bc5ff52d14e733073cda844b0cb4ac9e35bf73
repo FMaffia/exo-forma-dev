@@ -1,0 +1,10 @@
+
+ëjavascript:S6848"ÂAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(âö˜£ıÿÿÿÿ8÷¢¯å1
+‡javascript:S1082"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(âö˜£ıÿÿÿÿ8÷¢¯å1
+’javascript:S1077&"jimg elements must have an alt prop, either with meaningful text, or an empty string for decorative images.(»—¹Ôÿÿÿÿÿ8÷¢¯å1
+œjavascript:S6844+"øThe href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles.(ÁÀ£¡8÷¢¯å1
+¡javascript:S68442"øThe href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles.(¿óÂúÿÿÿÿ8÷¢¯å1
+Jjavascript:S6772<"'Ambiguous spacing before next element a(¿¯×´8÷¢¯å1
+œjavascript:S6844<"øThe href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles.(¿¯×´8÷¢¯å1
+¡javascript:S6844G"øThe href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles.(ó»ñ‚şÿÿÿÿ8÷¢¯å1
+œjavascript:S6844t"øThe href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles.(ãâ·ô8÷¢¯å1

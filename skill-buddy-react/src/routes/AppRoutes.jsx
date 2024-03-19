@@ -28,7 +28,7 @@ const appRoutes = (role) => [
         children: [
             {index: true, element: <Navigate to={BASE_PUBLIC_PATH}/>},
             {
-                path: "/exoforma-fe",
+                path: "/skillbuddy",
                 element: <Navigate to={BASE_PUBLIC_PATH}/>
             },
             {

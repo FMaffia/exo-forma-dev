@@ -1,14 +1,17 @@
-import { useKeycloak } from '@react-keycloak/web'
+import {useKeycloak} from '@react-keycloak/web'
 
 const useKeyRoles = () => {
-    const { keycloak } = useKeycloak()
-
+    const {keycloak} = useKeycloak()
 
     if (keycloak?.hasResourceRole('Editor', keycloak?.tokenParsed?.azp)) {
-        return 'ADMIN'
+        return 'Editor'
     }
+
     if (keycloak?.hasResourceRole('Reader', keycloak?.tokenParsed?.azp)) {
-        return 'USER'
+        return 'Reader'
+    }
+    if (keycloak?.hasResourceRole('Admin', keycloak?.tokenParsed?.azp)) {
+        return 'Admin'
     }
     return 'UNAUTHORIZED'
 }
